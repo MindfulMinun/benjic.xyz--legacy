@@ -1,0 +1,57 @@
+//! =============================== !//
+//! ========== Variables ========== !//
+//! =============================== !//
+
+//! Colors
+$background-color: #1e1e1e;
+$text-color: #fafafa;
+$accent:   #673ab7;
+$secondary: #00e676;
+$against-accent: rgba(white, 0.87);
+$against-secondary: rgba(black, 0.87);
+$contrast-color: white;
+$color-aside: rgba($contrast-color, 0.52);
+$color-fade : rgba($contrast-color, 0.24);
+
+//! Fonts
+$mono: "Roboto Mono", Monaco, monospace, monospace;
+$font: "Roboto",
+    //! Fallbacks
+    -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    //! Basic web fallback
+    Helvetica, Arial, sans-serif,
+    //! Emoji fallbacks
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+//! ================================= !//
+//! ========== Breakpoints ========== !//
+//! ================================= !//
+$s1: 30rem;   // 480px
+$s2: 37.5rem; // 600px
+$m1: 52.5rem; // 840px
+$m2: 60rem;   // 960px
+$l1: 80rem;   // 1280px
+$l2: 90rem;   // 1440px
+$l3: 100rem;  // 1600px
+
+$s1-up: "only screen and (min-width: #{$s1})";
+$s2-up: "only screen and (min-width: #{$s2})";
+$m1-up: "only screen and (min-width: #{$m1})";
+$m2-up: "only screen and (min-width: #{$m2})";
+$l1-up: "only screen and (min-width: #{$l1})";
+$l2-up: "only screen and (min-width: #{$l2})";
+$l3-up: "only screen and (min-width: #{$l3})";
+
+$s1-down: "only screen and (max-width: #{$s1})";
+$s2-down: "only screen and (max-width: #{$s2})";
+$m1-down: "only screen and (max-width: #{$m1})";
+$m2-down: "only screen and (max-width: #{$m2})";
+$l1-down: "only screen and (max-width: #{$l1})";
+$l2-down: "only screen and (max-width: #{$l2})";
+$l3-down: "only screen and (max-width: #{$l3})";
+
+//! Animation Curves
+$standard-curve    : cubic-bezier(0.4, 0, 0.2, 1);
+$acceleration-curve: cubic-bezier(0.4, 0, 1.0, 1);
+$deceleration-curve: cubic-bezier(0.0, 0, 0.2, 1);
+$sharp-curve       : cubic-bezier(0.4, 0, 0.6, 1);

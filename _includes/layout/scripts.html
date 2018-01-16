@@ -1,0 +1,28 @@
+{%- comment %}
+Frontmatter should look something like this:
+
+scripts:
+    - #! For external scripts
+        src: "/scripts/lol.js"
+        defer: true
+        async: true
+    - #! For code blocks
+        content: >
+            alert('hi')
+{% endcomment -%}
+<script src="/scripts/master.js"></script>
+    <script>
+        //! Install SW
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register('/sw.js')
+        }
+    </script>
+
+{%- if page.scripts -%}
+    {%- for s in page.scripts %}
+    <script
+{%- if s.src %} src="{{ s.src }}"{%- endif -%}
+{%- if s.defer %} defer{%- endif -%}
+{%- if s.async %} async{%- endif -%}>{{ s.content | rstrip }}</script>
+    {%- endfor %}
+{%- endif %}

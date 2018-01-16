@@ -1,0 +1,9 @@
+<figure id="{{ include.id | handleize }}">
+    <div class="media-box" style="{{ include.style }}">
+        <a href="{{ include.src }}">
+            <img src="{{ include.src }}" aria-labelledby="{{ include.id | handleize }}-caption"
+                 alt="{{ include.caption }}">
+        </a>
+    </div>
+    <figcaption id="{{ include.id | handleize }}-caption">{{ include.caption }}</figcaption>
+</figure>

@@ -1,0 +1,85 @@
+<!--[if lte IE 9]>
+    <div class="banner error">
+        <div class="container">
+            <p class="browserupgrade">
+                <strong>Outdated browser:</strong>
+                What’s an emo’s favorite browser? Edge. Speaking of browsers, please upgrade / replace yours.
+                The Internet won’t stop nagging about it until you do.
+            </p>
+        </div>
+    </div>
+<![endif]-->
+<noscript>
+    <div class="banner error">
+        <div class="container">
+            <p>
+                <strong>JavaScript Disabled:</strong>
+                stop being so paranoid and enable js
+            </p>
+        </div>
+    </div>
+</noscript>
+{%- comment %}
+    Content here will be served on all pages and should be used to distribute important information site-wide
+
+<div class="banner error" data-banner-id="example-notice-01">
+    <div class="container">
+        <p>
+            <span class="sr-only">Banner,</span>
+            <strong>Notice:</strong>
+            tchat will be discontinued on February 1st
+        </p>
+        <button class="banner--close flat-btn-dark" aria-label="Close banner"
+                onclick="xyz.banner.close('example-notice-01')">
+            Close
+        </button>
+    </div>
+</div>
+{% endcomment -%}
+{%- if page.banners -%}
+    {%- comment %}
+        Frontmatter content will appear on that specific page only.
+        Frontmatter should look something like this:
+        banners:
+            -
+                id: "banner-id"
+                content: "<strong>Example banner:</strong> An example banner. Accepts plain HTML"
+    {% endcomment -%}
+    {%- for b in page.banners -%}
+    <div class="banner error" data-banner-id="{{ b.id }}">
+        <div class="container">
+            <p>
+                <span class="sr-only">Banner,</span>
+                {{ b.content }}
+            </p>
+            <button class="banner--close flat-btn-dark no-js-hide" aria-label="Close banner"
+                    onclick="xyz.banner.close('{{ b.id }}')">
+                Close
+            </button>
+        </div>
+    </div>
+    {%- endfor -%}
+
+{%- endif -%}
+<script>
+    xyz.banner = {
+        close: function (bannerId) {
+            var d = JSON.parse(localStorage.getItem('xyz::banner')) || {};
+            d[bannerId] = true;
+            b = document.querySelector('.banner[data-banner-id="' + bannerId + '"]');
+            localStorage.setItem('xyz::banner', JSON.stringify(d));
+            b.classList.add('banner-hidden');
+        },
+        init: function () {
+            var n = document.querySelectorAll('.banner[data-banner-id]');
+            var d = JSON.parse(localStorage.getItem('xyz::banner')) || {};
+            for (var i = 0; i < n.length; i++) {
+                var bannerId = n[i].dataset.bannerId;
+                if (d[bannerId]) {
+                    n[i].style.display = "none";
+                }
+            }
+        }
+    }
+    xyz.banner.init();
+</script>

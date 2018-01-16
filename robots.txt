@@ -1,0 +1,7 @@
+---
+---
+User-agent: *
+Disallow: {{ site.url }}/404
+Disallow: {{ site.url }}/404/
+Disallow: {{ site.url }}/404.html
+Sitemap: {{ site.url }}/sitemap.xml

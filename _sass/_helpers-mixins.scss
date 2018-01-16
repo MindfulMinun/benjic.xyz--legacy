@@ -1,0 +1,94 @@
+//! ====================================== !//
+//! ========== Helpers & Mixins ========== !//
+//! ====================================== !//
+
+//! Mixins
+//! Aspect ratio mixin
+@mixin ratio($w, $h) {
+    position: relative;
+    height: 0;
+    padding-top: $h / $w * 100%;
+}
+
+//! Helpers
+.hide, .hidden {display: none !important;}
+.invisible {visibility: hidden !important;}
+.affix {
+    position: absolute;
+    display: block;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%; height: 100%;
+    text-align: center;
+}
+.media-box {
+    position: relative;
+    background: #000;
+    //! It is recommended that you insert a gradient that looks /somewhat/ like the image.
+    //! It'll look better that just a black box
+    @include ratio(16, 9); //! 16:9 default, use ;ratio for different ratios
+    * {@extend .affix;}
+}
+//! No-script hide
+html.no-js .no-js-hide {
+    display: none !important;
+}
+.clearfix, .cf {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+.visuallyhidden, .sr-only {
+    position: absolute;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+//! Floats
+.left {float: left !important;}
+.right {float: right !important;}
+
+//! Text stuff
+.txt-left {text-align: left !important;}
+.txt-right {text-align: right !important;}
+.txt-center {text-align: center !important;}
+.txt-justify {text-align: justify !important;}
+
+.txt-thin {font-weight: 100 !important;}
+.txt-light {font-weight: 300 !important;}
+.txt-regular {font-weight: 400 !important;}
+.txt-medium {font-weight: 500 !important;}
+.txt-bold {font-weight: 700 !important;}
+
+.txt-uppercase {text-transform: uppercase !important;}
+.txt-lowercase {text-transform: lowercase !important;}
+
+.txt-u {
+    text-decoration: underline !important;
+    text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+}
+
+.txt-alt {
+    //! Use this class if the surrounding text is already styled
+    @extend .txt-alike;
+    text-decoration: underline;
+    text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+}
+
+.txt-alike {
+    //! Use this class to have pre-styled tags (such as strong and em) blend in with the surrounding text.
+    font-weight: inherit !important;
+    font-style: inherit !important;
+    text-decoration: inherit !important;
+    text-align: inherit !important;
+}

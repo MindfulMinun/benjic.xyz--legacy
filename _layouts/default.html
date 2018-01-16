@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+    <head>
+        {%- include layout/default-head.html -%}
+        <link rel="stylesheet" href="/styles/master.css">
+        <link rel="stylesheet" href="/styles/grid.css">
+        <script>
+            document.documentElement.classList.remove("no-js");
+            {%- include specials/analytics.html -%}
+        </script>
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+        <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.4"></script>
+    </head>
+    <body class="fluid-body">
+        {%- include layout/banners.html -%}
+        {%- include layout/header.html -%}
+        <main>
+            <div class="container">
+                {{ content }}
+            </div>
+            <div class="container">
+                {%- include specials/disqus.html -%}
+            </div>
+        </main>
+        {%- include layout/footer.html -%}
+        <button class="sr-only">Bottom of page.</button>
+        {%- include layout/drawer.html -%}
+    </body>
+    {%- include layout/scripts.html %}
+</html>

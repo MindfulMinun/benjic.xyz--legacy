@@ -1,0 +1,70 @@
+%button {
+    box-sizing: border-box;
+    background: 0; border: 0;
+    margin: 8px; padding: 0 16px;
+    min-width: 36px; min-height: 36px;
+    background-color: transparent;
+    border-radius: 2px;
+    color: inherit;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    outline: 0;
+    transition: background $standard-curve 0.2s,
+                box-shadow $standard-curve 0.2s;
+}
+
+//! For new buttons, the background color for :hover, :focus, and :active
+//! should always fade to the color of the text. You can see this is .raised-btn and .raised-btn-2
+//!     White text -> fade to white
+//!     Black text -> fade to black
+
+
+.raised-btn {
+    @extend %button;
+    @include shadow(2);
+    background-color: $accent;
+    color: $against-accent;
+    &:hover, &:focus {
+        background-color: lighten($accent, 12%);
+    }
+    &:active {
+        background-color: lighten($accent, 24%);
+        @include shadow(8);
+    }
+}
+.raised-btn-2 {
+    @extend %button;
+    @include shadow(2);
+    background-color: $secondary;
+    color: $against-secondary;
+    &:hover, &:focus {
+        background-color: darken($secondary, 12%);
+    }
+    &:active {
+        background-color: darken($secondary, 20%);
+        @include shadow(8);
+    }
+}
+.flat-btn-light {
+    @extend %button;
+    color: #212121;
+    border: 1px solid invert($color-fade);
+    &:hover, &:focus {
+        background-color: invert($color-fade);
+    }
+    &:active {
+        background-color: invert($color-aside);
+    }
+}
+.flat-btn-dark {
+    @extend %button;
+    color: #fafafa;
+    border: 1px solid $color-fade;
+    &:hover, &:focus {
+        background-color: $color-fade;
+    }
+    &:active {
+        background-color: $color-aside;
+    }
+}

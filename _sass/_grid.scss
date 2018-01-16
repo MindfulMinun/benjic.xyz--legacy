@@ -1,0 +1,59 @@
+//! ========================== !//
+//! ========== Grid ========== !//
+//! ========================== !//
+
+//! Namespace & Variables
+$grid-namespace: "grid";
+$grid-columns: 12;
+
+$grid-sm-breakpoint: $s2 !default;
+$grid-ml-breakpoint: $m2 !default;
+$grid-sm-breakpoint: 37.5rem !default;
+$grid-ml-breakpoint: 60rem   !default;
+
+//! Cell mixin, creates a cell & sets its width
+@mixin grid-cell($i) {
+    @if $i == 0 {display: none;}
+    @else {
+        width: percentage($i / $grid-columns);
+        display: block;
+        max-width: 100%;
+    }
+}
+//! Creates a group of cells with a certain size, and adds the -order-$i and -fill cells
+@mixin create-cells($size-prefix) {
+    @for $i from 0 through $grid-columns {
+        .#{$grid-namespace} > .#{$size-prefix}#{$i} {@include grid-cell($i);}
+        .#{$grid-namespace} > .#{$size-prefix}-order-#{$i} {order: $i !important;}
+    }
+    .#{$grid-namespace} > .#{$size-prefix}-fill {flex: 1;}
+}
+//! The grid itself
+.#{$grid-namespace} {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    &.top     {align-items: flex-start;}
+    &.middle  {align-items: center;}
+    &.bottom  {align-items: flex-end;}
+    &.stretch {align-items: stretch;}
+
+    > [class^="s"],
+    > [class^="m"],
+    > [class^="l"] {
+        box-sizing: border-box;
+        margin:  0.5rem 0;
+        padding: 0 0.5rem;
+    }
+}
+//! Small
+@include create-cells("s");
+//! Medium
+@media only screen and (min-width: #{$grid-sm-breakpoint}) {
+    @include create-cells("m");
+}
+//! Large
+@media only screen and (min-width: #{$grid-ml-breakpoint}) {
+    @include create-cells("l");
+}

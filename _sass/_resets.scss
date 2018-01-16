@@ -1,0 +1,197 @@
+//! ================================== !//
+//! ============= Resets ============= !//
+//! ================================== !//
+
+
+//! Element consistency
+*, *::before, *::after {
+    box-sizing: border-box;
+    text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+}
+//! Cross-browser support & Backwards Compatibility
+/*
+ * 1. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+**/
+html {
+    -ms-text-size-adjust: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 1 */
+}
+iframe, canvas, svg, img, audio, video, {
+    display: block;
+    vertical-align: middle;
+}
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+//! HTML5 and stuff
+header, nav, main, article, aside, section, footer, figure, figcaption, details {
+    display: block;
+}
+template, [hidden] {
+    display: none;
+}
+p {
+    margin: 0;
+    padding: 0.5rem 0;
+}
+strong, b {font-weight: 700;}
+em, i {font-style: italic;}
+address {
+    font: inherit;
+    line-height: inherit;
+}
+abbr[title],
+acronym[title]  {
+    text-decoration: underline dotted;
+    text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+    cursor: help;
+    border-bottom: 0;
+}
+
+//! Code and stuff
+pre, code, kbd, samp {
+    font-family: $mono;
+    font-size: 14px;
+}
+pre, code {
+    background-color: black;
+    color: #0f0;
+}
+code {padding: 4px;}
+kbd {
+    background-color: #727272;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+pre {
+    padding: 1rem;
+    margin: 1rem 0;
+    white-space: pre;
+    display: block;
+    overflow-y: auto;
+}
+samp {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+    white-space: pre;
+    display: block;
+    overflow-y: auto;
+}
+mark {
+    background-color: #ff0;
+    color: #000;
+}
+
+//! Sized text
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sub {bottom: -0.25em;}
+sup {top: -0.5em;}
+small {font-size: 80%;}
+
+//! Lists
+dl, ul, ol {
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+    dl, ul, ol {
+        margin-bottom: 0;
+    }
+}
+//! Descriptions
+dt {font-weight: 700;}
+dd {
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+}
+//! Tables
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+//! Quotes
+blockquote, q {
+    quotes: none;
+    &::before, &::after {
+        content: none;
+    }
+}
+//! Reset Webkit quirks
+[type="search"] {
+    appearance: textfield;
+    outline-offset: -2px;
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration {
+        appearance: none;
+    }
+}
+::-webkit-file-upload-button {
+    appearance: button;
+    font: inherit;
+}
+
+
+
+//! Custom styled resets
+a[href] {
+    color: $secondary;
+    color: var(--secondary, $secondary);
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+}
+img, .img-fluid {
+    display: block;
+    border-style: none;
+    width: 100%;
+    height: auto;
+}
+blockquote {
+    padding: 0 1rem;
+    margin: 1rem 0;
+    border-left: 4px solid $accent;
+    border-left: 4px solid var(--accent, $accent);
+}
+hr {
+    //! Styled resets
+    margin: 0.5rem 0;
+    border: 0;
+    border-top: 1px solid $color-fade;
+}
+
+//! ============================== !//
+//! ========== Headings ========== !//
+//! ============================== !//
+h1, .h1 {font-size: 2.5rem;}
+h2, .h2 {font-size: 2rem;}
+h3, .h3 {font-size: 1.75rem;}
+h4, .h4 {font-size: 1.5rem;}
+h5, .h5 {font-size: 1.25rem;}
+h6, .h6 {font-size: 1rem;}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.2;
+    color: inherit;
+}

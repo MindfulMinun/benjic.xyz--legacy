@@ -1,0 +1,46 @@
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{ page.title | escape }}</title>
+        <meta name="viewport" content="width=device-width">
+        <meta name="theme-color" content="{{ page.theme-color }}">
+
+        <!-- OpenGraph & Twitter -->
+        {%- comment %}
+            {%- unless page.description -%}
+                {{ "Page description isn’t defined." | raise_error }}
+            {%- endunless -%}
+        {% endcomment %}
+        <meta name="og:title"            content="{{ page.title | escape }}">
+        <meta name="og:description"      content="{{ page.description | escape | lstrip | rstrip }}">
+        <meta name="description"         content="{{ page.description | escape | lstrip | rstrip }}">
+        <meta name="og:type"             content="website">
+        <!-- Twitter Cards -->
+        <meta name="twitter:title"       content="{{ page.title | escape }}">
+        <meta name="twitter:description" content="{{ page.description | escape | lstrip | rstrip }}">
+        <meta name="twitter:site"        content="{{ site.twitter }}">
+        <meta name="twitter:creator"     content="{{ site.twitter }}">
+
+        <!-- Twitter widget colors -->
+        <meta name="twitter:widgets:theme"        content="dark">
+        <meta name="twitter:widgets:link-color"   content="{{ page.theme-color }}">
+        <meta name="twitter:widgets:border-color" content="{{ page.theme-color }}">
+
+        <!-- Import styles -->
+        <!-- Import Material Icons, Roboto & Roboto Mono -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto:100,100i,200,200i,300,300i,400,400i,500,500i|Roboto+Mono:300">
+        <!-- <link rel="stylesheet" href="./styles.css"> -->
+
+        <script type="text/javascript">
+            window.xyz = window.xyz || {};
+            window.twemoji = window.twemoji || {parse: a => a};
+            xyz.warn = function (errorScope) {
+                //! errorScope bc idk what to call it.
+                //! If I'm neglecting accessibility, then the errorScope could be "a11y"
+                if (arguments.length < 2) {
+                    throw new Error("Custom error logger requires at least two arguments.")
+                }
+                var _ = [].slice.call(arguments, 1);
+                _.unshift('%cHey, listen!', 'font-size: 18px; line-height: 2;', "\n" + errorScope +  ":");
+                console.log.apply(null, _);
+            }
+        </script>

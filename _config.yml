@@ -1,0 +1,39 @@
+# Jekyll Config
+
+# Build config
+port: 1337
+# host: 0.0.0.0
+url: "https://benjic.xyz"
+theme-color: "#673ab7"
+twitter: "@MindfulMinun"
+synopsis: >
+    I like coding things for the Internet & playing the piano.
+
+
+
+# TODO: Install jekyll-sitemap
+plugins:
+    - jekyll-coffeescript
+    # - jekyll-sitemap
+
+# Frontmatter defaults
+defaults:
+    -
+        scope:
+            path: "" # Scope: All files...
+            type: "pages" # ...that are pages, so no JS files, for example
+        values:
+            # layout: default
+            theme-color: "#673ab7"
+    -
+        # This is here because Jekyll isn't smart enough to not set a layout for JS files, but doesn't for SCSS files????????
+        scope:
+            path: "scripts"
+        values:
+            layout: none
+
+
+# Sass settings
+sass:
+    sass_dir: _sass
+    style: compressed
