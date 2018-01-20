@@ -1,0 +1,50 @@
+//! ================================ !//
+//! ========== Typography ========== !//
+//! ================================ !//
+$typography-prefix: "t-";
+$typography-dense: "dense-";
+$typography-breakpoint: $m1-up;
+.#{$typography-prefix}display-4  {font-weight: 300; font-size: 112px;}
+.#{$typography-prefix}display-3  {font-weight: 400; font-size: 56px;}
+.#{$typography-prefix}display-2  {font-weight: 400; font-size: 45px;}
+.#{$typography-prefix}display-1  {font-weight: 400; font-size: 34px;}
+.#{$typography-prefix}headline   {font-weight: 400; font-size: 24px;}
+.#{$typography-prefix}title      {font-weight: 500; font-size: 20px;}
+.#{$typography-prefix}subheading {font-weight: 400; font-size: 16px;}
+.#{$typography-prefix}body-2     {font-weight: 500; font-size: 14px;}
+.#{$typography-prefix}body-1     {font-weight: 400; font-size: 14px;}
+.#{$typography-prefix}caption    {font-weight: 400; font-size: 12px;}
+.#{$typography-prefix}button     {font-weight: 500; font-size: 14px;}
+
+.#{$typography-prefix}display-4,
+.#{$typography-prefix}display-3,
+.#{$typography-prefix}display-2,
+.#{$typography-prefix}display-1,
+.#{$typography-prefix}headline,
+.#{$typography-prefix}title,
+.#{$typography-prefix}subheading,
+.#{$typography-prefix}body-2,
+.#{$typography-prefix}body-1,
+.#{$typography-prefix}caption,
+.#{$typography-prefix}button {
+    margin: 1rem 0;
+}
+.#{$typography-prefix}#{$typography-dense} {
+    .#{$typography-prefix}title      {font-size: 21px;}
+    .#{$typography-prefix}subheading {font-size: 17px;}
+    .#{$typography-prefix}body-2     {font-size: 15px;}
+    .#{$typography-prefix}body-1     {font-size: 15px;}
+    .#{$typography-prefix}caption    {font-size: 13px;}
+}
+
+@media #{$m1-up} {
+    .#{$typography-prefix}subheading {font-size: 15px;}
+    .#{$typography-prefix}body-2     {font-size: 13px;}
+    .#{$typography-prefix}body-1     {font-size: 13px;}
+
+    .#{$typography-prefix}#{$typography-dense} {
+        .#{$typography-prefix}subheading {font-size: 16px;}
+        .#{$typography-prefix}body-2     {font-size: 14px;}
+        .#{$typography-prefix}body-1     {font-size: 14px;}
+    }
+}

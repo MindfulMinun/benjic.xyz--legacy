@@ -1,8 +1,31 @@
 <!-- Start drawer -->
-<script async src="/scripts/drawer.js" charset="utf-8"></script>
+<script defer src="/scripts/drawer.js" charset="utf-8"></script>
+
 <aside aria-hidden="true" class="side-nav" id="layout--drawer" data-drawer-state="closed">
     <button class="nav-scrim" aria-label="Close drawer" onclick="xyz.drawer.close()"></button>
     <div class="nav-box">
+
+        <div class="account-box">
+
+            <a href="#!" class="user-image">
+                <img src="{% link /assets/pfp-1-1.jpg %}" alt="User image">
+            </a>
+
+
+            <div class="user-info">
+                <a href="#!">
+                    <span class="sr-only">Currently logged in as: </span>
+                    <span class="username">MindfulMinun</span>
+                    <span class="sr-only">,</span>
+                    <span class="email">importantmails4bc@gmail.com</span>
+                </a>
+                <a href="#!" class="switch-accounts"
+                    aria-label="Switch Accounts">
+                    <i class="material-icons">arrow_drop_down</i>
+                </a>
+            </div>
+
+        </div>
 
     </div>
 </aside>

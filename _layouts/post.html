@@ -3,6 +3,7 @@
     <head>
         {%- include layout/default-head.html %}
         <link rel="stylesheet" href="/styles/master.css">
+        <link rel="stylesheet" href="/styles/post.css">
         <link rel="stylesheet" href="/styles/grid.css">
         <script>
             document.documentElement.classList.remove("no-js");
@@ -11,14 +12,27 @@
         <script async src="https://www.google-analytics.com/analytics.js"></script>
         <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.4"></script>
     </head>
-    <body class="fluid-body">
+    <body class="fluid-body post">
         {%- include layout/banners.html %}
         {%- include layout/header.html %}
         <main>
             <div class="container">
-                {{ content }}
+
+                <div class="post-metadata">
+                    <h1>{{ page.title }}</h1>
+                    <p>
+                        Post metadata<br>
+                        {{ page.date | date: "Last updated: %a, %b %d at %T" }}
+                    </p>
+                    <hr>
+                </div>
+
+                <div class="post-content">
+                    {{ content }}
+                </div>
+
             </div>
-            <div class="container">
+            <div class="container post-thread disqus-thread">
                 {%- include specials/disqus.html %}
             </div>
         </main>

@@ -208,6 +208,54 @@ $side-nav-target: ".side-nav";
         transition: opacity $standard-curve 0.2s;
     }
 
+    .account-box {
+        color: #fff;
+        font-size: 14px;
+        padding: 16px;
+        background: $accent;
+        position: relative;
+
+        a {
+            @extend .txt-alike;
+            color: inherit;
+            display: block;
+        }
+
+        .user-image {
+            display: block;
+            height: 72px;
+            width: 72px;
+            background-color: $color-fade;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                // width: 100%;
+                // height: 100%;
+            }
+        }
+        .user-info {
+            position: relative;
+            .username {
+                margin-top: 8px;
+                display: block;
+                bottom: 36px;
+                font-weight: 500; //! Medium
+            }
+            .email {
+                display: block;
+                font-weight: 400; //! Regular
+            }
+            .switch-accounts {
+                height: 24px;
+                width: 24px;
+                position: absolute;
+                overflow: hidden;
+                text-align: center;
+                top: 0; right: 0;
+            }
+        }
+    }
+
     &[data-drawer-state="open"] {
         .nav-box {
             transform: translateX(0%);

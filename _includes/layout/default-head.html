@@ -1,6 +1,6 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ page.title | escape }}</title>
+        <title>{{ page.title | escape }} – Benji</title>
         <meta name="viewport" content="width=device-width">
         <meta name="theme-color" content="{{ page.theme-color }}">
 
@@ -11,12 +11,16 @@
             {%- endunless -%}
         {% endcomment %}
         <meta name="og:title"            content="{{ page.title | escape }}">
+        {%- if page.description -%}
         <meta name="og:description"      content="{{ page.description | escape | lstrip | rstrip }}">
         <meta name="description"         content="{{ page.description | escape | lstrip | rstrip }}">
+        {%- endif -%}
         <meta name="og:type"             content="website">
         <!-- Twitter Cards -->
         <meta name="twitter:title"       content="{{ page.title | escape }}">
+        {%- if page.description -%}
         <meta name="twitter:description" content="{{ page.description | escape | lstrip | rstrip }}">
+        {%- endif -%}
         <meta name="twitter:site"        content="{{ site.twitter }}">
         <meta name="twitter:creator"     content="{{ site.twitter }}">
 
@@ -33,14 +37,18 @@
         <script type="text/javascript">
             window.xyz = window.xyz || {};
             window.twemoji = window.twemoji || {parse: a => a};
-            xyz.warn = function (errorScope) {
-                //! errorScope bc idk what to call it.
-                //! If I'm neglecting accessibility, then the errorScope could be "a11y"
-                if (arguments.length < 2) {
-                    throw new Error("Custom error logger requires at least two arguments.")
+            xyz.ready = function (fn) {
+                if (
+                    document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"
+                ) {
+                    fn();
+                } else {
+                    document.addEventListener('DOMContentLoaded', fn);
                 }
-                var _ = [].slice.call(arguments, 1);
-                _.unshift('%cHey, listen!', 'font-size: 18px; line-height: 2;', "\n" + errorScope +  ":");
-                console.log.apply(null, _);
+            }
+            xyz.warn = function () {
+                var _ = [].slice.call(arguments);
+                console.warn('%cHey, listen!', 'font-size: 18px;', _);
+                // console.warn.apply(null, arguments);
             }
         </script>

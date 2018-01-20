@@ -28,6 +28,13 @@
     @include ratio(16, 9); //! 16:9 default, use ;ratio for different ratios
     * {@extend .affix;}
 }
+
+.accent {
+    background-color: $accent;
+    background-color: var(--accent, $accent);
+    color: $against-accent;
+}
+
 //! No-script hide
 html.no-js .no-js-hide {
     display: none !important;
@@ -71,11 +78,16 @@ html.no-js .no-js-hide {
 .txt-uppercase {text-transform: uppercase !important;}
 .txt-lowercase {text-transform: lowercase !important;}
 
+.txt-i {font-style: italic;}
+.txt-b {font-weight: 700;}
 .txt-u {
     text-decoration: underline !important;
     text-decoration-skip: ink;
     text-decoration-skip-ink: auto;
 }
+
+.txt-aside {color: $color-aside;}
+.txt-fade {color: $color-fade;}
 
 .txt-alt {
     //! Use this class if the surrounding text is already styled
@@ -87,8 +99,9 @@ html.no-js .no-js-hide {
 
 .txt-alike {
     //! Use this class to have pre-styled tags (such as strong and em) blend in with the surrounding text.
-    font-weight: inherit !important;
-    font-style: inherit !important;
-    text-decoration: inherit !important;
-    text-align: inherit !important;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+    text-align: inherit;
+    color: inherit;
 }

@@ -1,7 +1,5 @@
 ---
 ---
-#! NOTE: This script is loaded asyncronously, but the DOM will my mostly loaded by now
-
 #! Extended math
 Math.randomInt = (min, max) ->
     if arguments.length is 1
@@ -36,3 +34,15 @@ xyz.footerBlob =
         return selectedBlob
 
 xyz.footerBlob.newBlob();
+
+
+#! Do nothing on "#!" links
+
+# debugger;
+xyz.ready(->
+    for el in document.querySelectorAll('a[href="#!"]')
+        el.addEventListener('click', (e) ->
+            e.preventDefault()
+            return false;
+        )
+)

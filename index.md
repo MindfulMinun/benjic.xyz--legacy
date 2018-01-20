@@ -1,24 +1,14 @@
 ---
-title: Benji • About
+title: About me
 layout: default
 description: >
     Hi, I’m Benji. I like coding things for the Internet and playing the piano.
+# comments: true
 ---
 
 # Benji
 Student by day, developer by night.
 <hr>
-
-
-<!-- <div style="max-width: 216px; margin: 1rem 0;">
-    <div class="media-box" style="
-        padding-top: 100%;
-        background: #1d0c47;
-        background: radial-gradient(#c84d65, #1d0c47);
-    ">
-        <img src="{% link /assets/pfp-1-1.jpg %}" alt="">
-    </div>
-</div> -->
 
 <figure id="pfp">
     <div class="media-box" style="
