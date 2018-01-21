@@ -20,10 +20,17 @@
 
                 <div class="post-metadata">
                     <h1>{{ page.title }}</h1>
-                    <p>
-                        Post metadata<br>
-                        {{ page.date | date: "Last updated: %a, %b %d at %T" }}
-                    </p>
+                    <p class="txt-aside">
+                        Written on <time datetime="{{ page.date | date_to_xmlschema }}" class="i18n">
+                            {{ page.date | date: "%a, %b %d, %l:%M %P %Z" }}
+                        </time>
+                    {%- if page.last_mod -%}
+                        <br>
+                        Last updated on
+                        <time datetime="{{ page.last_mod | date_to_xmlschema }}" class="i18n">
+                            {{ page.last_mod | date: "%a, %b %d, %l:%M %P %Z" }}
+                        </time>
+                    {%- endif -%}
                     <hr>
                 </div>
 
@@ -40,5 +47,6 @@
         <button class="sr-only">Bottom of page.</button>
         {%- include layout/drawer.html %}
     </body>
+    <script src="/scripts/post.js"></script>
     {%- include layout/scripts.html %}
 </html>

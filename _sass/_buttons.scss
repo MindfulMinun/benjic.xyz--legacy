@@ -57,6 +57,7 @@
         background-color: invert($color-aside);
     }
 }
+.flat-btn,
 .flat-btn-dark {
     @extend %button;
     color: #fafafa;

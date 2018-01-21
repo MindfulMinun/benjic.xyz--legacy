@@ -45,4 +45,6 @@ xyz.ready(->
             e.preventDefault()
             return false;
         )
+    for el in document.getElementsByClassName('e')
+        el.innerHTML = twemoji.parse el.innerHTML;
 )

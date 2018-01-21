@@ -11,8 +11,6 @@
 }
 
 //! Helpers
-.hide, .hidden {display: none !important;}
-.invisible {visibility: hidden !important;}
 .affix {
     position: absolute;
     display: block;
@@ -58,6 +56,13 @@ html.no-js .no-js-hide {
     white-space: nowrap;
     overflow: hidden;
 }
+
+//! Display
+.block {display: block !important;}
+.inline {display: inline !important;}
+.inline-block {display: inline-block !important;}
+.hide, .hidden {display: none !important;}
+.invisible {visibility: hidden !important;}
 
 //! Floats
 .left {float: left !important;}

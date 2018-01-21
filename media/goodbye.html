@@ -1,0 +1,191 @@
+---
+---
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <title></title>
+        <script>document.documentElement.classList.remove('no-js');</script>
+        {%- capture scss -%}
+        $tv: "tiny-video-player";
+        $ds: "data-playback-state";
+        $play-icon: url("/assets/svg/play_circle_filled--white.svg");
+        $loading-icon: url("/assets/svg/cloud_circle--white.svg");
+        $no-js-video-message: "JavaScript must be enabled to play this video.";
+        $no-js-audio-message: "JavaScript must be enabled to play this audio.";
+
+        $cover: rgba(0,0,0,0.52);
+
+        html, body {
+            margin: 0;
+            background: black;
+            font-family: sans-serif;
+            line-height: 1;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        .#{$tv} {
+            position: fixed;
+            top: 0; bottom: 0; left: 0; right: 0;
+            display: block;
+            width: 100%;
+            margin: 0;
+            background-color: #000;
+            color: #fafafa;
+
+            * {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0; bottom: 0; left: 0; right: 0;
+                color: #fafafa;
+            }
+            video {
+                position: fixed;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            button.mini-video-player__a11y-btn {
+                opacity: 0;
+            }
+
+            &::after {
+                background-color: $cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 52px 52px;
+                content: ' ';
+                position: fixed;
+                cursor: pointer;
+                top: 0; bottom: 0; left: 0; right: 0;
+                opacity: 0;
+                transition: opacity .2s cubic-bezier(.4,0,.2,1);
+            }
+
+            &[#{$ds}="ready"],
+            &[#{$ds}="paused"],
+            &[#{$ds}="stopped"] {
+                &::after {
+                    background-image: $play-icon;
+                    opacity: 1;
+                }
+            }
+            &[#{$ds}="loading"]::after {
+                background-image: $loading-icon;
+                opacity: 1;
+            }
+            &[#{$ds}="playing"]::after {
+                opacity: 0;
+            }
+
+            .no-js & {
+                cursor: not-allowed;
+                * {
+                    cursor: not-allowed !important;
+                }
+
+                video {
+                    display: none;
+                    pointer-events: none;
+                }
+                &::after {
+                    position: absolute;
+                    content: $no-js-video-message;
+                    color: #fafafa;
+                    cursor: not-allowed;
+                    width: 100%;
+
+                    top: 50%; left: auto; right: auto; bottom: auto;
+                    transform: translateY(-50%);
+
+                    text-align: center;
+                    padding: 1rem;
+                    background: 0;
+                    z-index: 2;
+                    opacity: 1;
+                }
+            }
+        }
+        {%- endcapture -%}
+        <style>{{ scss | scssify }}</style>
+    </head>
+    <body>
+        <div class="tiny-video-player">
+            <video style="max-width: 480px; max-height: 480px;">
+                <source src="/assets/goodbye.mp4" type="video/mp4">
+            </video>
+        </div>
+    </body>
+    <script type="text/javascript">
+    (function(GlobalScope) {
+        'use strict';
+        //! ======================================= !//
+        //! ========== Tiny video player ========== !//
+        //! ======================================= !//
+
+        var players = document.querySelectorAll('.tiny-video-player');
+        [].forEach.call(players, p => {
+            var v = p.getElementsByTagName('video')[0];
+            var b = document.createElement('button');
+            // var i = document.createElement('')
+            var noA11y = document.createElement('div');
+
+            b.classList.add('mini-video-player__a11y-btn');
+            b.setAttribute('aria-live', 'polite');
+            v.setAttribute('aria-hidden', true);
+
+            v.addEventListener('canplay', _ => {
+                p.dataset.playbackState = 'ready';
+                b.innerText = 'Video ready. Click to play.';
+            });
+
+            p.addEventListener('click', _ => {
+                if (p.dataset.clickAction === 'load') {
+                    v.load();
+                    b.innerText = 'Preparing video.';
+                    return;
+                }
+                if (v.paused && p.dataset.playbackState) {
+                    v.play().catch(_ => {
+                        b.innerText = 'Video not resumed. Click to play.';
+                    });
+                } else {
+                    v.pause();
+                }
+            });
+            // v.addEventListener('timeupdate', _ => {
+            //     //! I'd update the UI here, but there is none.
+            // });
+            v.addEventListener('playing', _ => {
+                p.dataset.playbackState = 'playing';
+                b.innerText = 'Playing. Click to pause.';
+            });
+            v.addEventListener('pause', _ => {
+                p.dataset.playbackState = 'paused';
+                b.innerText = 'Paused. Click to play.';
+            });
+            v.addEventListener('ended', _ => {
+                p.dataset.playbackState = 'stopped';
+                b.innerText = 'Playback ended. Click to play.';
+            });
+            v.addEventListener('waiting', _ => {
+                p.dataset.playbackState = 'loading';
+                b.innerText = 'Loading.';
+            });
+            v.addEventListener('stalled', _ => {
+                console.log('Video stallled. Click to force-reload it.');
+                b.innerText = 'Video not loading. Click to force reload.';
+                p.dataset.playbackState = 'loading';
+                p.dataset.clickAction = 'load';
+            });
+            v.load();
+            p.dataset.playbackState = 'loading';
+            b.innerText = 'Preparing video.';
+            p.appendChild(b);
+        });
+    }(this));
+    </script>
+</html>

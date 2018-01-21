@@ -14,12 +14,13 @@ $color-aside: rgba($contrast-color, 0.52);
 $color-fade : rgba($contrast-color, 0.24);
 
 //! Fonts
-$mono: "Roboto Mono", Monaco, monospace, monospace;
+$mono: "Roboto Mono", Menlo, monospace, monospace;
 $font: "Roboto",
-    //! Fallbacks
-    -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    //! System Fallbacks
+    //! Apple, Chromium for MacOS, Windows, Generic
+    -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, // "Roboto",
     //! Basic web fallback
-    Helvetica, Arial, sans-serif,
+    "Helvetica Neue", Helvetica, Arial, sans-serif,
     //! Emoji fallbacks
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 

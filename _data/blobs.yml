@@ -69,4 +69,16 @@
 - "♬ <em>One, two, three! One, two, three! Okay, it’s on! It’s up to you!</em> ♬"
 # - "♫ <em>Let’s go read a buncha books!</em> ♫"
 - "♬ <em>Whoa! You go big guy!</em> ♬"
-- "♬ <em>ええ！すごいですね！</em> ♬"
+- "♬ <span>ええ！すごいですね！</span> ♬"
+- "<span lang=\"es\" title=\"Manga = Sleeve\">Leer manga no se refiere a leer las etiquetas en las mangas de camisas.</span><span class=\"sr-only\">Translation: Reading manga doesn’t mean reading tags on shirt sleeves. Note: Manga in Spanish means sleeve in English.</span>"
+- "<strong>Step 1:</strong> Think of what you want to say.<br><strong>Step 2:</strong> Say it."
+
+# - >
+#     On va à Paris! [???] excité!
+#     [???] langué [???] comment?
+#
+# - We’re going to Paris! I'm so excited! # On va à Paris! Je suis vraiment excité!
+# - As for the language, what do we do?
+# - Don’t worry, I know. # Don't worry, I have the solution.
+# - You just have to know the right gestures.
+# - Indeed, they seem really good with gestures.﻿

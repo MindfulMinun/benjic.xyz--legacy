@@ -3,7 +3,7 @@
 # Build config
 port: 1337
 # host: 0.0.0.0
-url: "https://benjic.xyz"
+# url: "https://benjic.xyz"
 theme-color: "#673ab7"
 twitter: "@MindfulMinun"
 synopsis: >
@@ -36,6 +36,7 @@ defaults:
             path: "_posts"
         values:
             layout: "default"
+            theme-color: "#673ab7"
 
 permalink: /:year-:month-:day/:categories/:title/
 

@@ -29,10 +29,11 @@ Hi, I’m Benji. I’m a high school student at [Legacy ECHS][lechs] in Taylor a
 
 <figure id="piano">
     <div class="media-box">
-        <video controls aria-labelledby="piano-caption">
+        <!-- <video controls aria-labelledby="piano-caption">
             <source src="{% link /assets/goodbye.mp4 %}" type="video/mp4" />
             Your browser doesn’t support the HTML5 video tag. What a lame browser :P
-        </video>
+        </video> -->
+        <iframe src="/media/goodbye/" aria-labelledby="piano-caption" frameborder="0" allow="encrypted-media" title="Don’t Ever Forget – Video" allowfullscreen></iframe>
     </div>
     <figcaption id="piano-caption">An excerpt of <em class="txt-u">Don’t Ever Forget</em>.</figcaption>
 </figure>
