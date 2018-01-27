@@ -9,11 +9,11 @@ assets = [
         "https://fonts.googleapis.com?family="
         "Material+Icons|"
         "Roboto:100,100i,200,200i,300,300i,400,400i,500,500i|"
-        "Roboto+Mono:300"
+        "Roboto+Mono:300,300i,400,400i"
     ].join('')
 ]
 # Cache name: v?.?.?-environment::yyyy-mm-dd--hh-mm-ss
-CACHE_NAME = 'v0.0.0-production::2018-01-12--21:22:04'
+CACHE_NAME = 'v0.0.0-production::2018-01-21--18:06:56'
 activeCaches = [
     CACHE_NAME
 ]

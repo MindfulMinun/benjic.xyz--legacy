@@ -162,6 +162,16 @@
             v.addEventListener('playing', _ => {
                 p.dataset.playbackState = 'playing';
                 b.innerText = 'Playing. Click to pause.';
+
+                if (!p.dataset.started) {
+                    window.parent.postMessage({
+                        'function': {
+                            'name': 'ga',
+                            'arguments': ['send', 'event', 'Media', 'Video played']
+                        }
+                    }, "*");
+                    p.dataset.started = true;
+                }
             });
             v.addEventListener('pause', _ => {
                 p.dataset.playbackState = 'paused';
@@ -170,6 +180,12 @@
             v.addEventListener('ended', _ => {
                 p.dataset.playbackState = 'stopped';
                 b.innerText = 'Playback ended. Click to play.';
+                window.parent.postMessage({
+                    'function': {
+                        'name': 'ga',
+                        'arguments': ['send', 'event', 'Media', 'Video played to end']
+                    }
+                }, "*");
             });
             v.addEventListener('waiting', _ => {
                 p.dataset.playbackState = 'loading';

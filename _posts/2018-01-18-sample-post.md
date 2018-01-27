@@ -3,7 +3,7 @@ title: My post lol
 date: 2018-01-19 00:16:33 CST
 last_mod: 2018-01-20 16:27:51 CST
 layout: post
-# comments: true
+comments: true
 description: >
     This is a really interesting post on how posts will be laid out. The layout of posts in blogs is very important, as it is the key to keeping the reader’s attention. It’s about layout, not content. Screw content.
 # excerpt: lol u gay
@@ -18,6 +18,7 @@ scripts:
 Sample paragraph text. Here’s a [link to the homepage](/). Here’s some **bold,** *italic,* and ***bold and italic*** text.
 
 <button class="flat-btn">Button lol</button>
+<button class="flat-btn large">Button lol</button>
 
 {% highlight html %}
 <!doctype html>
@@ -64,7 +65,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 <figure>
     <div class="media-box">
-        <iframe src="https://www.youtube.com/embed/zEs98nced2k?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/zEs98nced2k?rel=0" frameborder="0" allow="autoplay; encrypted-media" title="New Super Sky High Bros. – YouTube" allowfullscreen></iframe>
     </div>
     <figcaption>New Super Sky High Bros. – YouTube</figcaption>
 </figure>

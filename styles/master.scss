@@ -63,9 +63,6 @@ html, body {
 
 //! Maybe add ;typography here?
 
-//! Maybe add ;grid here?
-// @import "_grid";
-
 //! ====================================== !//
 //! ========== Material Shadows ========== !//
 //! ====================================== !//
@@ -80,6 +77,10 @@ html, body {
 //! Classes: .raised-btn     .raised-btn-2
 //!          .flat-btn-light .flat-btn-dark
 
+//! ========================== !//
+//! ========== Grid ========== !//
+//! ========================== !//
+@import "_grid";
 
 //! ========================================================= !//
 //! ========================================================= !//
@@ -92,7 +93,7 @@ body.fluid-body {
     display: flex;
     flex-direction: column;
     main {
-        padding-top: 1rem;
+        margin-top: 1rem;
         flex: 1;
     }
     footer {
@@ -146,6 +147,7 @@ figure {
     }
 }
 
+//! Banners
 .banner {
     background-color: $accent;
     color: #fafafa;
@@ -168,6 +170,10 @@ figure {
     }
 }
 
+
+//! ============================ !//
+//! ========== Extras ========== !//
+//! ============================ !//
 //! Twemoji
 img.emoji {
     display: inline-block;

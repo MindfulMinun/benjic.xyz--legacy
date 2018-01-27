@@ -37,6 +37,12 @@
 html.no-js .no-js-hide {
     display: none !important;
 }
+
+//! Pretty helpful
+.no-pointer, [readonly] {
+    cursor: not-allowed;
+    // pointer-events: none !important;
+}
 .clearfix, .cf {
     &:after {
         content: "";
@@ -74,11 +80,12 @@ html.no-js .no-js-hide {
 .txt-center {text-align: center !important;}
 .txt-justify {text-align: justify !important;}
 
-.txt-thin {font-weight: 100 !important;}
-.txt-light {font-weight: 300 !important;}
-.txt-regular {font-weight: 400 !important;}
-.txt-medium {font-weight: 500 !important;}
-.txt-bold {font-weight: 700 !important;}
+
+.txt-thin {font-weight: $thin !important;}
+.txt-light {font-weight: $light !important;}
+.txt-regular {font-weight: $regular !important;}
+.txt-medium {font-weight: $medium !important;}
+.txt-bold {font-weight: $bold !important;}
 
 .txt-uppercase {text-transform: uppercase !important;}
 .txt-lowercase {text-transform: lowercase !important;}

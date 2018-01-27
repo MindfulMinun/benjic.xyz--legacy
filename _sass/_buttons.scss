@@ -6,12 +6,25 @@
     background-color: transparent;
     border-radius: 2px;
     color: inherit;
+    font: inherit;
     font-size: 12px;
+    font-weight: $regular;
     text-align: center;
     cursor: pointer;
     outline: 0;
     transition: background $standard-curve 0.2s,
                 box-shadow $standard-curve 0.2s;
+
+
+    &.large {
+        font-size: 22px;
+        min-height: 48px;
+    }
+    // &.small {
+    //     font-size: 10px;
+    //     min-height: 20px;
+    //     padding: 0 8px;
+    // }
 }
 
 //! For new buttons, the background color for :hover, :focus, and :active
@@ -20,52 +33,86 @@
 //!     Black text -> fade to black
 
 
-.raised-btn {
+@mixin flat-btn($txt-color) {
+    @extend %button;
+
+    $hover: $color-fade;
+    $active: $color-aside;
+
+    @if lightness($txt-color) < 50 {
+        $hover: invert($color-fade);
+        $active: invert($color-aside);
+    }
+
+    border: 1px solid $hover;
+    &:hover, &:focus {
+        background-color: $hover;
+    }
+    &:active {
+        background-color: $active;
+    }
+    color: $txt-color;
+    &[disabled], &:disabled {
+        background-color: transparent;
+        opacity: 0.52;
+        cursor: not-allowed;
+    }
+}
+
+@mixin raised-btn($bg-color, $txt-color) {
     @extend %button;
     @include shadow(2);
-    background-color: $accent;
-    color: $against-accent;
+    background-color: $bg-color;
+    color: $txt-color;
     &:hover, &:focus {
-        background-color: lighten($accent, 12%);
+        @if lightness($txt-color) > 50 {
+            background-color: lighten($bg-color, 6%);
+        } @else {
+            background-color: darken($bg-color, 6%);
+        }
     }
     &:active {
-        background-color: lighten($accent, 24%);
+        @if lightness($txt-color) > 50 {
+            background-color: lighten($bg-color, 18%);
+        } @else {
+            background-color: darken($bg-color, 18%);
+        }
         @include shadow(8);
     }
-}
-.raised-btn-2 {
-    @extend %button;
-    @include shadow(2);
-    background-color: $secondary;
-    color: $against-secondary;
-    &:hover, &:focus {
-        background-color: darken($secondary, 12%);
-    }
-    &:active {
-        background-color: darken($secondary, 20%);
-        @include shadow(8);
+    &:disabled {
+        background-color: grayscale($secondary);
+        @include shadow(2);
+        color: rgba(white, 0.52);
+        cursor: not-allowed;
     }
 }
-.flat-btn-light {
-    @extend %button;
-    color: #212121;
-    border: 1px solid invert($color-fade);
-    &:hover, &:focus {
-        background-color: invert($color-fade);
-    }
-    &:active {
-        background-color: invert($color-aside);
-    }
-}
+
 .flat-btn,
-.flat-btn-dark {
-    @extend %button;
-    color: #fafafa;
-    border: 1px solid $color-fade;
-    &:hover, &:focus {
-        background-color: $color-fade;
+.flat-btn-dark {@include flat-btn(#fafafa);}
+.flat-btn-light {@include flat-btn(#212121);}
+
+.raised-btn {@include raised-btn($accent, $against-accent);}
+.raised-btn-2 {@include raised-btn($secondary, $against-secondary);}
+
+.icon-btn {
+    height: 40px;
+    width: 40px;
+    // border-radius: 16px;
+    border-radius: 50%;
+    padding: 0;
+    i.material-icons {
+        opacity: 0.72;
+        position: relative;
+        top: 2px;
+        line-height: 1;
+        padding: 0 4px;
     }
-    &:active {
-        background-color: $color-aside;
+    &.large {
+        height: 56px;
+        width: 56px;
     }
+    // &.small {
+    //     height: 40px;
+    //     width: 40px;
+    // }
 }

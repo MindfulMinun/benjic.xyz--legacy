@@ -38,28 +38,40 @@
 
 # Language stuff
 - "<span lang=\"ms\">“Selamat pagi!”</span>"
-- "<span lang=\"ja\" title=\"\">なんかハワイには、歯医者さんひとりもいない。それはね、歯はいい。</span><span class=\"sr-only\">It’s a Japanese pun on the word \"Hawaii\"</span>"
-- "<span lang=\"ja\" title=\"ni jyuu yo jikan pātī o shimasu.\">二十四時間パーティーをします。</span><span class=\"sr-only\">I party for 24 hours.</span>"
+- "<span lang=\"ja\">なんかハワイには、歯医者さんひとりもいない。それはね、歯はいい。</span><span class=\"sr-only\">It’s a Japanese pun on the word \"Hawaii\"</span>"
+- "<span lang=\"ja\" title=\"Rōmaji: Nijyuuyo jikan pātī o shimasu.\">二十四時間パーティーをします。</span><span class=\"sr-only\">I party for 24 hours.</span>"
 - "<span lang=\"es-MX\">¡Nooo, mi torta!</span>"
 - "<span lang=\"es-MX\">“Hay que ler.”</span>"
 - "<em lang=\"es-MX\"><strong>Advertencia:</strong> Se ha ejecutado un virus y ha tomado control del sistema operativo. Para la seguridad de usted y de los demás, su dispositivo será formateado en breve.</em>"
 - "<span lang=\"fr\">“Je mange le petit enfant.”</span>"
-- "<span lang=\"ja\" title=\"Hito wa baka.\">人はバカ。</span><span class=\"sr-only\">Translation: People are stupid.</span>"
-- "<span lang=\"ja\" title=\"Omae wa gei desu.\">お前はゲイです。</span><span class=\"sr-only\">Translation: You’re gay.</span>"
-- "<span lang=\"ja\" title=\"Hajimemashite, Benjī to mōshimasu.\">はじめまして、ベンジーと申します。</span><span class=\"sr-only\">Translation: Nice to meet you, call me Benji.</span>"
+- "<span lang=\"ja\" title=\"Rōmaji: Hito wa baka.\">人はバカ。</span><span class=\"sr-only\">Translation: People are stupid.</span>"
+- "<span lang=\"ja\" title=\"Rōmaji: Omae wa gei desu.\">お前はゲイです。</span><span class=\"sr-only\">Translation: You’re gay.</span>"
+- "<span lang=\"ja\" title=\"Rōmaji: Hajimemashite, Benjī to mōshimasu.\">はじめまして、ベンジーと申します。</span><span class=\"sr-only\">Translation: Nice to meet you, call me Benji.</span>"
 
 # Created on here:
 - XSS attacks most commonly occur when code from one language is interpolated incorrectly or carelessly into another language. #! Fakcts
-- "<span lang=\"ja\" title=\"Nihonyo, Kore ga eigada.\">日本よ、これが映画だ。</span><span class=\"sr-only\">Translation: Hey Japan, this is a movie.</span>"
+- "<span lang=\"ja\" title=\"Rōmaji: Nihonyo, Kore ga eigada.\">日本よ、これが映画だ。</span><span class=\"sr-only\">Translation: Hey Japan, this is a movie.</span>"
 - Copyright &copy; 2017–2018 MindfulMinun All Rights Reserved.
 - “Be unique” is such a normie thing to say.
 - “So long, gay Bowser!” #! SM64 reference
 - “How nice to see you again!” #! Brain Age reference
 - "<em title=\"Beyond!\">Plus ultra!</em>" #! bnha reference
 - r/animemes
-- one two <br> two loss #! loss reference
-- "<span lang=\"ja\" title=\"Poputepipikku!\">ポプテピピック！</span><span class=\"sr-only\">Pop Team Epic!</span>"
-- "<span lang=\"ja\" title=\"Tsuitta!\">ツイッター！</span><span class=\"sr-only\">Twitter!</span>"
+# - one two <br> two loss #! loss reference
+- >
+    <table style="text-align: center; width: auto; border: 0;" class="default">
+        <tr>
+            <td style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.52);">I</td>
+            <td style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.52);">II</td>
+        </tr>
+        <tr>
+            <td style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.52);">II</td>
+            <td style="width: 40px; height: 40px; border: 1px solid rgba(255,255,255,0.52);">L</td>
+        </tr>
+    </table>
+
+- "<span lang=\"ja\" title=\"Rōmaji: Poputepipikku!\">ポプテピピック！</span><span class=\"sr-only\">Pop Team Epic!</span>"
+- "<span lang=\"ja\" title=\"Rōmaji: Tsuitta!\">ツイッター！</span><span class=\"sr-only\">Twitter!</span>"
 - "<em lang=\"ja\" title=\"I love you soooooooooooo much!\" aria-hidden=\"true\">Daaaaaaaaaaaaaaaaaaaski!</em>\
    <span class=\"sr-only\">I love you <strong><em>so</em></strong> much!</span>"
 # なんかハワイには、歯医者さんひとりもいない。それはね、歯はいい。
@@ -69,9 +81,22 @@
 - "♬ <em>One, two, three! One, two, three! Okay, it’s on! It’s up to you!</em> ♬"
 # - "♫ <em>Let’s go read a buncha books!</em> ♫"
 - "♬ <em>Whoa! You go big guy!</em> ♬"
-- "♬ <span>ええ！すごいですね！</span> ♬"
-- "<span lang=\"es\" title=\"Manga = Sleeve\">Leer manga no se refiere a leer las etiquetas en las mangas de camisas.</span><span class=\"sr-only\">Translation: Reading manga doesn’t mean reading tags on shirt sleeves. Note: Manga in Spanish means sleeve in English.</span>"
+- "♬ <em>Wubba-dubba-dub, is that true?</em> ♬"
+
+# - "♬ <span>ええ！すごいですね！</span> ♬"
+# - "<span lang=\"es\" title=\"Manga = Sleeve\">Leer manga no se refiere a leer las etiquetas en las mangas de camisas.</span><span class=\"sr-only\">Translation: Reading manga doesn’t mean reading tags on shirt sleeves. Note: Manga in Spanish means sleeve in English.</span>"
 - "<strong>Step 1:</strong> Think of what you want to say.<br><strong>Step 2:</strong> Say it."
+- "“No, I’ll pay.” <em>*leaves crappy tip*</em>"
+- "Game over."
+# - "もう、私は何やってんだ！" #! What am I doing?
+# - "<span title=\"What are you doing?\">なにしてるな</span>"
+# - "<span title=\"Oh, no!\">やばい！</span>"
+- "Kek"
+# - "<em>Sometimes I wish memes weren’t common knowledge, normies abuse the word too much.</em>"
+- "A meme is an inside joke. It isn’t a meme if everyone knows."
+
+- "Each time I hear this song" #! YT reference
+- "Shoutouts to Alex." #! NOTE: Shout out to gay boi / weeb alex
 
 # - >
 #     On va à Paris! [???] excité!

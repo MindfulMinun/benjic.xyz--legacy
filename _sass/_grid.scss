@@ -26,6 +26,7 @@ $grid-ml-breakpoint: 60rem   !default;
         .#{$grid-namespace} > .#{$size-prefix}#{$i} {@include grid-cell($i);}
         .#{$grid-namespace} > .#{$size-prefix}-order-#{$i} {order: $i !important;}
     }
+    .#{$grid-namespace} > .#{$size-prefix}, //! s
     .#{$grid-namespace} > .#{$size-prefix}-fill {flex: 1;}
 }
 //! The grid itself

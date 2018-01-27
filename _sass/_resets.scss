@@ -63,8 +63,9 @@ pre, code {
 }
 code {padding: 4px;}
 kbd {
-    background-color: #727272;
+    background-color: #424242;
     color: white;
+    border: 1px solid $bg-4;
     border-radius: 4px;
     padding: 2px 4px;
 }
@@ -119,7 +120,32 @@ dd {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+
+    &:not(.default) {
+        width: 100%;
+        thead th {
+            padding: 0.5rem;
+            font-weight: $medium;
+            border-bottom: 1px solid $color-fade;
+        }
+        tbody {
+            tr {
+                background-color: 0;
+                transition: background 0.2s $standard-curve;
+            }
+            tr:nth-of-type(2n - 1) {
+                background-color: $bg-6;
+            }
+            tr:hover {
+                background-color: $bg-5;
+            }
+        }
+        th, td {
+            padding: 0.5rem;
+        }
+    }
 }
+
 //! Quotes
 blockquote, q {
     quotes: none;

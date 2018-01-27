@@ -1,4 +1,4 @@
-        <meta charset="utf-8">
+<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>{{ page.title | escape }} – Benji</title>
         <meta name="viewport" content="width=device-width">
@@ -10,16 +10,17 @@
                 {{ "Page description isn’t defined." | raise_error }}
             {%- endunless -%}
         {% endcomment %}
-        <meta name="og:title"            content="{{ page.title | escape }}">
+        <meta name="og:title"            content="{{ page.title | escape }} — Benji">
+        <meta name="og:url"              content="{{ page.url | absolute_url | normalize_whitespace }}">
         {%- if page.description -%}
-        <meta name="og:description"      content="{{ page.description | escape | lstrip | rstrip }}">
-        <meta name="description"         content="{{ page.description | escape | lstrip | rstrip }}">
+        <meta name="og:description"      content="{{ page.description | escape | normalize_whitespace }}">
+        <meta name="description"         content="{{ page.description | escape | normalize_whitespace }}">
         {%- endif -%}
         <meta name="og:type"             content="website">
         <!-- Twitter Cards -->
         <meta name="twitter:title"       content="{{ page.title | escape }}">
         {%- if page.description -%}
-        <meta name="twitter:description" content="{{ page.description | escape | lstrip | rstrip }}">
+        <meta name="twitter:description" content="{{ page.description | escape | normalize_whitespace }}">
         {%- endif -%}
         <meta name="twitter:site"        content="{{ site.twitter }}">
         <meta name="twitter:creator"     content="{{ site.twitter }}">
@@ -32,9 +33,13 @@
         <!-- Import styles -->
         <!-- Import Material Icons, Roboto & Roboto Mono -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto:100,100i,200,200i,300,300i,400,400i,500,500i|Roboto+Mono:300,300i,400,400i">
-        <!-- <link rel="stylesheet" href="./styles.css"> -->
 
+        <script async src="https://www.google-analytics.com/analytics_debug.js"></script>
+        <script async src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.4"></script>
         <script type="text/javascript">
+            document.documentElement.classList.remove("no-js");
+            {%- include specials/analytics.html %}
+
             window.xyz = window.xyz || {};
             window.twemoji = window.twemoji || {parse: a => a};
             xyz.ready = function (fn) {

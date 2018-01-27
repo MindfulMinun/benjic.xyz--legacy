@@ -1,6 +1,15 @@
 ---
 ---
 @import "_vars";
+
+.post-metadata {
+    position: relative;
+    #share {
+        position: absolute;
+        bottom: 0; right: 0;
+    }
+}
+
 .post {
     .disqus-thread {
         // max-width: 100%;
@@ -10,36 +19,6 @@
 .post .post-content {
     hr {
         border-top-style: dashed;
-    }
-    figure.highlight {
-        position: relative;
-        padding: 1rem;
-        margin: 1rem 0;
-        max-width: none;
-        border: 1px solid rgba(#727272, 0.52);
-        border-radius: 4px;
-        overflow: hidden;
-        font-size: 14px;
-        pre, code {
-            color: inherit;
-            background: inherit;
-            display: block;
-            font-size: 1em;
-            padding: 0;
-            margin: 0;
-        }
-        code::after {
-            position: absolute;
-            top: 0; right: 0;
-            background-color: rgba(#727272, 0.52);
-            color: white;
-            padding: 0.25rem 1rem;
-            border-bottom-left-radius: 4px;
-            content: attr(data-lang);
-        }
-        ::selection {
-            color: currentColor !important;
-        }
     }
 
     @import "syntax";

@@ -14,7 +14,7 @@ Math.randomInt = (min, max) ->
 #! Random blobs
 xyz.footerBlob =
     blobs: {{ site.data.blobs | jsonify }}
-    newBlob: (index) ->
+    setBlob: (index) ->
         blobRibbon = document.getElementById "footer--random-blob"
         return if !blobRibbon
 
@@ -33,18 +33,32 @@ xyz.footerBlob =
 
         return selectedBlob
 
-xyz.footerBlob.newBlob();
+xyz.footerBlob.setBlob();
 
 
 #! Do nothing on "#!" links
 
-# debugger;
 xyz.ready(->
     for el in document.querySelectorAll('a[href="#!"]')
         el.addEventListener('click', (e) ->
             e.preventDefault()
             return false;
         )
-    for el in document.getElementsByClassName('e')
+    for el in document.getElementsByClassName 'e'
         el.innerHTML = twemoji.parse el.innerHTML;
+    if location.href.match(/\?[\s\S]*(s=(1|permalink))/gi)
+        ga('send', 'event', 'Acquisition', "From share link")
 )
+
+
+onMessage = (event) ->
+    #! Check sender origin to be trusted
+    if event.origin is "{{ site.url }}"
+        if event.data.hasOwnProperty "function"
+            f = event.data.function
+            window[f.name].apply(null, f.arguments || [])
+            # console.log "A postMessage called a function"
+
+
+window.addEventListener("message", onMessage, false) if window.addEventListener
+window.attachEvent("onmessage", onMessage, false)    if window.attachEvent

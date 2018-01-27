@@ -5,13 +5,23 @@
 //! Colors
 $background-color: #1e1e1e;
 $text-color: #fafafa;
+
 $accent:   #673ab7;
 $secondary: #00e676;
 $against-accent: rgba(white, 0.87);
 $against-secondary: rgba(black, 0.87);
+
 $contrast-color: white;
+
 $color-aside: rgba($contrast-color, 0.52);
 $color-fade : rgba($contrast-color, 0.24);
+
+$bg-1: rgba($contrast-color, 0.87);
+$bg-2: rgba($contrast-color, 0.72);
+$bg-3: rgba($contrast-color, 0.52);
+$bg-4: rgba($contrast-color, 0.24);
+$bg-5: rgba($contrast-color, 0.12);
+$bg-6: rgba($contrast-color, 0.04);
 
 //! Fonts
 $mono: "Roboto Mono", Menlo, monospace, monospace;
@@ -23,6 +33,13 @@ $font: "Roboto",
     "Helvetica Neue", Helvetica, Arial, sans-serif,
     //! Emoji fallbacks
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+//! Font weights
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
 
 //! ================================= !//
 //! ========== Breakpoints ========== !//

@@ -3,7 +3,7 @@
 # Build config
 port: 1337
 # host: 0.0.0.0
-# url: "https://benjic.xyz"
+url: "https://benjic.xyz"
 theme-color: "#673ab7"
 twitter: "@MindfulMinun"
 synopsis: >
@@ -15,6 +15,12 @@ synopsis: >
 plugins:
     - jekyll-coffeescript
     # - jekyll-sitemap
+
+# Markdown parsing
+# markdown:    redcarpet
+# highlighter: rouge
+# redcarpet:
+#   extensions: []
 
 # Frontmatter defaults
 defaults:
