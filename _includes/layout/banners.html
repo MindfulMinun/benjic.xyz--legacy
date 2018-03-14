@@ -1,7 +1,7 @@
 <!--[if lte IE 9]>
     <div class="banner error">
         <div class="container">
-            <p class="browserupgrade">
+            <p class="browserupgrade banner--content">
                 <strong>Outdated browser:</strong>
                 What’s an emo’s favorite browser? Edge. Speaking of browsers, please upgrade / replace yours.
                 The Internet won’t stop nagging about it until you do.
@@ -12,19 +12,18 @@
 <noscript>
     <div class="banner error">
         <div class="container">
-            <p>
+            <p class="banner--content">
                 <strong>JavaScript Disabled:</strong>
                 stop being so paranoid and enable js
             </p>
         </div>
     </div>
 </noscript>
-{%- comment %}
-    Content here will be served on all pages and should be used to distribute important information site-wide
 
+{%- comment %}
 <div class="banner error" data-banner-id="example-notice-01">
     <div class="container">
-        <p>
+        <p class="banner--content">
             <span class="sr-only">Banner,</span>
             <strong>Notice:</strong>
             tchat will be discontinued on February 1st
@@ -46,14 +45,18 @@
                 content: "<strong>Example banner:</strong> An example banner. Accepts plain HTML"
     {% endcomment -%}
     {%- for b in page.banners -%}
-    <div class="banner error" data-banner-id="{{ b.id }}">
+    <div class="banner" data-banner-id="{{ b.id }}">
         <div class="container">
-            <p>
+            <p class="banner--content">
                 <span class="sr-only">Banner,</span>
                 {{ b.content }}
             </p>
             <button class="banner--close flat-btn-dark no-js-hide" aria-label="Close banner"
-                    onclick="xyz.banner.close('{{ b.id }}')">
+            {%- if b.consistent -%}
+                onclick="xyz.banner.close('{{ b.id }}', {{ b.consistent }})">
+            {%- else -%}
+                onclick="xyz.banner.close('{{ b.id }}')">
+            {%- endif -%}
                 Close
             </button>
         </div>
@@ -63,11 +66,13 @@
 {%- endif -%}
 <script>
     xyz.banner = {
-        close: function (bannerId) {
-            var d = JSON.parse(localStorage.getItem('xyz::banner')) || {};
-            d[bannerId] = true;
-            b = document.querySelector('.banner[data-banner-id="' + bannerId + '"]');
-            localStorage.setItem('xyz::banner', JSON.stringify(d));
+        close: function (bannerId, isConsistent) {
+            var b = document.querySelector('.banner[data-banner-id="' + bannerId + '"]');
+            if (!isConsistent) {
+                var d = JSON.parse(localStorage.getItem('xyz::banner')) || {};
+                d[bannerId] = true;
+                localStorage.setItem('xyz::banner', JSON.stringify(d));
+            }
             b.classList.add('banner-hidden');
         },
         init: function () {

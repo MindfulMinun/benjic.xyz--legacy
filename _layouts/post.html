@@ -1,20 +1,15 @@
 <!doctype html>
 <html class="no-js" lang="en-US">
     <head>
-        {% include layout/default-head.html %}
-
-        <!-- title=page.title | escape | normalize_whitespace
-        description=page.excerpt | escape | normalize_whitespace
-        url=page.permalink | absolute_url | normalize_whitespace -->
-
+        {%- include layout/default-head.html %}
         <!-- Post data -->
-        <meta name="post:title" content="{{ page.title | escape | normalize_whitespace }}">
+        <meta name="post:title"      content="{{ page.title | escape | normalize_whitespace }}">
         <meta name="post:share-text" content="{{ page.excerpt | strip_html | normalize_whitespace }}">
-        {%- if page.permalink -%}
-        <meta name="post:permalink" content="{{ page.permalink | absolute_url | normalize_whitespace }}">
-        {%- else condition -%}
-        <meta name="post:permalink" content="{{ page.url | absolute_url | normalize_whitespace }}">
-        {%- endif -%}
+        {%- if page.permalink %}
+        <meta name="post:permalink"  content="{{ page.permalink | absolute_url | normalize_whitespace }}">
+        {% else %}
+        <meta name="post:permalink"  content="{{ page.url | absolute_url | normalize_whitespace }}">
+        {% endif -%}
         <!-- End post data -->
 
         <link rel="stylesheet" href="/styles/master.css">
@@ -25,23 +20,23 @@
         {%- include layout/banners.html %}
         <main>
             <div class="container">
-                <aside class="post-metadata">
+                <aside class="post-metadata cf">
                     <h1>{{ page.title }}</h1>
 
 
-                    <p class="txt-aside">
+                    <p class="txt-aside left">
                         Written on <time datetime="{{ page.date | date_to_xmlschema }}" class="i18n">
                             {{ page.date | date: "%a, %b %d, %l:%M %P %Z" }}
                         </time>
-                    {%- if page.last_mod -%}
+                    {%- if page.last_mod %}
                         <br>
                         Last updated on
                         <time datetime="{{ page.last_mod | date_to_xmlschema }}" class="i18n">
                             {{ page.last_mod | date: "%a, %b %d, %l:%M %P %Z" }}
                         </time>
-                    {%- endif -%}
+                    {%- endif %}
                     </p>
-                    <button class="flat-btn icon-btn right no-js-hide" id="share"
+                    <button class="flat-btn icon-btn right no-js-hide print-hide" id="share"
                         aria-label="Share this post">
                         <i class="material-icons">share</i>
                     </button>
@@ -56,8 +51,10 @@
             {%- include specials/disqus.html %}
         </main>
         {%- include layout/footer.html %}
+        {%- comment %}
         <button class="sr-only">Bottom of page.</button>
         {%- include layout/drawer.html %}
+        {% endcomment -%}
     </body>
     <script src="/scripts/post.js"></script>
     {%- include layout/scripts.html %}

@@ -6,9 +6,9 @@
 $background-color: #1e1e1e;
 $text-color: #fafafa;
 
-$accent:   #673ab7;
+$accent:    #673ab7;
 $secondary: #00e676;
-$against-accent: rgba(white, 0.87);
+$against-accent:    rgba(white, 0.87);
 $against-secondary: rgba(black, 0.87);
 
 $contrast-color: white;
@@ -41,9 +41,9 @@ $regular: 400;
 $medium: 500;
 $bold: 700;
 
-//! ================================= !//
-//! ========== Breakpoints ========== !//
-//! ================================= !//
+//! ======================================== !//
+//! ========== Screen Breakpoints ========== !//
+//! ======================================== !//
 $s1: 30rem;   // 480px
 $s2: 37.5rem; // 600px
 $m1: 52.5rem; // 840px

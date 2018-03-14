@@ -1,0 +1,47 @@
+---
+layout: default
+title: Blob Debugger
+categories: ['p']
+description: >
+    Used to debug the random blobs and quotes in the footer.
+
+scripts:
+    - #! External scripts
+        src: "app.js"
+        async: true
+---
+
+<h1>{{ page.title }}</h1>
+
+
+<p>
+    Blob count: {{ site.data.blobs | size | minus: 1 }} elements (zero-based)
+</p>
+<div class="no-js-hide">
+
+    <div class="grid">
+        <div class="s6 m3">
+            <input type="number" title="Index of blob" id="index" min="0" placeholder="Index of blob"
+            max="{{ site.data.blobs | size | minus: 1}}">
+        </div>
+        <div class="s6">
+            <button class="flat-btn" id="new-blob" aria-label="Pull and render a blob.">Pull + render a blob</button>
+        </div>
+    </div>
+
+    <p aria-atomic="true" aria-live="assertive">
+        <span aria-hidden="true">Blob #</span><span class="sr-only">Blob number</span><span id="number">???</span><span aria-hidden=true>:</span>
+        <br>
+        <span id="blob-result" style="padding-left: 2rem; display: inline-block;">
+            <em class="txt-aside">There’s no blob rendered here&hellip;yet.</em>
+        </span>
+    </p>
+</div>
+<hr>
+
+<pre>
+{% assign blobs = site.data.blobs %}
+{%- for blob in blobs -%}
+    {% increment c %} - {{ blob | escape }}<br>
+{%- endfor -%}
+</pre>

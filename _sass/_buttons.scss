@@ -1,7 +1,7 @@
 %button {
     box-sizing: border-box;
     background: 0; border: 0;
-    margin: 8px; padding: 0 16px;
+    margin: 8px; padding: 8px 16px;
     min-width: 36px; min-height: 36px;
     background-color: transparent;
     border-radius: 2px;
@@ -27,6 +27,15 @@
     // }
 }
 
+@media print {
+    %button {
+        background: 0;
+        border: 1px solid #999 !important;
+        &[disabled]::after, &:disabled::after {
+            content: "\00a0[Disabled]"
+        }
+    }
+}
 //! For new buttons, the background color for :hover, :focus, and :active
 //! should always fade to the color of the text. You can see this is .raised-btn and .raised-btn-2
 //!     White text -> fade to white
@@ -56,6 +65,9 @@
         background-color: transparent;
         opacity: 0.52;
         cursor: not-allowed;
+    }
+    @media print {
+        border: 1px solid #999;
     }
 }
 
@@ -111,8 +123,19 @@
         height: 56px;
         width: 56px;
     }
-    // &.small {
-    //     height: 40px;
-    //     width: 40px;
-    // }
+    &.small {
+        height: 24px;
+        width: 24px;
+    }
+}
+@media print {
+    .icon-btn {
+        background: 0;
+        border: 1px solid #999;
+        &[disabled], &:disabled {
+            &::after {
+                content: none
+            }
+        }
+    }
 }

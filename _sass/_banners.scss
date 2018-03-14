@@ -1,0 +1,26 @@
+//! Banners
+.banner {
+    background-color: $accent;
+    color: #fafafa;
+    width: 100%;
+    border-top: 1px solid $color-fade;
+    transition: opacity   $acceleration-curve 0.24s,
+                transform $acceleration-curve 0.52s;
+    .banner--content {
+        float: left;
+    }
+    .banner--close {
+        float: right;
+        display: block;
+        margin: 10px 8px;
+    }
+    &.error {
+        background-color: desaturate(#ff5252, 15%);
+    }
+    &.banner-hidden {
+        position: fixed;
+        transform: translateX(-300px);
+        opacity: 0;
+        pointer-events: none;
+    }
+}

@@ -6,7 +6,8 @@ layout: post
 comments: true
 description: >
     This is a really interesting post on how posts will be laid out. The layout of posts in blogs is very important, as it is the key to keeping the reader’s attention. It’s about layout, not content. Screw content.
-# excerpt: lol u gay
+excerpt: >
+    This is a really interesting post on how posts will be laid out. The layout of posts in blogs is very important, as it is the key to keeping the reader’s attention. It’s about layout, not content. Screw content.
 scripts:
     -
         async: true
@@ -59,7 +60,6 @@ my.simple#selector[attribute^="value"] {
 
 Sample text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-
 ## Heading level 2
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
@@ -80,7 +80,41 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ##### Heading level 5
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+**Lists**
+
+* One, two, three, four
+* Who's that knocking at my door?
+    * Five, six, seven, eight,
+    * Hurry up and don't be late
+* Nine, ten, ‘leven, twelve,
+* Got a secret I can’t tell.
+    * Flap your fins,
+    * Flip your tails
+* School’s out,
+    * Ring the bell!
+
+
+1. One, two, three, four
+2. Who's that knocking at my door?
+    1. Five, six, seven, eight,
+    2. Hurry up and don't be late
+3. Nine, ten, ‘leven, twelve,
+4. Got a secret I can’t tell.
+    1. Flap your fins,
+    2. Flip your tails
+5. School’s out,
+    1. Ring the bell!
+
+
+<dl>
+    <dt>Coffee</dt>
+    <dd>A warm caffeinated drink</dd>
+    <dt>Soda</dt>
+    <dd>A cold caffeinated drink</dd>
+    <dt>Tea</dt>
+    <dd>Water with leaves</dd>
+</dl>
 
 ###### Heading level 6
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

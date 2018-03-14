@@ -3,7 +3,7 @@
         <div class="grid">
             <div class="m6 s12">
                 <h2 class="h4 txt-light" id="footer--about">About</h2>
-                <p>{{ site.synopsis | escape }}</p>
+                <p>{{ site.synopsis | markdownify }}</p>
             </div>
             <div class="m6 s12">
                 <nav>
@@ -11,8 +11,7 @@
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/posts/">Posts</a></li>
-                        <li><a href="https://github.com/mindfulminun">GitHub</a></li>
-                        <li><a href="https://twitter.com/MindfulMinun">Twitter</a></li>
+                        <li><a href="/p/">Projects</a></li>
                     </ul>
                 </nav>
             </div>
@@ -20,7 +19,7 @@
     </div>
     <div class="mini-ribbon">
         <div class="container">
-            <p id="footer--random-blob">
+            <p id="footer--blob">
                 <noscript>
                     “I heard hackers can use ‘java scripts’ to hack into your bank account” &mdash;&nbsp;Paranoid&nbsp;mom
                 </noscript>

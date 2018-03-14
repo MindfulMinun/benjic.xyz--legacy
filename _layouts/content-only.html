@@ -7,10 +7,21 @@
     <body class="fluid-body">
         {%- include layout/banners.html %}
         <main>
+            {%- if page.container-fluid -%}
+            <div class="container-fluid">
+            {%- else -%}
             <div class="container">
+            {%- endif -%}
                 {{ content }}
             </div>
         </main>
     </body>
-    {%- include layout/scripts.html %}
+    {%- if page.scripts -%}
+        {%- for s in page.scripts %}
+        <script
+    {%- if s.src %} src="{{ s.src }}"{%- endif -%}
+    {%- if s.defer %} defer{%- endif -%}
+    {%- if s.async %} async{%- endif -%}>{{ s.content | rstrip }}</script>
+        {%- endfor %}
+    {%- endif %}
 </html>

@@ -1,6 +1,6 @@
 # Jekyll Config
 
-# Build config
+
 port: 1337
 # host: 0.0.0.0
 url: "https://benjic.xyz"
@@ -8,19 +8,45 @@ theme-color: "#673ab7"
 twitter: "@MindfulMinun"
 synopsis: >
     I like coding things for the Internet & playing the piano.
+    I’m also on [Twitter](https://twitter.com/MindfulMinun)
+    and [GitHub](https://github.com/mindfulminun). Come say hi!
 
+timezone: America/Chicago
+permalink: /:year-:month-:day/:categories/:title/
 
+#! My vars
+tracking-id: "UA-113187497-1"
 
-# TODO: Install jekyll-sitemap
 plugins:
     - jekyll-coffeescript
-    # - jekyll-sitemap
+    - jekyll-autoprefixer
+    - jekyll-redirect-from
+    - jekyll-sitemap
+    # - jekyll-minifier
 
+#! Plugin vars
+include:
+    - ".htaccess"
 # Markdown parsing
 # markdown:    redcarpet
 # highlighter: rouge
 # redcarpet:
 #   extensions: []
+
+jekyll-minifier:
+    exclude:
+        - 'robots.txt'
+        - 'sitemap.xml'
+        - '.htaccess'
+
+# Sass settings
+sass:
+    sass_dir: _sass
+    style: compressed
+
+autoprefixer:
+    browsers:
+        - last 2 versions
 
 # Frontmatter defaults
 defaults:
@@ -43,11 +69,3 @@ defaults:
         values:
             layout: "default"
             theme-color: "#673ab7"
-
-permalink: /:year-:month-:day/:categories/:title/
-
-
-# Sass settings
-sass:
-    sass_dir: _sass
-    style: compressed

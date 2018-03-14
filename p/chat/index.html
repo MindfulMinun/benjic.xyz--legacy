@@ -1,0 +1,134 @@
+---
+layout: none
+title: Chat
+container-fluid: true
+categories: ['p']
+theme-color: "#FF4081"
+description: >
+    Uhhh.
+
+styles:
+    -
+        href: "/styles/master.css"
+    -
+        href: "./app.css"
+---
+
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        {%- include layout/default-head.html %}
+    </head>
+    <body>
+
+
+        <div class="root" id="root">
+            <div id="app-bar">
+                <button aria-label="Back" class="flat-btn icon-btn" onclick="xyz.drawer.open()"
+                        data-action="toggle-drawer">
+                    <i class="material-icons">menu</i>
+                </button>
+                <div class="title" id="title">Chat</div>
+                <button aria-label="People" class="flat-btn icon-btn">
+                    <i class="material-icons">people</i>
+                </button>
+            </div>
+            <main class="main" id="main">
+                <div id="chat-group" class="chat-group"></div>
+            </main>
+            <div class="composer-toolbar">
+                <div class="input-bar">
+                    <div class="tools"></div>
+                    <textarea placeholder="Send a message&hellip;" class="autoresize composer" id="composer"></textarea>
+                </div>
+                <button class="raised-btn icon-btn" id="send" aria-label="Send">
+                    <i class="material-icons">send</i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Drawer -->
+        {%- include layout/drawer.html %}
+        <!-- Dialogs -->
+        <div class="dialog-container" id="dialog--log-in-or-sign-up" data-dialog-state="closed" role="dialog">
+            <button class="dialog-scrim" aria-label="This dialog cannot be closed" onclick=""></button>
+            <div class="dialog">
+                <div class="dialog-title">Log in or sign up</div>
+                <div class="dialog-content">
+                    <p>You’ll need to sign up or log in before continuing.</p>
+                    <p class="txt-center">
+                        <button class="flat-btn-light" data-action="sign-in-google" data-provider="Google" style="background-color: #FFF;">
+                            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt=""
+                                style="height: 18px; width: 18px; float: left; margin-right: 8px;">
+                            Google
+                        </button>
+                        <button class="flat-btn-dark" data-action="sign-in-twitter" data-provider="Twitter" style="background-color: #55acee;">
+                            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/twitter.svg" alt=""
+                                style="height: 18px; width: 18px; float: left; margin-right: 8px;">
+                            Twitter
+                        </button>
+                        <!-- <button class="flat-btn-dark"></button> -->
+                    </p>
+                    <p>Or you can use your email and password:</p>
+                    <div class="grid">
+                        <div class="s6">
+                            <input type="email" placeholder="Email" class="light block">
+                        </div>
+                        <div class="s6">
+                            <input type="password" placeholder="Password" class="light block">
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-actions">
+                    <button class="flat-btn-light" data-action="sign-in-email">Log in</button>
+                    <button class="flat-btn-light" data-action="sign-up-email">Sign up</button>
+                </div>
+            </div>
+        </div>
+        <!-- Settings dialog -->
+        <div class="dialog-container" id="dialog--settings" data-dialog-state="closed" role="dialog">
+            <button class="dialog-scrim" aria-label="Close dialog" onclick="xyz.dialog.close('#dialog--settings')"></button>
+            <div class="dialog">
+                <div class="dialog-title">Settings</div>
+                <div class="dialog-content">
+                    <section>
+                        <h2 class="h5">Manage account</h2>
+                        <p>Link (or unlink) sign-in providers to allow for simple one-click sign in.</p>
+                        <select class="light" id="sign-in-provider-selector">
+                            <option value="" selected disabled>(Select a sign-in provider)</option>
+                            <option value="Google">Google</option>
+                            <option value="Twitter">Twitter</option>
+                        </select>
+                        <button class="flat-btn-light" data-action="link-sign-in-provider">Link sign-in provider</button>
+                        <button class="flat-btn-light" data-action="unlink-sign-in-provider">Unlink sign-in provider</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- New Conversation dialog -->
+        <div class="dialog-container" id="dialog--new-conversation" data-dialog-state="closed" role="dialog">
+            <button class="dialog-scrim" aria-label="Close dialog" onclick="xyz.dialog.close('#dialog--new-conversation')"></button>
+            <div class="dialog">
+                <div class="dialog-title">New Conversation</div>
+                <div class="dialog-content">
+                    <!-- Start a new conversation with someone by entering their unique user ID. -->
+                    <p>Start a new conversation by giving it a name. You’ll be able to change this later on.</p>
+                    <div class="grid">
+                        <div class="s12">
+                            <input type="text" class="light" placeholder="Conversation name" id="new-conversation-name">
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-actions">
+                    <button class="flat-btn-light" data-action="create-new-conversation">Start conversation</button>
+                </div>
+            </div>
+        </div>
+        <!-- Toasts -->
+        <div id="toast-container"></div>
+        <!-- Scripts -->
+        <script src="/scripts/master.js" charset="utf-8"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js" charset="utf-8"></script>
+        <script src="./app.js" charset="utf-8"></script>
+    </body>
+</html>

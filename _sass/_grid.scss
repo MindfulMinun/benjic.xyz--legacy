@@ -34,7 +34,7 @@ $grid-ml-breakpoint: 60rem   !default;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: baseline;
     &.top     {align-items: flex-start;}
     &.middle  {align-items: center;}
     &.bottom  {align-items: flex-end;}
@@ -44,7 +44,6 @@ $grid-ml-breakpoint: 60rem   !default;
     > [class^="m"],
     > [class^="l"] {
         box-sizing: border-box;
-        margin:  0.5rem 0;
         padding: 0 0.5rem;
     }
 }

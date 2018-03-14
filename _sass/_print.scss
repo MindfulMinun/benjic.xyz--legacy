@@ -2,6 +2,10 @@
 //! ========== Print styles ========== !//
 //! ================================== !//
 @media print {
+    //! ============================= !//
+    //! ========== General ========== !//
+    //! ============================= !//
+
     *, *:before, *:after {
         background: transparent !important;
         color: #000 !important;
@@ -23,18 +27,59 @@
     acronym[title]:after {
         content: " (" attr(title) ")";
     }
-    section, pre, blockquote, figure, img {
+    section, pre, blockquote, figure, img, tr, footer {
         page-break-inside: avoid;
     }
-
     pre, code, kbd, samp {
         border: 1px solid #999;
+        code {
+            border: 0;
+        }
+        &::after {
+            border: 1px solid #999;
+        }
     }
+    hr {border-color: #999;}
     code, kbd {
         padding: 2px 4px;
         border-radius: 4px;
     }
     blockquote {
         border-left: 4px solid #999;
+    }
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    .print-only {display: block;}
+    .print-hide {display: none;}
+
+    //! Tables
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        thead {
+            display: table-header-group;
+            tr {
+                border-bottom: 4px solid #999;
+            }
+        }
+        tbody tr {
+            border-bottom: 1px solid #999;
+        }
+
+    }
+
+    //! Body
+    body.fluid-body {
+        .banner {display: none;}
+        footer {
+            display: none;
+            border: 4px solid #999;
+            .mini-ribbon {
+                border-top: 1px solid #999;
+            }
+        }
     }
 }

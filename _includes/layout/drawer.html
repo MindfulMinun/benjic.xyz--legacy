@@ -3,15 +3,12 @@
 
 <aside aria-hidden="true" class="side-nav" id="layout--drawer" data-drawer-state="closed">
     <button class="nav-scrim" aria-label="Close drawer" onclick="xyz.drawer.close()"></button>
-    <div class="nav-box">
 
+    <!-- <div class="nav-box">
         <div class="account-box">
-
             <a href="#!" class="user-image">
                 <img src="{% link /assets/pfp-1-1.jpg %}" alt="User image">
-            </a>
-
-
+            </a>]
             <div class="user-info">
                 <a href="#!">
                     <span class="sr-only">Currently logged in as: </span>
@@ -24,9 +21,62 @@
                     <i class="material-icons">arrow_drop_down</i>
                 </a>
             </div>
-
+            <div class="user-info">
+                <a href="#!">
+                    <span class="username">Not logged in.</span>
+                    <span class="email">Click the triangle to sign in.</span>
+                </a>
+                <a href="#!" class="switch-accounts"
+                    aria-label="Switch Accounts">
+                    <i class="material-icons">arrow_drop_down</i>
+                </a>
+            </div>
         </div>
+        <ul class="">
+            <li>Hello!</li>
+        </ul>
 
-    </div>
+    </div> -->
+
+
+    <ul class="nav-box">
+        <li class="account-box">
+            <a href="#!" class="user-image"></a>
+            <div class="user-info">
+                <a href="#!">
+                    <span class="username">Not logged in.</span>
+                    <span class="email">Some actions are unavailable.</span>
+                </a>
+                <a href="#!" class="switch-accounts"
+                    aria-label="Switch Accounts">
+                    <i class="material-icons">arrow_drop_down</i>
+                </a>
+            </div>
+        </li>
+        <li><a href="#" onclick="xyz.drawer.close(), xyz.dialog.open('#dialog--new-conversation')"
+            aria-label="New Conversation">
+            New Conversation <i class="material-icons">add</i>
+        </a></li>
+        <li class="divider"></li>
+        <li class="subheader"><a href="#">My Conversations</a></li>
+<div id="nav--my-conversations">
+        <!-- <li><a href="#">
+            Some user: <span class="msg-preview trunc">My conversation that should truncate</span>
+        </a></li>
+        <li class="unread"><a href="#">
+            Some other user: <span class="msg-preview trunc">My unread message</span>
+        </a></li> -->
+</div>
+        <li class="divider"></li>
+        <li><a href="#" aria-label="Settings" onclick="xyz.drawer.close(), xyz.dialog.open('#dialog--settings')">
+            Settings <i class="material-icons">settings</i>
+        </a></li>
+        <li><a href="#" aria-label="Log out" data-action="log-out">
+            Sign out <i class="material-icons">exit_to_app</i>
+        </a></li>
+        <li><a href="#" aria-label="Send Feedback">
+            Send Feedback <i class="material-icons">feedback</i>
+        </a></li>
+    </ul>
 </aside>
 <!-- End drawer -->

@@ -39,17 +39,21 @@ html.no-js .no-js-hide {
 }
 
 //! Pretty helpful
-.no-pointer, [readonly] {
+// [readonly],
+.no-pointer {
     cursor: not-allowed;
     // pointer-events: none !important;
 }
 .clearfix, .cf {
+    //! Prevents `this` from collapsing with floating children
     &:after {
         content: "";
         display: table;
         clear: both;
     }
 }
+.print-only {display: none;} //! Other half is in _print.scss
+//! There's also .print-hide, hides on print
 .visuallyhidden, .sr-only {
     position: absolute;
     border: 0;
@@ -66,13 +70,19 @@ html.no-js .no-js-hide {
 //! Display
 .block {display: block !important;}
 .inline {display: inline !important;}
-.inline-block {display: inline-block !important;}
+.inline-block, .i-block {display: inline-block !important;}
 .hide, .hidden {display: none !important;}
 .invisible {visibility: hidden !important;}
+.flex {
+    display: flex;
+    align-items: baseline;
+    > .flex-stretch {flex: 1;}
+}
 
 //! Floats
 .left {float: left !important;}
 .right {float: right !important;}
+.clear {clear: both !important;}
 
 //! Text stuff
 .txt-left {text-align: left !important;}
@@ -80,6 +90,11 @@ html.no-js .no-js-hide {
 .txt-center {text-align: center !important;}
 .txt-justify {text-align: justify !important;}
 
+.txt-truncate, .trunc {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .txt-thin {font-weight: $thin !important;}
 .txt-light {font-weight: $light !important;}
@@ -107,6 +122,11 @@ html.no-js .no-js-hide {
     text-decoration: underline;
     text-decoration-skip: ink;
     text-decoration-skip-ink: auto;
+}
+
+.txt-read {
+    //! Use this class to increase the text size, particularly in text-heavy pages
+    font-size: 1.25em;
 }
 
 .txt-alike {

@@ -1,4 +1,8 @@
-            //! Google Analytics
+            // Google Analytics
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            {%- if jekyll.environment == "production" -%}
+            ga('create','{{ site.tracking-id }}','auto');
+            {%- else -%}
             ga('create','UA-XXXXX-Y','auto');
+            {%- endif -%}
             ga('send','pageview',location.pathname);

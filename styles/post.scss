@@ -4,19 +4,46 @@
 
 .post-metadata {
     position: relative;
-    #share {
-        position: absolute;
-        bottom: 0; right: 0;
-    }
+    // #share {
+    //     position: absolute;
+    //     bottom: 0; right: 0;
+    // }
 }
 
-.post {
-    .disqus-thread {
-        // max-width: 100%;
+
+@media print {
+    .post {
+        .disqus-thread {
+            #disqus_thread {display: none;}
+            &::after {
+                content: "Thanks for reading. This post contains a comment thread not shown in print.";
+                font-style: italic;
+                padding: 1rem 0;
+            }
+        }
     }
 }
 
 .post .post-content {
+    a.header-link {
+        color: inherit;
+        text-decoration: none;
+        h1, h2, h3, h4, h5, h6 {
+            position: relative;
+            color: inherit;
+            &::after {
+                content: '\00a0link';
+                font-family: "Material Icons";
+                font-size: 0.72em;
+                color: white;
+                opacity: 0;
+                transition: opacity 0.15s $sharp-curve;
+            }
+            &:hover::after {
+                opacity: 0.5;
+            }
+        }
+    }
     hr {
         border-top-style: dashed;
     }

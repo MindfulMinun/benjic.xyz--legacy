@@ -10,14 +10,6 @@ scripts:
         content: >
             alert('hi')
 {% endcomment -%}
-<script src="/scripts/master.js"></script>
-    <script>
-        //! Install SW
-        if (navigator.serviceWorker) {
-            navigator.serviceWorker.register('/sw.js')
-        }
-    </script>
-
 {%- if page.scripts -%}
     {%- for s in page.scripts %}
     <script
@@ -26,3 +18,10 @@ scripts:
 {%- if s.async %} async{%- endif -%}>{{ s.content | rstrip }}</script>
     {%- endfor %}
 {%- endif %}
+    <script src="/scripts/master.js"></script>
+    <script>
+        //! Install SW
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>

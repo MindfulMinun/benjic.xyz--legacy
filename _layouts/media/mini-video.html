@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+        <title>{{ page.title }} – Video</title>
+        <script>document.documentElement.classList.remove('no-js');</script>
+        {%- capture scss -%}
+        $tv: "tiny-video-player";
+        $ds: "data-playback-state";
+        $play-icon: url("/assets/svg/play_circle_filled--white.svg");
+        $pause-icon: url("/assets/svg/pause_circle_filled--white.svg");
+        $loading-icon: url("/assets/svg/cloud_circle--white.svg");
+        $no-js-video-message: "JavaScript must be enabled to play this video.";
+        $no-js-audio-message: "JavaScript must be enabled to play this audio.";
+        $cover: rgba(0,0,0,0.52);
+
+        html, body {
+            margin: 0;
+            background: black;
+            font-family: sans-serif;
+            line-height: 1;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        .#{$tv} {
+            position: fixed;
+            top: 0; bottom: 0; left: 0; right: 0;
+            display: block;
+            width: 100%;
+            margin: 0;
+            background-color: #000;
+            color: #fafafa;
+
+            * {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0; bottom: 0; left: 0; right: 0;
+                color: #fafafa;
+            }
+            video {
+                position: fixed;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            button.mini-video-player__a11y-btn {
+                opacity: 0;
+            }
+
+            &::after {
+                background-color: $cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 52px 52px;
+                content: ' ';
+                position: fixed;
+                cursor: pointer;
+                top: 0; bottom: 0; left: 0; right: 0;
+                opacity: 0;
+                transition: opacity .2s cubic-bezier(.4,0,.2,1);
+            }
+
+            &[#{$ds}="ready"],
+            &[#{$ds}="paused"],
+            &[#{$ds}="stopped"] {
+                &::after {
+                    background-image: $play-icon;
+                    opacity: 1;
+                }
+            }
+            &[#{$ds}="loading"]::after {
+                background-image: $loading-icon;
+                opacity: 1;
+            }
+            &[#{$ds}="playing"]::after {
+                background-image: $pause-icon;
+                opacity: 0;
+            }
+            // &[#{$ds}="playing"]:hover::after {
+            //     opacity: 1;
+            // }
+
+            .no-js & {
+                cursor: not-allowed;
+                * {
+                    cursor: not-allowed !important;
+                }
+                button.mini-video-player__a11y-btn {
+                    display: none !important;
+                }
+
+                video {
+                    display: none;
+                    pointer-events: none;
+                }
+                &::after {
+                    position: absolute;
+                    content: $no-js-video-message;
+                    color: #fafafa;
+                    cursor: not-allowed;
+                    width: 100%;
+
+                    top: 50%; left: auto; right: auto; bottom: auto;
+                    transform: translateY(-50%);
+
+                    text-align: center;
+                    padding: 1rem;
+                    background: 0;
+                    z-index: 2;
+                    opacity: 1;
+                }
+            }
+        }
+        {%- endcapture -%}
+        <style>{{ scss | scssify }}</style>
+    </head>
+    <body>
+        <div class="tiny-video-player">
+            <button class="mini-video-player__a11y-btn" aria-live="polite">Loading video&hellip;</button>
+            <video style="{{ page.styles }}">
+                {%- for source in page.sources -%}
+                    <source src="{{ source.src }}" type="{{ source.type }}">
+                {%- endfor -%}
+            </video>
+        </div>
+    </body>
+    <script src="/scripts/mini-video.js" charset="utf-8"></script>
+</html>

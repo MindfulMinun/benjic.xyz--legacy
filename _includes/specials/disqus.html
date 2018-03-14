@@ -13,9 +13,13 @@
         this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         */
-        (function() { // DON'T EDIT BELOW THIS LINE
+        (function() { // DON'T EDIT BELOW THIS LINE // lol i did you can't tell me what to do
         var d = document, s = d.createElement('script');
+        {% if jekyll.environment == "production" %}
+        s.src = 'https://benji-xyz.disqus.com/embed.js';
+        {%- else -%}
         s.src = 'https://testing-benji-xyz.disqus.com/embed.js';
+        {% endif %}
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
         })();
