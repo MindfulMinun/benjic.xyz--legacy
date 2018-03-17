@@ -22,7 +22,7 @@ plugins:
     - jekyll-autoprefixer
     - jekyll-redirect-from
     - jekyll-sitemap
-    # - jekyll-minifier
+    - jekyll-minifier
 
 #! Plugin vars
 include:

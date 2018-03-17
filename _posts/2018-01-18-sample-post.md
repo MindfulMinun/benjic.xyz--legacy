@@ -1,13 +1,13 @@
 ---
-title: My post lol
+title: Sample post
 date: 2018-01-19 00:16:33 CST
 last_mod: 2018-01-20 16:27:51 CST
 layout: post
 comments: true
 description: >
-    This is a really interesting post on how posts will be laid out. The layout of posts in blogs is very important, as it is the key to keeping the reader’s attention. It’s about layout, not content. Screw content.
+    This is a really interesting post on how posts will be laid out. The layout of posts in blogs is very important, as it is the key to keeping the reader’s attention. It’s about presentation, not content.
 excerpt: >
-    This is a really interesting post on how posts will be laid out. The layout of posts in blogs is very important, as it is the key to keeping the reader’s attention. It’s about layout, not content. Screw content.
+    This is a really interesting post on how posts will be laid out. The layout of posts in blogs is very important, as it is the key to keeping the reader’s attention. It’s about presentation, not content.
 scripts:
     -
         async: true

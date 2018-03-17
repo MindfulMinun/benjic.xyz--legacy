@@ -69,24 +69,24 @@ Chat.appendMessage = (message, user) ->
     if not message or not message.type or not message.timestamp or not message.sender or not message.content
         return new Error "This isn’t a valid message."
 
+
+    #! TODO: COMBAK: Code DRY, Don't repeat yourself
+    msgContainer = null
     if message.type is "text/info"
         msgContainer = xyz.parseHTML """
             <div class="message-container" data-message-id="#{message.key}"
                 title="Sent on #{new Date(message.timestamp).toLocaleString()}">
                 <div class="message info">
-                    <p>#{ xyz.escapeHTML message.content }</p>
+                    <p>#{ twemoji.parse xyz.escapeHTML message.content }</p>
                 </div>
             </div>
         """
-        chatGroup.appendChild msgContainer
-        return message
-
-    if message.sender is Chat.user.uid
+    else if message.sender is Chat.user.uid
         msgContainer = xyz.parseHTML """
             <div class="message-container" data-message-id="#{message.key}"
                 title="Sent on #{new Date(message.timestamp).toLocaleString()}">
                 <div class="message right">
-                    <p>#{ xyz.escapeHTML message.content }</p>
+                    <p>#{ twemoji.parse xyz.escapeHTML message.content }</p>
                 </div>
                 <small class="right timestamp">&hellip;</small>
             </div>
@@ -100,15 +100,12 @@ Chat.appendMessage = (message, user) ->
                 xyz.time.format new Date(message.timestamp)
             }
             """
-        #! Append the message
-        chatGroup.appendChild msgContainer
-        return message
-    if message.sender isnt Chat.user.uid
+    else if message.sender isnt Chat.user.uid
         msgContainer = xyz.parseHTML """
             <div class="message-container" data-message-id="#{message.key}"
                 title="Sent on #{new Date(message.timestamp).toLocaleString()}">
                 <div class="message left">
-                    <p>#{ xyz.escapeHTML message.content }</p>
+                    <p>#{ twemoji.parse xyz.escapeHTML message.content }</p>
                 </div>
                 <small class="left timestamp">&hellip;</small>
             </div>
@@ -122,9 +119,10 @@ Chat.appendMessage = (message, user) ->
                 xyz.time.format new Date(message.timestamp)
             }
             """
-        #! Append the message
-        chatGroup.appendChild msgContainer
-        return message
+    #! Append the message
+    chatGroup.appendChild msgContainer
+    #! Scroll
+    main.scrollTop += msgContainer.scrollHeight
 
 #! </ chat.appendMessage >
 
@@ -154,9 +152,12 @@ Chat.switchChatrooms = (chatId) ->
     db.ref("chats/#{Chat.chatroom}/messages").off "child_added"
     db.ref("chats/#{Chat.chatroom}/messages").off "value"
 
-    #!
+    #! Do the switch
     console.log "Hey, listen! Switched to chatroom #{chatId}"
     Chat.chatroom = chatId
+
+    #! Close the drawer if open
+    xyz.drawer.close()
 
     #! Clear the chat group
     chatGroup.innerHTML = ""
@@ -168,6 +169,7 @@ Chat.switchChatrooms = (chatId) ->
         val = snapshot.val()
         val.key = snapshot.key
         Chat.appendMessage val
+
 
     #! Update the title when it changes (it probably won't)
     db.ref "chats/#{chatId}/groupName"
@@ -205,9 +207,9 @@ Chat.switchChatrooms = (chatId) ->
 #! Firebase Database
 db = firebase.database()
 
-### ==================================== ###
-### ========== Authentication ========== ###
-### ==================================== ###
+#! ==================================== !#
+#! ========== Authentication ========== !#
+#! ==================================== !#
 (->
     #! Sign in section
     btns = [

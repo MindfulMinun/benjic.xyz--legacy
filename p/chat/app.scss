@@ -109,7 +109,7 @@ html, body {
     position: absolute;
     background-color: #212121;
     @include shadow(4);
-    // z-index: 4;
+    z-index: 4;
     top: 0; left: 0; right: 0;
     display: flex;
     align-items: center;

@@ -26,10 +26,7 @@ Hi, I’m Benji. I’m a high school student at [Legacy ECHS][lechs] in Taylor a
     <figcaption id="pfp-caption">This is what I look like.</figcaption>
 </figure>
 
-In my free time, I like to code and play the piano. I code in HTML, SCSS, and CoffeeScript.
-
-In my free time, I like to code and play the piano.
-I speak both English and Spanish fluently.
+In my free time, I like to code and play the piano. I code in HTML, SCSS, and CoffeeScript. I speak both English and Spanish fluently.
 
 <figure id="piano" class="large">
     <div class="media-box">
