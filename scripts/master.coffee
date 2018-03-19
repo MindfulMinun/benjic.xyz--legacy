@@ -92,10 +92,13 @@ xyz.toast = (data) ->
     if !data.content then throw new Error "An object with content is required to display a toast"
     if !data.actionText && data.actionHandler then throw new Error "Provide a action text for the handler"
 
+    toastContainer = document.getElementById "toast-container"
+    if !toastContainer then throw new Error "There’s not a #toast-container on this page, you either forgot to add it or this page wasn’t built for toasts. Use banners instead."
+
     data.timeout = data.timeout or 4000
     data.actionHandler = data.actionHandler || `function(){}`
 
-    toastContainer = document.getElementById "toast-container"
+
     thisToast = xyz.parseHTML """
         <div class="toast">
             <span class="toast-content">#{data.content}</span>

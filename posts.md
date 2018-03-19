@@ -11,8 +11,12 @@ comments: true
 <ul>
 {%- for post in site.posts -%}
     <li>
-        <a href="{{ post.url }}">{{ post.title }}</a><br>
-        <p>{{ post.description | strip_html }}</p>
+        {%- if post.draft -%}
+        <a href="{{ post.url | absolute_url }}">{{ post.title }}&nbsp;[draft]</a><br>
+        {%- else -%}
+        <a href="{{ post.url | absolute_url }}">{{ post.title }}</a><br>
+        {%- endif -%}
+        <p>{{ post.excerpt | strip_html }}</p>
     </li>
 {%- endfor -%}
 </ul>

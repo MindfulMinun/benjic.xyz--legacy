@@ -47,6 +47,7 @@ html, body {
 
     margin-left: auto;
     margin-right: auto;
+    overflow-x: hidden;
     // margin-top: 1rem;
 }
 @media #{$s2-up} {
@@ -179,7 +180,8 @@ figure {
         content: attr(data-tooltip);
         text-align: center;
         font-size: 14px;
-        font-weight: $regular;
+        font-weight: $light;
+        font-style: normal;
         white-space: pre-line;
         opacity: 0;
         left: 0; right: 0;
@@ -188,8 +190,8 @@ figure {
         transform: translateY(100%) translateX(-50%);
         color: #fff;
         width: max-content;
-        margin-left: 50%;
         max-width: 20rem;
+        margin-left: 50%;
         padding: 4px 8px;
         border-radius: 2px;
         transition: 0.15s opacity $acceleration-curve,
