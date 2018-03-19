@@ -7,14 +7,16 @@
         {%- endif -%}
         <meta name="viewport" content="width=device-width">
         <meta name="theme-color" content="{{ page.theme-color }}">
-
+        <link rel="shortcut icon" href="/assets/favicon/144.png">
+        <!-- Manifest -->
+        <link rel="manifest" href="/manifest.json">
         <!-- OpenGraph & Twitter -->
         {%- comment %}
             {%- unless page.description -%}
                 {{ "Page description isn’t defined." | raise_error }}
             {%- endunless -%}
         {% endcomment %}
-        <meta name="og:title"            content="{{ page.title | escape }} — Benji">
+        <meta name="og:title"            content="{{ page.title | escape }} • Benji">
         <meta name="og:url"              content="{{ page.url | absolute_url | normalize_whitespace }}">
         {%- if page.description %}
         <meta name="og:description"      content="{{ page.description | escape | normalize_whitespace }}">
@@ -64,12 +66,12 @@
         <script async src="https://www.google-analytics.com/analytics_debug.js"></script>
         {% endif -%}
 
-        <script async src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.4"></script>
+        <script async src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.5"></script>
         <script type="text/javascript">
             document.documentElement.classList.remove("no-js");
             {%- include specials/analytics.html %}
             window.xyz = window.xyz || {};
-            window.twemoji = window.twemoji || {parse: function (a) {return a;}}
+            window.twemoji = window.twemoji || {parse: function (a) {return a;}};
             xyz.ready = function (fn) {
                 if (
                     document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"
@@ -80,8 +82,11 @@
                 }
             }
             xyz.warn = function () {
-                var _ = [].slice.call(arguments);
-                console.warn('%cHey, listen!', 'font-size: 18px;', _);
-                // console.warn.apply(null, arguments);
+                // var _ = [].slice.call(arguments);
+                // console.warn('%cHey, listen! This function is deprecated! Use console.warn instead', 'font-size: 18px;', _);
+                console.warn('%cHey, listen! This function is deprecated! Use console.warn instead', 'font-size: 18px;', [].slice.call(arguments));
             }
+            xyz.ready(function(){
+                twemoji.size = "svg"; twemoji.ext = ".svg";
+            });
         </script>
