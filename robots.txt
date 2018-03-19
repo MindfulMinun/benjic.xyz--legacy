@@ -1,7 +1,11 @@
 ---
 ---
 User-agent: *
+#! 404s
 Disallow: {{ site.url }}/404
 Disallow: {{ site.url }}/404/
 Disallow: {{ site.url }}/404.html
-Sitemap: {{ site.url }}/sitemap.xml
+#! Anything in /oops/
+Disallow: {{ site.url }}/oops
+Disallow: {{ site.url }}/oops/
+Sitemap:  {{ site.url }}/sitemap.xml

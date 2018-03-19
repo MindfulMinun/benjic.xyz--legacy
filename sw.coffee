@@ -1,25 +1,31 @@
 ---
 ---
 'use strict'
+offline_url = "/oops/offline.html"
 assets = [
     # "https://www.google-analytics.com/analytics.js"
     "/styles/master.css"
+    "/scripts/mini-video.js"
+    offline_url
     # "/styles/grid.css"
-    "https://twemoji.maxcdn.com/2/twemoji.min.js?2.4"
+    "https://twemoji.maxcdn.com/2/twemoji.min.js?2.5"
 ]
 # Cache name: v?.?.?-environment::yyyy-mm-dd--hh-mm-ss
-CACHE_NAME = 'v0.0.0-production::2018-02-28--19:29:16'
+# Current_Cache = 'v0.0.0-production::2018-03-17--23:49:26'
+Current_Cache = 'v0.0.0-development::2018-03-18--16:29:19'
 expectedCaches = [
-    CACHE_NAME
+    Current_Cache
 ]
 
 precache = (assetsToCache) ->
-    caches.open(CACHE_NAME).then( (cache) ->
-        cache.addAll(assets)
-        .then(->
-            l "Added assets to cache “#{CACHE_NAME}”"
-        )
-    )
+    ###
+     * Purpose: To add assets to the cache so they can be retrieved later
+     * Accepts: 1 argument, a list of URLs to add to the cache
+     * Returns: A promise
+    ###
+    caches.open Current_Cache
+    .then (cache) ->
+        cache.addAll assetsToCache
 
 retrieveFromCache = (request) ->
     caches.match request
@@ -36,7 +42,7 @@ deleteCachesNotIn = (arr) ->
     .then (keylist) ->
         Promise.all (
             keylist.map (key) ->
-                if arr.indexOf key is -1
+                if arr.indexOf(key) is -1
                     caches.delete key
                     l "Deleted cache:", key
         )
@@ -56,6 +62,8 @@ self.addEventListener 'install', (event) ->
     l 'Installed successfully'
     event.waitUntil(
         precache assets
+        .then ->
+            l "Added assets to cache “#{Current_Cache}”"
     )
 
 self.addEventListener 'activate', (event) ->
@@ -70,9 +78,17 @@ self.addEventListener 'fetch', (event) ->
         event.respondWith(
             caches.match event.request
             .then (response) ->
-                if response
-                    event.waitUntil caches.open(CACHE_NAME).add(event.request)
+                if response #! If there's something in the cache, use that and update the cache.
+                    event.waitUntil(
+                        caches.open Current_Cache
+                        .then (cache) ->
+                            cache.add event.request
+                    )
                     return response
+                else if (event.request.mode is "navigate") or event.request.headers.get("accept").includes("text/html")
+                    #! If it’s not in the cache and we're requesting an HTML file, try that with the offline fallback
+                    fetch(event.request).catch -> caches.match offline_url
                 else
-                    return fetch event.request
+                    #! If all else fails, just hit the network and hope for the best.
+                    fetch event.request
         )
