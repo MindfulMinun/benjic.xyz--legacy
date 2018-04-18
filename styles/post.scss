@@ -4,14 +4,28 @@
 
 .post-metadata {
     position: relative;
-    // #share {
-    //     position: absolute;
-    //     bottom: 0; right: 0;
-    // }
+    background: $accent;
+    padding-top: 30vh;
+    margin-top: -1rem;
+    #share {
+        margin: 1rem 0;
+    }
+    &.ribbon-image {
+        background-position: center;
+        background-size: cover;
+        > .ribbon-gradient-container {
+            background: linear-gradient(transparent, rgba(black, 0.46));
+            .txt-aside {color: rgba(white, 0.72);}
+        }
+    }
 }
 
 
 @media print {
+    .post-metadata {
+        padding-top: 0;
+        margin-top: 0;
+    }
     .post {
         .disqus-thread {
             #disqus_thread {display: none;}

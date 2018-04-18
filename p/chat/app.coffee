@@ -97,7 +97,7 @@ Chat.appendMessage = (message, user) ->
             msgContainer.querySelector "small.timestamp"
             .innerHTML = """
             #{userSnapshot.val().displayName} • #{
-                xyz.time.format new Date(message.timestamp)
+                xyz.time.formatDateTime new Date(message.timestamp)
             }
             """
     else if message.sender isnt Chat.user.uid
@@ -116,7 +116,7 @@ Chat.appendMessage = (message, user) ->
             msgContainer.querySelector "small.timestamp"
             .innerHTML = """
             #{userSnapshot.val().displayName} • #{
-                xyz.time.format new Date(message.timestamp)
+                xyz.time.formatDateTime new Date(message.timestamp)
             }
             """
     #! Append the message

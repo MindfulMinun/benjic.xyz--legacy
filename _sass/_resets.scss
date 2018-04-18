@@ -55,19 +55,25 @@ acronym[title]  {
 //! Code and stuff
 pre, code, kbd, samp {
     font-family: $mono;
-    font-size: 14px;
+    font-size: 87.5%;
+    line-height: 1.5;
 }
 pre, code {
     background-color: black;
-    color: #0f0;
-}
-code {padding: 4px;}
-kbd {
-    background-color: #424242;
-    color: white;
-    border: 1px solid $bg-4;
+    color: $secondary;
+    color: var(--secondary, $secondary);
     border-radius: 4px;
-    padding: 2px 4px;
+}
+code {
+    padding: 4px 6px;
+    border: 1px solid rgba($secondary, 0.52);
+}
+kbd {
+    background-color: #fefefe;
+    color: black;
+    border-radius: 4px;
+    padding: 4px 6px;
+    kbd {padding: 0; font-size: 100%;}
 }
 pre {
     padding: 1rem;
@@ -75,6 +81,7 @@ pre {
     white-space: pre;
     display: block;
     overflow-y: auto;
+    code {border: 0;}
 }
 samp {
     background-color: #000;
@@ -86,7 +93,7 @@ samp {
     overflow-y: auto;
 }
 mark {
-    background-color: #ff0;
+    background-color: rgba(#ff0, 0.52);
     color: #000;
 }
 

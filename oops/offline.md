@@ -4,7 +4,7 @@ layout: content-only
 permalink: /oops/offline.html
 ---
 {% capture scss %}
-//! <!-- Make this as tiny as possible (added html comment bc syntax is annoying)
+//<!-- Make this as tiny as possible (added html comment bc syntax is annoying)
 @import "_vars";
 main .container {
     position: relative;
@@ -17,9 +17,12 @@ main .container {
 
 # Offline
 
-The internet’s broken.
+One of three things happened.
 
-<button class="flat-btn-dark">uhh hi</button>
+1. You’re offline.
+2. I forgot to start `jekyll serve`.
+3. My web server diedededed.
 
+_Protip: Press_ <kbd><kbd>&#8984; Command</kbd> + <kbd>R</kbd></kbd> _to refresh._
 
 <!-- > _“If you search for it, you’ll find everything.” &mdash;&nbsp;Short&nbsp;Thoughts, Nichijou_ -->

@@ -41,7 +41,8 @@
 ### ======================================== ###
 - screen shot of quetion
 - Engineering Students
-- Well, by definition, a meme is an inside joke. Therefore, if anyone and anybody can find humor in it, it’s not a meme.
+- If everyone gets the joke, is it <em>really</em> an inside joke?
+- Mr. Markowski
 
 
 ### ======================================== ###
@@ -61,26 +62,26 @@
 ### ======================================== ###
 ### ================ Spanish =============== ###
 ### ======================================== ###
-- <span lang="es-MX" title="Your principal is your pal. Not principle.">La principala.</span>
-- <em title="Beyond!">¡Más allá!</em>
-- <span lang="es-MX" title="Nooo, my sandwich!">¡Nooo, mi torta!</span>
-- <span lang="es-MX" title="Reeding is important.">“Hay que ler.”</span>
+- <span lang="es-MX" class="tooltip" data-tooltip="Your principal is your pal. Not principle.">La principala.</span>
+- <em class="tooltip" data-tooltip="Beyond!">¡Más allá!</em>
+- <span lang="es-MX" class="tooltip" data-tooltip="Nooo, my sandwich!">¡Nooo, mi torta!</span>
+- <span lang="es-MX" class="tooltip" data-tooltip="Reeding is important.">“Hay que ler.”</span>
 - <em lang="es-MX"><strong>Advertencia:</strong> Se ha ejecutado un virus y ha tomado control del sistema operativo. Para la seguridad de usted y de los demás, su dispositivo será formateado en breve.</em>
 
 
 ### ======================================== ###
 ### =============== Japanese =============== ###
 ### ======================================== ###
-- <span lang="ja" title="Pop Team Epic!">ポプテピピック！</span><span class="sr-only">Pop Team Epic!</span>
-- <span lang="ja" title="Twitter!">ツイッター！</span><span class="sr-only">Twitter!</span>
-- <em lang="ja" title="I love you soooooooooooo much!" aria-hidden="true">Daaaaaaaaaaaaaaaaaaaski!</em> <span class="sr-only">I love you <strong><em>so</em></strong> much!</span>
-- <span lang="ja" title="Hey Japan, this is a movie." aria-hidden="true">日本よ、これが映画だ。</span> <span class="sr-only">Hey Japan, <strong>this</strong> is a movie.</span>
-- <span title="First comes rock! Then comes paper! You can’t throw all of them. Rock, paper, scissors!">Saisho wa guu <br>Sono tsugi paa <br>Guchopa wo nashi yo <br>Jan ken pon!</span>
-- <span lang="ja" title=\"It’s a pun on the word “Hawaii”\">なんかハワイには、歯医者さんひとりもいない。それはね、歯はいい。</span><span class="sr-only">It’s a Japanese pun on the word “Hawaii”</span>
-- <span lang="ja" title="I party for 24 hours.">二十四時間パーティーをします。</span><span class="sr-only">I party for 24 hours.</span>
-- <span lang="ja" title="People are dumb." aria-hidden="true">人はバカ。</span><span class="sr-only">People are stupid.</span>
-- <span lang="ja" title="You’re gay.">お前はゲイです。</span><span class="sr-only">You’re gay.</span>
-- <span lang="ja" title="Nice to meet you, call me Benji.">はじめまして、ベンジーと申します。</span><span class="sr-only">Nice to meet you, call me Benji.</span>
+- <span lang="ja" class="tooltip" data-tooltip="Pop Team Epic!">ポプテピピック！</span><span class="sr-only">Pop Team Epic!</span>
+- <span lang="ja" class="tooltip" data-tooltip="Twitter!">ツイッター！</span><span class="sr-only">Twitter!</span>
+- <em lang="ja" class="tooltip" data-tooltip="I love you soooooooooooo much!" aria-hidden="true">Daaaaaaaaaaaaaaaaaaaski!</em> <span class="sr-only">I love you <strong><em>so</em></strong> much!</span>
+- <span lang="ja" class="tooltip" data-tooltip="Hey Japan, this is a movie." aria-hidden="true">日本よ、これが映画だ。</span> <span class="sr-only">Hey Japan, <strong>this</strong> is a movie.</span>
+- <span class="tooltip" data-tooltip="First comes rock! Then comes paper! You can’t throw all of them. Rock, paper, scissors!">Saisho wa guu <br>Sono tsugi paa <br>Guchopa wo nashi yo <br>Jan ken pon!</span>
+- <span lang="ja" class="tooltip" data-tooltip=\"It’s a pun on the word “Hawaii”\">なんかハワイには、歯医者さんひとりもいない。それはね、歯はいい。</span><span class="sr-only">It’s a Japanese pun on the word “Hawaii”</span>
+- <span lang="ja" class="tooltip" data-tooltip="I party for 24 hours.">二十四時間パーティーをします。</span><span class="sr-only">I party for 24 hours.</span>
+- <span lang="ja" class="tooltip" data-tooltip="People are dumb." aria-hidden="true">人はバカ。</span><span class="sr-only">People are stupid.</span>
+- <span lang="ja" class="tooltip" data-tooltip="You’re gay.">お前はゲイです。</span><span class="sr-only">You’re gay.</span>
+- <span lang="ja" class="tooltip" data-tooltip="Nice to meet you, call me Benji.">はじめまして、ベンジーと申します。</span><span class="sr-only">Nice to meet you, call me Benji.</span>
 
 
 ### ======================================== ###
@@ -92,15 +93,21 @@
 - “So long, gay Bowser!”
 - Nathaniel Bandy every time. #! Simpleflips
 - “How nice to see you again!”
-- <em title="Beyond!">Plus ultra!</em>
+- <em class="tooltip" data-tooltip="Beyond!">Plus ultra!</em>
 - one two <br> two loss
 - Showdown!
 - Pok&eacute;mon Showdown!
+- Fear my Rattata!
 - Asada-san!
 - <strong>Step 1:</strong> Think of what you want to say.<br><strong>Step 2:</strong> Say it.
 - Hyperflex
 - Ah, the scalene triangle.
-
+- Sal from Khan Academy.
+    #! A Hat in Time + Doki Doki
+- Peck.
+- Doki Doki Hat Club
+- A Monika in Time
+- <span class="truncate">Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head.</span>
     #! XXX: Love Live!
 - i love you <del>watanabe</del>
 - <em>Love Live!</em> is the most anime-like anime I’ve ever heard of.
@@ -112,7 +119,7 @@
 - Smile! Sweet! Sister! Sadistic! Surprise! Service!
     #! XXX: Vsauce
 - Hey, <span aria-hidden="true">🅱️🆘</span><span class="sr-only">Vsauce</span>, Michael here.
-    #! XXX: Desu noto
+    #! XXX: Death note
 - “I’ll take a potato chip, and eat it!”
     #! XXX: Nichijou
 - <span lang="ms">“Selamat pagi!”</span>
@@ -154,3 +161,10 @@
 - “Be unique” is such a normie thing to say.
 - Happiness isn’t the absence of problems, but the ability to overcome them.
 - “Stop holding hands! No PDFs!”
+- >
+    <span class="ruby tooltip" data-tooltip="What"><!--
+    ---><ruby lang="ja"><!--
+        --->何<span class="sr-only">&nbsp;(</span><rt>なに</rt><span class="sr-only">)</span><!--
+    ---></ruby>
+    </span>
+    the fuck?

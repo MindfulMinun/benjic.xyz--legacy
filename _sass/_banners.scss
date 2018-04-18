@@ -1,6 +1,7 @@
 //! Banners
 .banner {
     background-color: $accent;
+    background-color: var(--accent, $accent);
     color: #fafafa;
     width: 100%;
     border-top: 1px solid $color-fade;

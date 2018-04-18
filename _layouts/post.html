@@ -19,34 +19,39 @@
         {%- include layout/header.html %}
         {%- include layout/banners.html %}
         <main>
+            {%- if page.image -%}
+            <aside class="post-metadata cf ribbon-image"
+                style="background-image: url({{ page.image.src | absolute_url }}); background-color: {{ page.image.color }}">
+            {%- else -%}
+            <aside class="post-metadata cf">
+            {%- endif -%}
+                <div class="ribbon-gradient-container">
+                    <div class="container flex end">
+                        <h1 class="flex-fill-row">{{ page.title }}</h1>
+                        <p class="txt-aside flex-fill-space">
+                            Written on <time datetime="{{ page.date | date_to_xmlschema }}" class="i18n">
+                                {{ page.date | date: "%a, %b %d, %l:%M %P %Z" }}
+                            </time>
+                        {%- if page.last_mod %}
+                            <br>
+                            Last updated on
+                            <time datetime="{{ page.last_mod | date_to_xmlschema }}" class="i18n">
+                                {{ page.last_mod | date: "%a, %b %d, %l:%M %P %Z" }}
+                            </time>
+                        {%- endif %}
+                        </p>
+                        <button class="flat-btn icon-btn no-js-hide print-hide" id="share"
+                            aria-label="Share this post">
+                            <i class="material-icons">share</i>
+                        </button>
+                    </div>
+                </div>
+            </aside>
+            <hr class="print-only">
             <div class="container">
-                <aside class="post-metadata cf">
-                    <h1>{{ page.title }}</h1>
-
-
-                    <p class="txt-aside left">
-                        Written on <time datetime="{{ page.date | date_to_xmlschema }}" class="i18n">
-                            {{ page.date | date: "%a, %b %d, %l:%M %P %Z" }}
-                        </time>
-                    {%- if page.last_mod %}
-                        <br>
-                        Last updated on
-                        <time datetime="{{ page.last_mod | date_to_xmlschema }}" class="i18n">
-                            {{ page.last_mod | date: "%a, %b %d, %l:%M %P %Z" }}
-                        </time>
-                    {%- endif %}
-                    </p>
-                    <button class="flat-btn icon-btn right no-js-hide print-hide" id="share"
-                        aria-label="Share this post">
-                        <i class="material-icons">share</i>
-                    </button>
-                </aside>
-                <hr>
-
                 <article class="post-content">
                     {{ content }}
                 </article>
-
             </div>
             {%- include specials/disqus.html %}
         </main>

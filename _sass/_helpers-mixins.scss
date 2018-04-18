@@ -69,7 +69,19 @@ html.no-js .no-js-hide {
 
 //! Subtractive classes
 .no-border {border: none !important;}
-// .no-
+
+//! Margin and stuff
+.margin-tb, .margin-bt {margin: 1rem 0;}
+.margin-lr, .margin-rl {margin: 0 1rem;}
+
+.padding-tb, .padding-bt {padding: 1rem 0;}
+.padding-lr, .padding-rl {padding: 0 1rem;}
+
+.no-margin {margin: 0 !important;}
+.no-padding {padding: 0 !important;}
+
+
+
 
 //! Display
 .block {display: block !important;}
@@ -79,8 +91,16 @@ html.no-js .no-js-hide {
 .invisible {visibility: hidden !important;}
 .flex {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: baseline;
-    > .flex-stretch {flex: 1;}
+
+    &.end {align-items: flex-end;}
+    &.start {align-items: flex-start;}
+    &.center {align-items: center;}
+
+    > .flex-fill-space {flex: 1;}
+    > .flex-fill-row   {width: 100%;}
 }
 
 //! Floats

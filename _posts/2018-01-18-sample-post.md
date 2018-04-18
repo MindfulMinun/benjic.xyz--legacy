@@ -1,6 +1,6 @@
 ---
 title: Sample post
-date: 2018-01-19 00:16:33 CST
+date:     2018-01-19 00:16:33 CST
 last_mod: 2018-01-20 16:27:51 CST
 layout: post
 comments: true
@@ -12,6 +12,10 @@ scripts:
     -
         async: true
         src: "https://platform.twitter.com/widgets.js"
+image:
+    src: "/assets/cherry_blossom.jpg"
+    alt: "Cherry blossom"
+    color: "#53cbbf"
 ---
 
 # Heading level 1
@@ -19,7 +23,7 @@ scripts:
 Sample paragraph text. Here’s a [link to the homepage](/). Here’s some **bold,** *italic,* and ***bold and italic*** text.
 
 <button class="flat-btn">Button lol</button>
-<button class="flat-btn large">Button lol</button>
+<button class="flat-btn large">Big Button lol</button>
 
 {% highlight html %}
 <!doctype html>
@@ -58,30 +62,46 @@ my.simple#selector[attribute^="value"] {
 
 -----
 
-Sample text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Embeds
+Here, I embed various common widgets (a YouTube video, a regular video, a Twitter post, and a Twitter Timeline) using very little HTML. The HTML looks like so.
 
-## Heading level 2
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+{%- highlight html -%}
+<figure class="<small, med, large> <no-stick>">
+    <div class="media-box"> <!-- Gives the content a ratio of 16:9, optional -->
+        <!-- The content itself -->
+    </div>
+    <figcaption>Some amazing caption no one’s gonna read.</figcaption>
+</figure>
+{%- endhighlight -%}
 
 <figure>
     <div class="media-box">
-        <iframe src="https://www.youtube.com/embed/zEs98nced2k?rel=0" frameborder="0" allow="autoplay; encrypted-media" title="New Super Sky High Bros. – YouTube" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/1-BSTM2is7I?modestbranding=1&rel=0" frameborder="0" allow="encrypted-media" title="I Don’t Want to Say Goodbye – YouTube" allowfullscreen></iframe>
     </div>
-    <figcaption>New Super Sky High Bros. – YouTube</figcaption>
+    <figcaption>I Don’t Want to Say Goodbye – YouTube</figcaption>
 </figure>
 
 
-### Heading level 3
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+### Twitter posts
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">If I made a romance game for my crush, do you think it would stay forever in beta just like me?</p>&mdash; Benji (@MindfulMinun) <a href="https://twitter.com/MindfulMinun/status/922978526197899264?ref_src=twsrc%5Etfw">October 25, 2017</a></blockquote>
+<div class="grid top">
+    <div class="s12 m6">
+        <figure class="no-stick">
+            <a class="twitter-timeline" data-height="500" href="https://twitter.com/MindfulMinun?ref_src=twsrc%5Etfw">Tweets by MindfulMinun</a>
+        </figure>
+    </div>
+    <div class="s12 m6">
+        <figure class="no-stick">
+            <blockquote class="twitter-tweet" data-lang="en">
+                <p lang="en" dir="ltr">
+                    If I made a romance game for my crush, do you think it would stay forever in beta just like me?
+                </p>&mdash; Benji (@MindfulMinun) <a href="https://twitter.com/MindfulMinun/status/922978526197899264?ref_src=twsrc%5Etfw">October 25, 2017</a>
+            </blockquote>
+        </figure>
+    </div>
+</div>
 
-#### Heading level 4
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-##### Heading level 5
-
-**Lists**
+<!-- **Lists**
 
 * One, two, three, four
 * Who's that knocking at my door?
@@ -104,7 +124,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
     1. Flap your fins,
     2. Flip your tails
 5. School’s out,
-    1. Ring the bell!
+    1. Ring the bell! -->
 
 
 <dl>

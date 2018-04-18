@@ -57,6 +57,7 @@ defaults:
         values:
             # layout: default
             theme-color: "#673ab7"
+            manifest: "/manifest.json"
     -
         # This is here because Jekyll isn't smart enough to not set a layout for JS files, but doesn't for SCSS files????????
         scope:

@@ -39,9 +39,7 @@
                 .getAttribute('content') + location.hash + "?s=1"
         if navigator.share
             navigator.share {
-                title: title,
-                text: text,
-                url: url
+                title, text, url
             }
             .then ->
                 #! Successful share

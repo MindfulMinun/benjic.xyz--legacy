@@ -9,40 +9,42 @@
         <meta name="theme-color" content="{{ page.theme-color }}">
         <link rel="shortcut icon" href="/assets/favicon/144.png">
         <!-- Manifest -->
-        <link rel="manifest" href="/manifest.json">
+        {%- if page.manifest -%}
+            <link rel="manifest" href="{{ page.manifest }}">
+        {%- endif -%}
         <!-- OpenGraph & Twitter -->
         {%- comment %}
             {%- unless page.description -%}
                 {{ "Page description isn’t defined." | raise_error }}
             {%- endunless -%}
         {% endcomment %}
-        <meta name="og:title"            content="{{ page.title | escape }} • Benji">
+        <meta name="og:title"            content="{{ page.title | escape }}">
         <meta name="og:url"              content="{{ page.url | absolute_url | normalize_whitespace }}">
         {%- if page.description %}
-        <meta name="og:description"      content="{{ page.description | escape | normalize_whitespace }}">
-        <meta name="description"         content="{{ page.description | escape | normalize_whitespace }}">
+            <meta name="og:description"      content="{{ page.description | escape | normalize_whitespace }}">
+            <meta name="description"         content="{{ page.description | escape | normalize_whitespace }}">
         {% endif -%}
         <meta name="og:type"             content="website">
         <!-- Twitter Cards -->
         <meta name="twitter:title"       content="{{ page.title | escape }}">
         {%- if page.description %}
-        <meta name="twitter:description" content="{{ page.description | escape | normalize_whitespace }}">
+            <meta name="twitter:description" content="{{ page.description | escape | normalize_whitespace }}">
         {% endif -%}
         {%- if page.image %}
-        <meta name="og:image"            content="{{ page.image.src | absolute_url }}">
-        <meta name="og:image:alt"        content="{{ page.image.alt }}">
-        <meta name="twitter:image"       content="{{ page.image.src | absolute_url }}">
-        <meta name="twitter:image:alt"   content="{{ page.image.alt }}">
+            <meta name="og:image"            content="{{ page.image.src | absolute_url }}">
+            <meta name="og:image:alt"        content="{{ page.image.alt }}">
+            <meta name="twitter:image"       content="{{ page.image.src | absolute_url }}">
+            <meta name="twitter:image:alt"   content="{{ page.image.alt }}">
         {% endif -%}
         <meta name="twitter:site"        content="{{ site.twitter }}">
         <meta name="twitter:creator"     content="{{ site.twitter }}">
 
         {%- if page.date %}
         <!-- Article stuff -->
-        <meta name="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-        {%- if page.last_mod %}
-        <meta name="article:modified_time"  content="{{ page.last_mod | date_to_xmlschema }}">
-        {% endif -%}
+            <meta name="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+            {%- if page.last_mod %}
+                <meta name="article:modified_time"  content="{{ page.last_mod | date_to_xmlschema }}">
+            {% endif -%}
         {% endif -%}
 
         <!-- Twitter widget colors -->
@@ -59,34 +61,31 @@
             {%- endfor -%}
         {%- endif -%}
 
+        <!-- Google site verification -->
+        <meta name="google-site-verification" content="3RNRM0WftJT1LuEg3jjTpufm1mxfhkHNtRJFMBP1Eyc">
+
 
         {%- if jekyll.environment == "production" %}
-        <script async src="https://www.google-analytics.com/analytics.js"></script>
+            <script async src="https://www.google-analytics.com/analytics.js"></script>
         {% else %}
-        <script async src="https://www.google-analytics.com/analytics_debug.js"></script>
+            <script async src="https://www.google-analytics.com/analytics_debug.js"></script>
         {% endif -%}
 
-        <script async src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.5"></script>
+        <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
         <script type="text/javascript">
-            document.documentElement.classList.remove("no-js");
-            {%- include specials/analytics.html %}
-            window.xyz = window.xyz || {};
-            window.twemoji = window.twemoji || {parse: function (a) {return a;}};
-            xyz.ready = function (fn) {
-                if (
-                    document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"
-                ) {
-                    fn();
-                } else {
-                    document.addEventListener('DOMContentLoaded', fn);
-                }
-            }
-            xyz.warn = function () {
-                // var _ = [].slice.call(arguments);
-                // console.warn('%cHey, listen! This function is deprecated! Use console.warn instead', 'font-size: 18px;', _);
-                console.warn('%cHey, listen! This function is deprecated! Use console.warn instead', 'font-size: 18px;', [].slice.call(arguments));
-            }
-            xyz.ready(function(){
+            (function(d) {
+                "use strict";
+                d.documentElement.classList.remove("no-js");
+                {%- include specials/analytics.html %}
+                window.xyz = window.xyz || {
+                    ready: function (fn) {
+                        if (
+                            d.attachEvent ? d.readyState === "complete" : d.readyState !== "loading"
+                        ) {fn();}
+                        else {d.addEventListener("DOMContentLoaded", fn);}
+                    }
+                };
+                window.twemoji = window.twemoji || {parse: function (s) {return s;}};
                 twemoji.size = "svg"; twemoji.ext = ".svg";
-            });
+            }(document));
         </script>

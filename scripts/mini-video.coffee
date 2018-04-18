@@ -1,9 +1,10 @@
 ---
 ---
-
 ##! ======================================= !##
 ##! ========== Tiny video player ========== !##
 ##! ======================================= !##
+
+'use strict'
 
 dataState = 'data-playback-state'
 dataStarted = 'data-started'

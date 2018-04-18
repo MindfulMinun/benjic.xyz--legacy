@@ -28,7 +28,7 @@
     }],
     "start_url": "/?homescreen=1",
     "scope": "/",
-    "display": "minimal-ui",
+    "display": "standalone",
     "background_color": "#1e1e1e",
     "theme_color": "#673ab7"
 }

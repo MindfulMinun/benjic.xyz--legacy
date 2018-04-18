@@ -25,13 +25,26 @@ banners:
 
 The following is a paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-Styled text: I want to go to Kyoto.
-<span class="ruby tooltip" data-tooltip="Kyōto ni ikitai." lang="ja">
-    <ruby>京都<span class="sr-only">&nbsp;(</span><rt>きょうと</rt><span class="sr-only">)</span></ruby>
-    に
-    <ruby>行<span class="sr-only">&nbsp;(</span><rt>い</rt><span class="sr-only">)</span></ruby>
-    きたい。
-</span>
+### Fancy Ruby
+<p class="ruby-group"><!--
+---><span class="ruby tooltip" data-tooltip="Kyōto ni ikitai." lang="ja"><!--
+    ---><ruby>京都<span class="sr-only">&nbsp;(</span><rt>きょうと</rt><span class="sr-only">)</span></ruby><!--
+    --->に<!--
+    ---><ruby>行<span class="sr-only">&nbsp;(</span><rt>い</rt><span class="sr-only">)</span></ruby><!--
+    --->きたい。<!--
+---></span><!--
+---><em>I want to go to Kyoto.</em>
+</p>
+<p class="ruby-group"><!--
+---><span class="ruby tooltip" data-tooltip="Nihongo o hanasemasu." lang="ja"><!--
+    ---><ruby>日本<span class="sr-only">&nbsp;(</span><rt>にほん</rt><span class="sr-only">)</span></ruby><!--
+    ---><ruby>語<span class="sr-only">&nbsp;(</span><rt>ご</rt><span class="sr-only">)</span></ruby><!--
+    --->を<!--
+    ---><ruby>話<span class="sr-only">&nbsp;(</span><rt>はな</rt><span class="sr-only">)</span></ruby><!--
+    --->せます。<!--
+---></span><!--
+---><em>I speak Japanese.</em>
+</p>
 
 <div class="grid" style="text-align: center;">
     <div class="s6" style="background-color: black;">
@@ -105,36 +118,63 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 
 
-{%- capture mi -%}
-    <span class="ruby tooltip" data-tooltip="mi" lang="ja"><ruby>見<span class="sr-only">&nbsp;(</span><rt>み</rt><span class="sr-only">)</span></ruby></span>
-{%- endcapture -%}
 {%- capture miru -%}
-    <span class="ruby tooltip" data-tooltip="miru" lang="ja"><ruby>見<span class="sr-only">&nbsp;(</span><rt>み</rt><span class="sr-only">)</span></ruby>る</span>
+    <span class="ruby tooltip" data-tooltip="miru" lang="ja"><!--
+        ---><ruby>見<span class="sr-only">&nbsp;(</span><rt>み</rt><span class="sr-only">)</span></ruby>る<!--
+---></span>
 {%- endcapture -%}
 {%- capture mimasu -%}
-    <span class="ruby tooltip" data-tooltip="mimasu" lang="ja"><ruby>見<span class="sr-only">&nbsp;(</span><rt>み</rt><span class="sr-only">)</span></ruby>ます</span>
-{%- endcapture -%}
-{%- capture minai -%}
-    <span class="ruby tooltip" data-tooltip="minai" lang="ja"><ruby>見<span class="sr-only">&nbsp;(</span><rt>み</rt><span class="sr-only">)</span></ruby>ない</span>
+    <span class="ruby tooltip" data-tooltip="mimasu" lang="ja"><!--
+    ---><ruby>見<span class="sr-only">&nbsp;(</span><rt>み</rt><span class="sr-only">)</span></ruby>ます<!--
+---></span>
 {%- endcapture -%}
 {%- capture mimasen -%}
-    <span class="ruby tooltip" data-tooltip="mimasen" lang="ja"><ruby>見<span class="sr-only">&nbsp;(</span><rt>み</rt><span class="sr-only">)</span></ruby>ません</span>
+    <span class="ruby tooltip" data-tooltip="mimasen" lang="ja"><!--
+    ---><ruby>見<span class="sr-only">&nbsp;(</span><rt>み</rt><span class="sr-only">)</span></ruby>ません<!--
+---></span>
+{%- endcapture -%}
+{%- capture mite -%}
+    <span class="ruby tooltip" data-tooltip="mite" lang="ja"><!--
+    ---><ruby>見<span class="sr-only">&nbsp;(</span><rt>み</rt><span class="sr-only">)</span></ruby>て<!--
+---></span>
 {%- endcapture -%}
 
-### Japanese Verb Conjugation
+{% capture hanasu -%}
+    <span class="ruby tooltip" data-tooltip="hanasu" lang="ja"><!--
+    ---><ruby>話<span class="sr-only">&nbsp;(</span><rt>はな</rt><span class="sr-only">)</span></ruby>す<!--
+---></span>
+{%- endcapture %}
+{% capture hanashimasu -%}
+    <span class="ruby tooltip" data-tooltip="hanashimasu" lang="ja"><!--
+    ---><ruby>話<span class="sr-only">&nbsp;(</span><rt>はな</rt><span class="sr-only">)</span></ruby>します<!--
+---></span>
+{%- endcapture %}
+{% capture hanasanai -%}
+    <span class="ruby tooltip" data-tooltip="hanasanai" lang="ja"><!--
+    ---><ruby>話<span class="sr-only">&nbsp;(</span><rt>はな</rt><span class="sr-only">)</span></ruby>さない<!--
+---></span>
+{%- endcapture %}
+{% capture hanashite -%}
+    <span class="ruby tooltip" data-tooltip="hanashite" lang="ja"><!--
+    ---><ruby>話<span class="sr-only">&nbsp;(</span><rt>はな</rt><span class="sr-only">)</span></ruby>して<!--
+---></span>
+{%- endcapture %}
+{% capture hanashita -%}
+    <span class="ruby tooltip" data-tooltip="hanashita" lang="ja"><!--
+    ---><ruby>話<span class="sr-only">&nbsp;(</span><rt>はな</rt><span class="sr-only">)</span></ruby>した<!--
+---></span>
+{%- endcapture %}
 
-| {{ miru }}: to see / watch      | Casual         | Polite         |
-| :------------- | :------------- | :------------- |
-| Stem           | {{ mi }}       | {{ mi }}       |
-| Plain form     | {{ miru }}     | {{ mimasu }}   |
-| Negative form  | {{ minai }}    | {{ mimasen }}  |
 
 
+### Verb Conjugation
 
+| Conjugation   | {{ hanasu | strip_newlines }}: hanasu (to speak) | {{ miru | strip_newlines }}: miru (to see) |
+| :------------ | :----------------------------------------------- | :----------------------------------------------- |
+| Polite form   | {{ hanashimasu | strip_newlines }}               | {{ mimasu | strip_newlines }} |
+| Negative form | {{ hanasanai | strip_newlines }}                 | {{ mimasen | strip_newlines }} |
+| "Te" form     | {{ hanashite | strip_newlines }}                 | {{ mite | strip_newlines }} |
 
-
-
-> “That should be the ringtone for every payphone.”
 
 ### Lists
 
