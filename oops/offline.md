@@ -11,6 +11,7 @@ main .container {
     top: 50%;
     width: 100%;
     transform: translateY(-50%);
+    h1 {margin-top: 0;}
 }
 //-->
 {% endcapture %}<style>{{ scss | scssify }}</style>

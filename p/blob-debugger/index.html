@@ -3,7 +3,7 @@ layout: default
 title: Blob Debugger
 categories: ['p']
 description: >
-    Used to debug the random blobs and quotes in the footer.
+    Debug the random blobs and quotes in the footer, each blob with its index and content.
 
 scripts:
     - #! External scripts
@@ -38,9 +38,11 @@ scripts:
 </div>
 <hr>
 
+<figure class="no-cap flush-p">
 <pre>
 {% assign blobs = site.data.blobs %}
 {%- for blob in blobs -%}
     {% increment c %} - {{ blob | escape }}<br>
 {%- endfor -%}
 </pre>
+</figure>

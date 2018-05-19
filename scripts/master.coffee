@@ -155,28 +155,17 @@ xyz.addEventListeners = (nodes, event, handler) ->
         node.addEventListener event, handler
     return nodes
 
-xyz.time = {
-    formatDateTime: (dateObj) ->
-        formatter = new Intl.DateTimeFormat([], {
-            weekday: "short"
-            hour: "numeric"
-            minute: "2-digit"
-        })
-        formatter.format dateObj
-
-}
-
-
+# xyz.time = {
+#     formatDateTime: (dateObj) ->
+#         formatter = new Intl.DateTimeFormat([], {
+#             weekday: "short"
+#             hour: "numeric"
+#             minute: "2-digit"
+#         })
+#         formatter.format dateObj
+# }
 
 xyz.ready(->
-    #! Do nothing on "#!" links
-    xyz.addEventListeners(
-        document.querySelectorAll 'a[href="#!"], a[href="#"]',
-        "click",
-        (e) ->
-            e.preventDefault()
-            return false
-    )
     #! Parse twemoji
     for el in document.getElementsByClassName 'e'
         el.innerHTML = twemoji.parse el.innerHTML;

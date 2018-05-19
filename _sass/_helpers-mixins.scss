@@ -24,7 +24,7 @@
     //! It is recommended that you insert a gradient that looks /somewhat/ like the image.
     //! It'll look better that just a black box
     @include ratio(16, 9); //! 16:9 default, use ;ratio for different ratios
-    * {@extend .affix;}
+    > * {@extend .affix;}
 }
 
 .accent {
@@ -33,12 +33,21 @@
     color: $against-accent;
 }
 
+.text-against-image {
+    background: $text-against-image;
+}
+
 //! No-script hide
 html.no-js .no-js-hide {
     display: none !important;
 }
 
 //! Pretty helpful
+.help {
+    cursor: help;
+    border-bottom: 1px dotted;
+}
+
 // [readonly],
 .no-pointer {
     cursor: not-allowed;
@@ -77,8 +86,8 @@ html.no-js .no-js-hide {
 .padding-tb, .padding-bt {padding: 1rem 0;}
 .padding-lr, .padding-rl {padding: 0 1rem;}
 
-.no-margin {margin: 0 !important;}
-.no-padding {padding: 0 !important;}
+.no-margin, .flush {margin: 0 !important;}
+.no-padding, .flush-p {padding: 0 !important;}
 
 
 
@@ -99,8 +108,8 @@ html.no-js .no-js-hide {
     &.start {align-items: flex-start;}
     &.center {align-items: center;}
 
-    > .flex-fill-space {flex: 1;}
-    > .flex-fill-row   {width: 100%;}
+    > .flex-fill-space, > .space {flex: 1;}
+    > .flex-fill-row,   > .row  {width: 100%;}
 }
 
 //! Floats

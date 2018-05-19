@@ -60,19 +60,19 @@ pre, code, kbd, samp {
 }
 pre, code {
     background-color: black;
-    color: $secondary;
-    color: var(--secondary, $secondary);
+    color: $accent;
+    color: var(--accent, $accent);
     border-radius: 4px;
 }
 code {
     padding: 4px 6px;
-    border: 1px solid rgba($secondary, 0.52);
+    border: 1px solid rgba($accent, 0.52);
 }
 kbd {
     background-color: #fefefe;
     color: black;
     border-radius: 4px;
-    padding: 4px 6px;
+    padding: 2px 6px;
     kbd {padding: 0; font-size: 100%;}
 }
 pre {
@@ -183,9 +183,7 @@ table {
 //! Quotes
 blockquote, q {
     quotes: none;
-    &::before, &::after {
-        content: none;
-    }
+    &::before, &::after {content: none;}
 }
 //! Reset Webkit quirks
 [type="search"] {
@@ -205,8 +203,8 @@ blockquote, q {
 
 //! Custom styled resets
 a[href] {
-    color: $secondary;
-    color: var(--secondary, $secondary);
+    color: $accent;
+    color: var(--accent, $accent);
     background-color: transparent;
     text-decoration: underline;
     text-decoration-skip: ink;
@@ -221,8 +219,8 @@ img, .img-fluid {
 blockquote {
     padding: 0 1rem;
     margin: 1rem 0;
-    border-left: 4px solid $accent;
-    border-left: 4px solid var(--accent, $accent);
+    border-left: 4px solid $secondary;
+    border-left: 4px solid var(--secondary, $secondary);
     // &:dir()
 }
 hr {
@@ -247,8 +245,8 @@ $select-arrow-size: 0.35em;
     transition: border 0.2s $standard-curve;
 
     &:focus {
-        border-bottom-color: $secondary;
-        border-bottom-color: var(--secondary);
+        border-bottom-color: $accent;
+        border-bottom-color: var(--accent);
     }
 }
 @media print {
@@ -279,8 +277,8 @@ select {
     &.light {
         border-bottom-color: invert($bg-4);
         &:focus {
-            border-bottom-color: $secondary;
-            border-bottom-color: var(--secondary);
+            border-bottom-color: $accent;
+            border-bottom-color: var(--accent);
         }
     }
 }
@@ -294,11 +292,32 @@ input {
         appearance: textfield;
         border-bottom-color: invert($bg-4);
         &:focus {
-            border-bottom-color: $secondary;
-            border-bottom-color: var(--secondary);
+            border-bottom-color: $accent;
+            border-bottom-color: var(--accent);
         }
     }
 }
+//! Textareas
+textarea.textarea {
+    display: block;
+    background: 0; border: 0;
+    color: inherit; font: inherit;
+    padding: .5rem;
+    font-size: 87.5%;
+    border: 1px solid $bg-5;
+    border-radius: 4px;
+    width: 100%;
+    min-height: 5rem;
+    resize: vertical;
+    transition: border-color 0.2s $standard-curve;
+    outline: none;
+    &:hover {border-color: $bg-4;}
+    &:focus {
+        border-color: $accent;
+        border-color: var(--accent, $accent);
+    }
+}
+
 
 //! ============================== !//
 //! ========== Headings ========== !//
@@ -317,8 +336,8 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
     margin: 0;
-    margin-top: 1rem;
-    margin-bottom: .5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     font-family: inherit;
     font-weight: 400;
     line-height: 1.2;

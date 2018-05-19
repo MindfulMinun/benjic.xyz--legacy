@@ -6,7 +6,8 @@
 $background-color: #1e1e1e;
 $text-color: #fafafa;
 
-$accent:    #673ab7;
+// $accent:    #673ab7;
+$accent:    #448aff;
 $secondary: #00e676;
 $against-accent:    rgba(white, 0.87);
 $against-secondary: rgba(black, 0.87);
@@ -22,6 +23,8 @@ $bg-3: rgba($contrast-color, 0.52);
 $bg-4: rgba($contrast-color, 0.24);
 $bg-5: rgba($contrast-color, 0.12);
 $bg-6: rgba($contrast-color, 0.04);
+
+$text-against-image: linear-gradient(transparent, rgba(black, 0.46));
 
 //! Fonts
 $mono: "Roboto Mono", Menlo, monospace, monospace;

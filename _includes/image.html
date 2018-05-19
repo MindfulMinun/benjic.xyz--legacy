@@ -1,9 +1,15 @@
-<figure id="{{ include.id | handleize }}">
+<figure id="{{ include.id | handleize }}" {% if include.class -%}class="{{ include.class }}"{%- endif -%}>
     <div class="media-box" style="{{ include.style }}">
+        {%- if include.suppressLink != "true" -%}
         <a href="{{ include.src }}">
-            <img src="{{ include.src }}" aria-labelledby="{{ include.id | handleize }}-caption"
-                 alt="{{ include.caption }}">
+        {%- endif -%}
+            <img src="{{ include.src }}" aria-labelledby="{{ include.id | handleize }}--caption"
+                 {% if include.caption -%}alt="{{ include.caption }}"{%- endif %}
+                 {% if include.title -%}title="{{ include.title }}"{%- endif %}
+                >
+        {%- if include.suppressLink != "true" -%}
         </a>
+        {%- endif -%}
     </div>
-    <figcaption id="{{ include.id | handleize }}-caption">{{ include.caption }}</figcaption>
+    <figcaption id="{{ include.id | handleize }}--caption">{{ include.caption }}</figcaption>
 </figure>

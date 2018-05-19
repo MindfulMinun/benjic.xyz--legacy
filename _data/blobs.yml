@@ -11,6 +11,8 @@
 - Kek
 - Bobby-kun!
 - “Don’t quote me on this.” &mdash;&nbsp;Benji
+- Benji, the skinny legend.
+- Minerva.
 - It’s a running joke.
 - Superb owl
 - r/animemes
@@ -19,12 +21,21 @@
 - Copyright &copy; 2017–2018 MindfulMinun All Rights Reserved.
 - “No, I’ll pay.” <em>*leaves crappy tip*</em>
 - Game over.
-- “You never know, y’know?”
-- “Y’know, you never know.”
+- “You never know, y’know?” #! Reference to next blob
+- “Y’know, you never know.” #! Reference to previous blob
 - "&gt; Be me." #! Greentext
 - “Hola hola crayola”
 - Red cup. #! I'm still shook
 - “Taylor ISD Trustees agree to split THS, Legacy”
+- >-
+    ｜￣￣￣￣￣￣￣￣￣￣｜<br>
+    ｜　　あんたは嫌い　　｜<br>
+    ｜＿＿＿＿＿＿＿＿＿＿｜<br>
+    (\__/) ||<br>
+    (•ㅅ•) ||<br>
+    / 　 づ
+
+
 
 ### ======================================== ###
 ### ============== Misc. jokes ============= ###
@@ -49,39 +60,48 @@
 ### =========== Coding and stuff =========== ###
 ### ======================================== ###
 - "Uncaught TypeError: Assignment to constant variable."
-- >
-    <pre style="background: 0; color: inherit; padding: 0;">f = a -> {
-        alert a
-        f 'I love recursion'
-    }</pre>
+- >-
+    <pre style="background: 0; color: inherit; padding: 0;">
+    f = -> f arguments...<br>
+    f 'I love recursion'
+    </pre>
 - “You are currently on a text element, inside of web content.”
 - I become very self-conscious when people look at my code.
-- <strong>Note:<strong> XSS attacks most frequently occur when code from one language is interpolated incorrectly or carelessly into another language.
+- <strong>Note:</strong> XSS attacks most frequently occur when code from one language is interpolated incorrectly or carelessly into another language.
 
 
 ### ======================================== ###
 ### ================ Spanish =============== ###
 ### ======================================== ###
-- <span lang="es-MX" class="tooltip" data-tooltip="Your principal is your pal. Not principle.">La principala.</span>
-- <em class="tooltip" data-tooltip="Beyond!">¡Más allá!</em>
-- <span lang="es-MX" class="tooltip" data-tooltip="Nooo, my sandwich!">¡Nooo, mi torta!</span>
-- <span lang="es-MX" class="tooltip" data-tooltip="Reeding is important.">“Hay que ler.”</span>
-- <em lang="es-MX"><strong>Advertencia:</strong> Se ha ejecutado un virus y ha tomado control del sistema operativo. Para la seguridad de usted y de los demás, su dispositivo será formateado en breve.</em>
+- >-
+    <span lang="es-MX" class="tooltip" data-tp="above" data-tooltip="Your principal is your pal. Not principle.">
+        La principala.
+    </span>
+- <em class="tooltip" data-tp="above" data-tooltip="Beyond!">¡Más allá!</em>
+- <span lang="es-MX" class="tooltip" data-tp="above" data-tooltip="Nooo, my sandwich!">¡Nooo, mi torta!</span>
+- <span lang="es-MX" class="tooltip" data-tp="above" data-tooltip="Reeding is important.">“Hay que ler.”</span>
+- >-
+    <em lang="es-MX">
+        <strong>Advertencia:</strong> Se ha ejecutado un virus y ha tomado control del sistema operativo. Para la seguridad de usted y de los demás, su dispositivo será formateado en breve.
+    </em>
 
 
 ### ======================================== ###
 ### =============== Japanese =============== ###
 ### ======================================== ###
-- <span lang="ja" class="tooltip" data-tooltip="Pop Team Epic!">ポプテピピック！</span><span class="sr-only">Pop Team Epic!</span>
-- <span lang="ja" class="tooltip" data-tooltip="Twitter!">ツイッター！</span><span class="sr-only">Twitter!</span>
-- <em lang="ja" class="tooltip" data-tooltip="I love you soooooooooooo much!" aria-hidden="true">Daaaaaaaaaaaaaaaaaaaski!</em> <span class="sr-only">I love you <strong><em>so</em></strong> much!</span>
-- <span lang="ja" class="tooltip" data-tooltip="Hey Japan, this is a movie." aria-hidden="true">日本よ、これが映画だ。</span> <span class="sr-only">Hey Japan, <strong>this</strong> is a movie.</span>
-- <span class="tooltip" data-tooltip="First comes rock! Then comes paper! You can’t throw all of them. Rock, paper, scissors!">Saisho wa guu <br>Sono tsugi paa <br>Guchopa wo nashi yo <br>Jan ken pon!</span>
-- <span lang="ja" class="tooltip" data-tooltip=\"It’s a pun on the word “Hawaii”\">なんかハワイには、歯医者さんひとりもいない。それはね、歯はいい。</span><span class="sr-only">It’s a Japanese pun on the word “Hawaii”</span>
-- <span lang="ja" class="tooltip" data-tooltip="I party for 24 hours.">二十四時間パーティーをします。</span><span class="sr-only">I party for 24 hours.</span>
-- <span lang="ja" class="tooltip" data-tooltip="People are dumb." aria-hidden="true">人はバカ。</span><span class="sr-only">People are stupid.</span>
-- <span lang="ja" class="tooltip" data-tooltip="You’re gay.">お前はゲイです。</span><span class="sr-only">You’re gay.</span>
-- <span lang="ja" class="tooltip" data-tooltip="Nice to meet you, call me Benji.">はじめまして、ベンジーと申します。</span><span class="sr-only">Nice to meet you, call me Benji.</span>
+- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Pop Team Epic!">ポプテピピック！</span><span class="sr-only">Pop Team Epic!</span>
+- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Twitter!">ツイッター！</span><span class="sr-only">Twitter!</span>
+- <em lang="ja" class="tooltip" data-tp="above" data-tooltip="I love you soooooooooooo much!" aria-hidden="true">Daaaaaaaaaaaaaaaaaaaski!</em> <span class="sr-only">I love you <strong><em>so</em></strong> much!</span>
+# - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Hey Japan, this is a movie." aria-hidden="true">日本よ、これが映画だ。</span> <span class="sr-only">Hey Japan, <strong>this</strong> is a movie.</span>
+- <span class="tooltip" data-tp="above" data-tooltip="First comes rock! Then comes paper! You can’t throw all of them. Rock, paper, scissors!">Saisho wa guu <br>Sono tsugi paa <br>Guchopa wo nashi yo <br>Jan ken pon!</span>
+- >-
+    <span lang="ja" class="tooltip" data-tp="above" data-tooltip="It’s a pun on the word “Hawaii”">
+        なんかハワイには、歯医者さんひとりもいない。それはね、歯はいい。</span>
+    <span class="sr-only">It’s a Japanese pun on the word “Hawaii”</span>
+- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="I party for 24 hours.">二十四時間パーティーをします。</span><span class="sr-only">I party for 24 hours.</span>
+- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="People are dumb." aria-hidden="true">人はバカ。</span><span class="sr-only">People are stupid.</span>
+- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="You’re gay.">お前はゲイだよ。</span><span class="sr-only">You’re gay.</span>
+- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Nice to meet you, call me Benji.">はじめまして、ベンジーと申します。</span><span class="sr-only">Nice to meet you, call me Benji.</span>
 
 
 ### ======================================== ###
@@ -90,10 +110,11 @@
 #! XXX: Misc. references
 - KissAnime
 - Each time I hear this song
+- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Akane-chan will go along with whatever you say.">何でも言うことを聞いてくれるアカネチャン</span><span class="sr-only">Akane-chan will go along with whatever you say.</span>
 - “So long, gay Bowser!”
 - Nathaniel Bandy every time. #! Simpleflips
 - “How nice to see you again!”
-- <em class="tooltip" data-tooltip="Beyond!">Plus ultra!</em>
+- <em class="tooltip" data-tp="above" data-tooltip="Beyond!">Plus ultra!</em>
 - one two <br> two loss
 - Showdown!
 - Pok&eacute;mon Showdown!
@@ -103,11 +124,16 @@
 - Hyperflex
 - Ah, the scalene triangle.
 - Sal from Khan Academy.
-    #! A Hat in Time + Doki Doki
+    #! XXX: A Hat in Time + Doki Doki
 - Peck.
 - Doki Doki Hat Club
 - A Monika in Time
-- <span class="truncate">Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head.</span>
+- She’s omnipresent.
+- Just Monika.
+- “Manga is literature!”
+- Amy Likes Spiders
+- “You kind of left [Sayori] hanging this morning, you know?”
+- <span class="block trunc">Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head.</span>
     #! XXX: Love Live!
 - i love you <del>watanabe</del>
 - <em>Love Live!</em> is the most anime-like anime I’ve ever heard of.
@@ -117,12 +143,16 @@
 - Sorry, I was thinking about Hellshake Yano.
     #! XXX: Blend S
 - Smile! Sweet! Sister! Sadistic! Surprise! Service!
+    #! XXX: Duet game
+- It’s so good to see you.<br>Stay close to me and don’t touch anything.
+- <span lang="es" class="tooltip" data-tp="above" data-tooltip="Attempt itself invites failure.">El mero intento invita al fracaso.</span>
     #! XXX: Vsauce
 - Hey, <span aria-hidden="true">🅱️🆘</span><span class="sr-only">Vsauce</span>, Michael here.
     #! XXX: Death note
 - “I’ll take a potato chip, and eat it!”
     #! XXX: Nichijou
 - <span lang="ms">“Selamat pagi!”</span>
+# - Hyadaruko no Kakakata Kataomoi-F
 - <em>“See? Fortune favors the upbeat. It’s positive magic!”</em>
 - “To live tomorrow with a smile, even though I cried yesterday.”
 - "Short Thoughts: “If you search for it, you’ll find everything.”"
@@ -155,16 +185,16 @@
 ### ======================================== ###
 ### ================ Quotes ================ ###
 ### ======================================== ###
-- "“Regarding Snapstreaks: If you're gonna send me the letter S, you can go ahead and take this L.”"
+- "“Regarding Snapstreaks: If you’re gonna send me the letter S, you can go ahead and take this L.”"
 - “They’re not gonna put your money to a cause, the money <em>is</em> the cause.” — Uniquenameosaurus
 - Although “can solve a Rubik’s Cube” is a pretty neat skill, I don’t think you should mention it in your résumé.
 - “Be unique” is such a normie thing to say.
 - Happiness isn’t the absence of problems, but the ability to overcome them.
 - “Stop holding hands! No PDFs!”
-- >
-    <span class="ruby tooltip" data-tooltip="What"><!--
-    ---><ruby lang="ja"><!--
-        --->何<span class="sr-only">&nbsp;(</span><rt>なに</rt><span class="sr-only">)</span><!--
-    ---></ruby>
-    </span>
-    the fuck?
+# - >
+#     <span class="ruby tooltip" data-tp="above" data-tooltip="What"><!--
+#      --><ruby lang="ja"><!--
+#         --->何<span class="sr-only">&nbsp;(</span><rt>なに</rt><span class="sr-only">)</span><!--
+#      --></ruby><!--
+#     -->the fuck?<!--
+#     --></span>

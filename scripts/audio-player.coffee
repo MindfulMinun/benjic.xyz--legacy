@@ -4,11 +4,12 @@
 
 {% capture scss %}
 @import "_vars";
-//! Audio player styles
+//! Audio player styles ###
 .audio-player {
     overflow: hidden;
     background-color: #fff;
     color: #000;
+    border: 1px solid rgba(black, 0.13);
     padding: 8px;
     display: flex;
     flex-direction: row;
@@ -57,11 +58,15 @@
             i.material-icons {position: relative; right: 0px; top: 2px;}
         }
     }
-}{% endcapture %}
+}
+// ###
+{% endcapture %}
+
 
 styles = """
     {{ scss | scssify }}
 """
+
 
 #! Append styles
 css = document.createElement "style"
@@ -113,7 +118,7 @@ createPlayer = (box) ->
     box.appendChild xyz.parseHTML """
         <div class="audio-player__controls">
             <button aria-label="Play"><i class="material-icons">play_arrow</i></button>
-            <button class="audio-player__time-display" aria-label="Timestamp not yet loaded.">0:00 / ?:??</button>
+            <button class="audio-player__time-display" aria-label="Timestamp not loaded.">0:00 / ?:??</button>
         </div>
     """
 

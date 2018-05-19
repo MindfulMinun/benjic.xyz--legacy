@@ -14,7 +14,7 @@
         background-position: center;
         background-size: cover;
         > .ribbon-gradient-container {
-            background: linear-gradient(transparent, rgba(black, 0.46));
+            background: $text-against-image;
             .txt-aside {color: rgba(white, 0.72);}
         }
     }

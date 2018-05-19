@@ -1,5 +1,5 @@
+#! ========================================
 # Jekyll Config
-
 
 port: 1337
 # host: 0.0.0.0
@@ -9,29 +9,29 @@ twitter: "@MindfulMinun"
 synopsis: >
     I like coding things for the Internet & playing the piano.
     I’m also on [Twitter](https://twitter.com/MindfulMinun)
-    and [GitHub](https://github.com/mindfulminun). Come say hi!
+    and [CodePen](https://codepen.io/MindfulMinun). Come say hi!
 
 timezone: America/Chicago
 permalink: /:year-:month-:day/:categories/:title/
 
+#! ========================================
 #! My vars
 tracking-id: "UA-113187497-1"
 
 plugins:
-    - jekyll-coffeescript
     - jekyll-autoprefixer
     - jekyll-redirect-from
     - jekyll-sitemap
     - jekyll-minifier
+    - jekyll-coffeescript
 
+#! ========================================
 #! Plugin vars
 include:
     - ".htaccess"
-# Markdown parsing
-# markdown:    redcarpet
-# highlighter: rouge
-# redcarpet:
-#   extensions: []
+show_drafts: true
+# incremental: true
+strict_front_matter: true
 
 jekyll-minifier:
     exclude:
@@ -39,6 +39,7 @@ jekyll-minifier:
         - 'sitemap.xml'
         - '.htaccess'
 
+#! ========================================
 # Sass settings
 sass:
     sass_dir: _sass
@@ -48,6 +49,7 @@ autoprefixer:
     browsers:
         - last 2 versions
 
+#! ========================================
 # Frontmatter defaults
 defaults:
     -
@@ -56,8 +58,8 @@ defaults:
             type: "pages" # ...that are pages, so no JS files, for example
         values:
             # layout: default
-            theme-color: "#673ab7"
-            manifest: "/manifest.json"
+            theme-color: "#448aff"
+            # manifest: "/manifest.json"
     -
         # This is here because Jekyll isn't smart enough to not set a layout for JS files, but doesn't for SCSS files????????
         scope:

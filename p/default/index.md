@@ -1,7 +1,7 @@
 ---
 title: Default Layout
 layout: default
-description: This page showcases default styles and components used throughout this site, all of which are mobile-first and work without JavaScript.
+description: Default styles and components used throughout this site, all of which are mobile-first and work without JavaScript.
 categories: ["p"]
 banners:
     -
@@ -9,171 +9,56 @@ banners:
         content: >
             Sample banner. This banner is consistent, meaning it will reappear on refresh
         consistent: true
+scripts:
     -
-        id: "default-layout--sample-banner-2"
-        content: >
-            This banner is also consistent.
-        consistent: true
+        async: true
+        src: "https://platform.twitter.com/widgets.js"
 ---
 
-# Heading 1
-## Heading 2
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
+# Default Layout and Styles
 
-The following is a paragraph: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The following is a paragraph demonstrating basic text: **Donut wafer cupcake** icing bonbon cheesecake dessert muffin chocolate cake. Dessert tart dragée marshmallow carrot cake. [Donut sweet roll](#) chocolate bar brownie sesame snaps. Oat cake bonbon jelly beans gingerbread lemon drops. _Bear claw chocolate bar_ jelly-o sesame snaps biscuit pastry dragée.
 
-### Fancy Ruby
-<p class="ruby-group"><!--
----><span class="ruby tooltip" data-tooltip="Kyōto ni ikitai." lang="ja"><!--
-    ---><ruby>京都<span class="sr-only">&nbsp;(</span><rt>きょうと</rt><span class="sr-only">)</span></ruby><!--
-    --->に<!--
-    ---><ruby>行<span class="sr-only">&nbsp;(</span><rt>い</rt><span class="sr-only">)</span></ruby><!--
-    --->きたい。<!--
----></span><!--
----><em>I want to go to Kyoto.</em>
-</p>
-<p class="ruby-group"><!--
----><span class="ruby tooltip" data-tooltip="Nihongo o hanasemasu." lang="ja"><!--
-    ---><ruby>日本<span class="sr-only">&nbsp;(</span><rt>にほん</rt><span class="sr-only">)</span></ruby><!--
-    ---><ruby>語<span class="sr-only">&nbsp;(</span><rt>ご</rt><span class="sr-only">)</span></ruby><!--
-    --->を<!--
-    ---><ruby>話<span class="sr-only">&nbsp;(</span><rt>はな</rt><span class="sr-only">)</span></ruby><!--
-    --->せます。<!--
----></span><!--
----><em>I speak Japanese.</em>
+### Ruby Text
+
+<p>
+    <span class="ruby-group"><!--
+    ---><span class="ruby tooltip" data-tooltip="Kyōto ni ikitai, nihongo wo chotto wakarimasu." lang="ja"><!--
+        ---><ruby>京都<span class="sr-only">（</span><rt>きょうと</rt><span class="sr-only">）</span></ruby><!--
+        --->に<!--
+        ---><ruby>行<span class="sr-only">（</span><rt>い</rt><span class="sr-only">）</span></ruby><!--
+        --->きたい、<!--
+        ---><ruby>日本語<span class="sr-only">（</span><rt>にほんご</rt><span class="sr-only">）</span></ruby><!--
+        --->をちょっとわかります。<!--
+    ---></span><!--
+    ---><em>I want to go to Kyoto, I can understand a bit of Japanese.</em>
+    </span>
 </p>
 
-<div class="grid" style="text-align: center;">
-    <div class="s6" style="background-color: black;">
-        <button class="flat-btn-dark">Dark flat button</button>
-        <button class="flat-btn-dark" disabled>Dark disabled flat button</button>
-    </div>
-    <div class="s6" style="background-color: white;">
-        <button class="flat-btn-light">Light flat button</button>
-        <button class="flat-btn-light" disabled>Light disabled flat button</button>
-    </div>
-    <div class="s12 m6" style="background-color: white; text-align: center;">
 
-        <div class="i-block">
-            <button class="icon-btn left flat-btn-light"><i class="material-icons">check</i></button>
-            <button class="icon-btn left raised-btn"><i class="material-icons">check</i></button>
-            <button class="icon-btn left raised-btn-2"><i class="material-icons">check</i></button>
-        </div>
+### Blockquotes
+<blockquote>
+    <p>
+        —Está en el sótano del comedor— explicó, aligerada su dicción por la angustia—. Es mío, es mío; yo lo descubrí en la niñez, antes de la edad escolar. La escalera del sótano es empinada, mis tíos me tenían prohibido el descenso, pero alguien dijo que había un mundo en el sótano. Se refería, lo supe después, a un baúl, pero yo entendí que había un mundo. Bajé secretamente, rodé por la escalera vedada, caí. Al abrir los ojos, vi el Aleph.
+    </p>
+    <cite>&mdash;&nbsp;El Aleph, Jorge Luis Borges</cite>
+</blockquote>
 
-        <div class="i-block">
-            <button disabled class="icon-btn left flat-btn-light"><i class="material-icons">clear</i></button>
-            <button disabled class="icon-btn left raised-btn"><i class="material-icons">clear</i></button>
-            <button disabled class="icon-btn left raised-btn-2"><i class="material-icons">clear</i></button>
-        </div>
-    </div>
-    <div class="s12 m6" style="background-color: black; text-align: center;">
-
-        <div class="inline-block">
-            <button class="icon-btn left flat-btn-dark"><i class="material-icons">check</i></button>
-            <button class="icon-btn left raised-btn"><i class="material-icons">check</i></button>
-            <button class="icon-btn left raised-btn-2"><i class="material-icons">check</i></button>
-        </div>
-
-        <div class="inline-block">
-            <button disabled class="icon-btn left flat-btn-dark"><i class="material-icons">clear</i></button>
-            <button disabled class="icon-btn left raised-btn"><i class="material-icons">clear</i></button>
-            <button disabled class="icon-btn left raised-btn-2"><i class="material-icons">clear</i></button>
-        </div>
-
-    </div>
-</div>
-
-
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-<div class="grid" style="text-align: center">
-    <div class="s6" style="background-color: black;">
-        <button class="raised-btn">Raised button</button>
-        <button class="raised-btn-2">Raised button secondary</button><br>
-        <button class="raised-btn" disabled>Disabled button</button>
-        <button class="raised-btn-2" disabled>Disabled button secondary</button>
-    </div>
-    <div class="s6" style="background-color: white;">
-        <button class="raised-btn">Raised button</button>
-        <button class="raised-btn-2">Raised button secondary</button><br>
-        <button class="raised-btn" disabled>Disabled button</button>
-        <button class="raised-btn-2" disabled>Disabled button secondary</button>
-    </div>
-</div>
-
-
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+### Images and Media
 
 {% include image.html
-    caption="Sample Image"
+    caption="Cherry blossom"
     id="cherry-blossom-tree"
     src="/assets/cherry_blossom.jpg"
     style="padding-top:50%; background-color: #53cbbf" %}
 
+<figure>
+    <div class="media-box">
+        <iframe src="https://www.youtube.com/embed/1-BSTM2is7I?modestbranding=1&rel=0&color=white" frameborder="0" allow="encrypted-media" title="I Don’t Want to Say Goodbye – YouTube" allowfullscreen></iframe>
+    </div>
+    <figcaption>I Don’t Want to Say Goodbye – YouTube</figcaption>
+</figure>
 
-
-{%- capture miru -%}
-    <span class="ruby tooltip" data-tooltip="miru" lang="ja"><!--
-        ---><ruby>見<span class="sr-only">&nbsp;(</span><rt>み</rt><span class="sr-only">)</span></ruby>る<!--
----></span>
-{%- endcapture -%}
-{%- capture mimasu -%}
-    <span class="ruby tooltip" data-tooltip="mimasu" lang="ja"><!--
-    ---><ruby>見<span class="sr-only">&nbsp;(</span><rt>み</rt><span class="sr-only">)</span></ruby>ます<!--
----></span>
-{%- endcapture -%}
-{%- capture mimasen -%}
-    <span class="ruby tooltip" data-tooltip="mimasen" lang="ja"><!--
-    ---><ruby>見<span class="sr-only">&nbsp;(</span><rt>み</rt><span class="sr-only">)</span></ruby>ません<!--
----></span>
-{%- endcapture -%}
-{%- capture mite -%}
-    <span class="ruby tooltip" data-tooltip="mite" lang="ja"><!--
-    ---><ruby>見<span class="sr-only">&nbsp;(</span><rt>み</rt><span class="sr-only">)</span></ruby>て<!--
----></span>
-{%- endcapture -%}
-
-{% capture hanasu -%}
-    <span class="ruby tooltip" data-tooltip="hanasu" lang="ja"><!--
-    ---><ruby>話<span class="sr-only">&nbsp;(</span><rt>はな</rt><span class="sr-only">)</span></ruby>す<!--
----></span>
-{%- endcapture %}
-{% capture hanashimasu -%}
-    <span class="ruby tooltip" data-tooltip="hanashimasu" lang="ja"><!--
-    ---><ruby>話<span class="sr-only">&nbsp;(</span><rt>はな</rt><span class="sr-only">)</span></ruby>します<!--
----></span>
-{%- endcapture %}
-{% capture hanasanai -%}
-    <span class="ruby tooltip" data-tooltip="hanasanai" lang="ja"><!--
-    ---><ruby>話<span class="sr-only">&nbsp;(</span><rt>はな</rt><span class="sr-only">)</span></ruby>さない<!--
----></span>
-{%- endcapture %}
-{% capture hanashite -%}
-    <span class="ruby tooltip" data-tooltip="hanashite" lang="ja"><!--
-    ---><ruby>話<span class="sr-only">&nbsp;(</span><rt>はな</rt><span class="sr-only">)</span></ruby>して<!--
----></span>
-{%- endcapture %}
-{% capture hanashita -%}
-    <span class="ruby tooltip" data-tooltip="hanashita" lang="ja"><!--
-    ---><ruby>話<span class="sr-only">&nbsp;(</span><rt>はな</rt><span class="sr-only">)</span></ruby>した<!--
----></span>
-{%- endcapture %}
-
-
-
-### Verb Conjugation
-
-| Conjugation   | {{ hanasu | strip_newlines }}: hanasu (to speak) | {{ miru | strip_newlines }}: miru (to see) |
-| :------------ | :----------------------------------------------- | :----------------------------------------------- |
-| Polite form   | {{ hanashimasu | strip_newlines }}               | {{ mimasu | strip_newlines }} |
-| Negative form | {{ hanasanai | strip_newlines }}                 | {{ mimasen | strip_newlines }} |
-| "Te" form     | {{ hanashite | strip_newlines }}                 | {{ mite | strip_newlines }} |
 
 
 ### Lists
@@ -214,7 +99,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 <link rel="stylesheet" href="/styles/syntax.css">
 
-{%- highlight javascript -%}
+{%- highlight js -%}
 $('#exampleModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget); // Button that triggered the modal
     var recipient = button.data('whatever'); // Extract info from data-* attributes
