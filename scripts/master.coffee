@@ -2,19 +2,11 @@
 ---
 'use strict'
 
-##! =============================== !##
-##! ========== RandomInt ========== !##
-##! =============================== !##
-#! Description: returns a random integer between <min> and <max>
-#! Usage: Math.randomInt(<min>, <max>) OR
-#!        Math.randomInt(<max>) where a number will be generated from 0 to <max> instead
-Math.randomInt = (min, max) ->
-    if arguments.length is 1
-        max = min
-        min = 0
-
-    return Math.floor(Math.random() * (~~max - ~~min + 1)) + ~~min
-
+{% include_relative xyz/randomInt.coffee %}
+{% include_relative xyz/parseHTML.coffee %}
+{% include_relative xyz/escapeHTML.coffee %}
+{% include_relative xyz/wait.coffee %}
+{% include_relative xyz/addEventListeners.coffee %}
 
 #! Random blobs
 xyz.blobs = {
@@ -23,45 +15,13 @@ xyz.blobs = {
         x = if typeof index is "number"
                 index
             else
-                Math.randomInt(0, @allBlobs.length - 1)
+                xyz.randomInt(0, @allBlobs.length - 1)
 
         return {
             blob: twemoji.parse @allBlobs[x]
             index: x
         }
 }
-##! ================================ !##
-##! ========== Parse HTML ========== !##
-##! ================================ !##
-#! Description: Takes a string of HTML and parses in into an HTML node
-#! Usage: xyz.parseHTML(<string>)
-#! where string is a string representing HTML
-#! Returns: Either an HTMLElement or an HTMLCollection, depending on the string
-xyz.parseHTML = (string) ->
-    tmp = document.implementation.createHTMLDocument()
-    tmp.body.innerHTML = string
-    if tmp.body.children.length is 1
-        return tmp.body.firstChild
-    else
-        return tmp.body.children
-
-##! ================================= !##
-##! ========== Escape HTML ========== !##
-##! ================================= !##
-#! Description: Sanitizes an an untrusted string with HTML characters.
-#! Usage: xyz.escapeHTML(<String>)
-#! Returns: a string with escaped HTML characters
-xyz.escapeHTML = (string) ->
-    _HTMLEntities =
-        '&': '&amp;'
-        '<': '&lt;'
-        '>': '&gt;'
-        '"': '&quot;'
-        "'": '&#39;'
-        '/': '&#x2F;'
-        '`': '&#x60;'
-        '=': '&#x3D;'
-    String(string).replace /[&<>"'`=\/]/g, (s) -> _HTMLEntities[s]
 
 ##! ============================ !##
 ##! ========== Dialog ========== !##
@@ -128,43 +88,6 @@ xyz.toast = (data) ->
             thisToast.parentNode.removeChild thisToast
     return data
 
-##! =========================== !##
-##! ========== Toast ========== !##
-##! =========================== !##
-#! Description: Resolves after the desired number of milliseconds
-#! Usage: xyz.wait(<ms>);
-#! where ms the number of milliseconds to wait
-#! Returns: a Promise
-xyz.wait = (ms) ->
-    return new Promise (resolve) ->
-        window.setTimeout ->
-            resolve()
-        , ms
-
-##! ======================================= !##
-##! ========== addEventListeners ========== !##
-##! ======================================= !##
-#! Description: Adds event listeners to any number of nodes
-#! Usage: xyz.addEventListeners(<nodes>, <event>, <handler>);
-#! where <nodes> is an array-like object to add the event listeners to
-#! where <event> is a string reperesenting the event name (such as "click")
-#! where <handler> is the event handler to be fired
-#! Returns: the nodes with the listers attached
-xyz.addEventListeners = (nodes, event, handler) ->
-    for node in nodes
-        node.addEventListener event, handler
-    return nodes
-
-# xyz.time = {
-#     formatDateTime: (dateObj) ->
-#         formatter = new Intl.DateTimeFormat([], {
-#             weekday: "short"
-#             hour: "numeric"
-#             minute: "2-digit"
-#         })
-#         formatter.format dateObj
-# }
-
 xyz.ready(->
     #! Parse twemoji
     for el in document.getElementsByClassName 'e'
@@ -175,19 +98,15 @@ xyz.ready(->
         ga('send', 'event', 'Acquisition', "From share link")
 
     #! Add the footer blob if the footer's there
-    if document.getElementById "footer--blob"
-        document.getElementById "footer--blob"
-        .innerHTML = xyz.blobs.pull().blob
+    footerBlob = document.getElementById "footer--blob"
+    if footerBlob then footerBlob.innerHTML = xyz.blobs.pull().blob
 )
 
-
-onMessage = (event) ->
+xyz.addEventListeners([window], 'message', (event) ->
     #! Check sender origin to be trusted
     if event.origin is "{{ site.url }}"
         if event.data.hasOwnProperty "function"
             f = event.data.function
             window[f.name].apply(null, f.arguments || [])
             # console.log "Function was called via postMessage"
-
-window.addEventListener("message", onMessage, false) if window.addEventListener
-window.attachEvent("onmessage", onMessage, false)    if window.attachEvent
+)

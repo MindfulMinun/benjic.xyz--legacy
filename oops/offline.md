@@ -2,6 +2,7 @@
 title: Offline
 layout: content-only
 permalink: /oops/offline.html
+sitemap: false
 ---
 {% capture scss %}
 //<!-- Make this as tiny as possible (added html comment bc syntax is annoying)

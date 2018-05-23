@@ -99,14 +99,16 @@ The following is a paragraph demonstrating basic text: **Donut wafer cupcake** i
 
 <link rel="stylesheet" href="/styles/syntax.css">
 
-{%- highlight js -%}
-$('#exampleModal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget); // Button that triggered the modal
-    var recipient = button.data('whatever'); // Extract info from data-* attributes
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this);
-    modal.find('.modal-title').text('New message to ' + recipient);
-    modal.find('.modal-body input').val(recipient);
-});
+{%- highlight coffeescript -%}
+describe "xyz", ->
+    # ...
+    describe ".ready", ->
+        it "should execute function once DOM has been loaded", (done) ->
+            xyz.ready done
+        it "should execute immediately if DOM is already loaded", ->
+            xyz.ready ->
+                start = performance.now()
+                xyz.ready ->
+                    end = performance.now()
+                    chai.assert.isAtMost(end - start, 1)
 {%- endhighlight -%}

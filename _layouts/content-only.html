@@ -16,12 +16,5 @@
             </div>
         </main>
     </body>
-    {%- if page.scripts -%}
-        {%- for s in page.scripts %}
-        <script
-    {%- if s.src %} src="{{ s.src }}"{%- endif -%}
-    {%- if s.defer %} defer{%- endif -%}
-    {%- if s.async %} async{%- endif -%}>{{ s.content | rstrip }}</script>
-        {%- endfor %}
-    {%- endif %}
+    {%- include layout/scripts.html -%}
 </html>

@@ -36,9 +36,11 @@ html, body {
 }
 
 //! Focus styles
-:focus {
-    outline: 1px dotted white;
-    outline-offset: 4px;
+.focus-visible:focus, :focus-within .focus-visible {
+    outline-style: dashed;
+    outline-color: white;
+    outline-width: 1px;
+    outline-offset: 0.125rem;
 }
 //! Hides focus ring if focused with mouse, but shows it if focused via keyboard
 .js-focus-visible :focus:not(.focus-visible) {

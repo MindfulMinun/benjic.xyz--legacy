@@ -315,6 +315,7 @@ textarea.textarea {
     &:focus {
         border-color: $accent;
         border-color: var(--accent, $accent);
+        outline: none;
     }
 }
 

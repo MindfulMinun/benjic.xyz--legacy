@@ -13,6 +13,8 @@
 - “Don’t quote me on this.” &mdash;&nbsp;Benji
 - Benji, the skinny legend.
 - Minerva.
+- <code>window["xyz"];</code>
+- w00t
 - It’s a running joke.
 - Superb owl
 - r/animemes
@@ -27,15 +29,14 @@
 - “Hola hola crayola”
 - Red cup. #! I'm still shook
 - “Taylor ISD Trustees agree to split THS, Legacy”
-- >-
+- <blockquote>There will be bad things that will happen in life. We cannot always avoid those. But what we can do is we can stand up.</blockquote>
+- |-
     ｜￣￣￣￣￣￣￣￣￣￣｜<br>
     ｜　　あんたは嫌い　　｜<br>
     ｜＿＿＿＿＿＿＿＿＿＿｜<br>
     (\__/) ||<br>
     (•ㅅ•) ||<br>
     / 　 づ
-
-
 
 ### ======================================== ###
 ### ============== Misc. jokes ============= ###
@@ -44,7 +45,8 @@
 - “Comedy is best left to comedians.”
 - Be there or be square ‘cause you’re never a-round.
 - It’s transient humor.
-- "<em style=\"font-family:'Comic Sans MS', serif; font-weight: 100;\" aria-hidden=\"true\">Helvetica</em><span class=\"sr-only\">Helvetica written in Comic Sans.</span>"
+- |-
+    <em style=\"font-family:'Comic Sans MS', serif; font-weight: 100;\" aria-hidden=\"true\">Helvetica</em><span class=\"sr-only\">Helvetica written in Comic Sans.</span>
 
 
 ### ======================================== ###
@@ -60,27 +62,27 @@
 ### =========== Coding and stuff =========== ###
 ### ======================================== ###
 - "Uncaught TypeError: Assignment to constant variable."
-- >-
+- |-
     <pre style="background: 0; color: inherit; padding: 0;">
     f = -> f arguments...<br>
     f 'I love recursion'
     </pre>
 - “You are currently on a text element, inside of web content.”
 - I become very self-conscious when people look at my code.
-- <strong>Note:</strong> XSS attacks most frequently occur when code from one language is interpolated incorrectly or carelessly into another language.
+- <strong>Note:</strong> XSS vectors most frequently appear where code from one language is interpolated incorrectly or carelessly into another language.
 
 
 ### ======================================== ###
 ### ================ Spanish =============== ###
 ### ======================================== ###
-- >-
+- |-
     <span lang="es-MX" class="tooltip" data-tp="above" data-tooltip="Your principal is your pal. Not principle.">
         La principala.
     </span>
 - <em class="tooltip" data-tp="above" data-tooltip="Beyond!">¡Más allá!</em>
 - <span lang="es-MX" class="tooltip" data-tp="above" data-tooltip="Nooo, my sandwich!">¡Nooo, mi torta!</span>
 - <span lang="es-MX" class="tooltip" data-tp="above" data-tooltip="Reeding is important.">“Hay que ler.”</span>
-- >-
+- |-
     <em lang="es-MX">
         <strong>Advertencia:</strong> Se ha ejecutado un virus y ha tomado control del sistema operativo. Para la seguridad de usted y de los demás, su dispositivo será formateado en breve.
     </em>
@@ -92,9 +94,14 @@
 - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Pop Team Epic!">ポプテピピック！</span><span class="sr-only">Pop Team Epic!</span>
 - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Twitter!">ツイッター！</span><span class="sr-only">Twitter!</span>
 - <em lang="ja" class="tooltip" data-tp="above" data-tooltip="I love you soooooooooooo much!" aria-hidden="true">Daaaaaaaaaaaaaaaaaaaski!</em> <span class="sr-only">I love you <strong><em>so</em></strong> much!</span>
-# - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Hey Japan, this is a movie." aria-hidden="true">日本よ、これが映画だ。</span> <span class="sr-only">Hey Japan, <strong>this</strong> is a movie.</span>
-- <span class="tooltip" data-tp="above" data-tooltip="First comes rock! Then comes paper! You can’t throw all of them. Rock, paper, scissors!">Saisho wa guu <br>Sono tsugi paa <br>Guchopa wo nashi yo <br>Jan ken pon!</span>
-- >-
+- |-
+    <span class="tooltip" data-tp="above" data-tooltip="First comes rock! Then comes paper! You can’t throw all of them. Rock, paper, scissors!">
+    Saisho wa guu<br>
+    Sono tsugi paa<br>
+    Guchopa wo nashi yo<br>
+    Jan ken pon!
+    </span>
+- |-
     <span lang="ja" class="tooltip" data-tp="above" data-tooltip="It’s a pun on the word “Hawaii”">
         なんかハワイには、歯医者さんひとりもいない。それはね、歯はいい。</span>
     <span class="sr-only">It’s a Japanese pun on the word “Hawaii”</span>
@@ -102,6 +109,8 @@
 - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="People are dumb." aria-hidden="true">人はバカ。</span><span class="sr-only">People are stupid.</span>
 - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="You’re gay.">お前はゲイだよ。</span><span class="sr-only">You’re gay.</span>
 - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Nice to meet you, call me Benji.">はじめまして、ベンジーと申します。</span><span class="sr-only">Nice to meet you, call me Benji.</span>
+- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Akane-chan will go along with whatever you say.">何でも言うことを聞いてくれるアカネチャン</span><span class="sr-only">Akane-chan will go along with whatever you say.</span>
+
 
 
 ### ======================================== ###
@@ -110,7 +119,6 @@
 #! XXX: Misc. references
 - KissAnime
 - Each time I hear this song
-- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Akane-chan will go along with whatever you say.">何でも言うことを聞いてくれるアカネチャン</span><span class="sr-only">Akane-chan will go along with whatever you say.</span>
 - “So long, gay Bowser!”
 - Nathaniel Bandy every time. #! Simpleflips
 - “How nice to see you again!”
@@ -124,7 +132,7 @@
 - Hyperflex
 - Ah, the scalene triangle.
 - Sal from Khan Academy.
-    #! XXX: A Hat in Time + Doki Doki
+#! XXX: A Hat in Time + Doki Doki
 - Peck.
 - Doki Doki Hat Club
 - A Monika in Time
@@ -132,37 +140,52 @@
 - Just Monika.
 - “Manga is literature!”
 - Amy Likes Spiders
-- “You kind of left [Sayori] hanging this morning, you know?”
-- <span class="block trunc">Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head. Get out of my head.</span>
-    #! XXX: Love Live!
+- “You kind of left her hanging this morning, you know?”
+- I gently open the door.
+- |-
+    An exception has occurred.
+    <img src="/game/script-ch5.rpy" onerror="throw Error(
+        'Oh jeez...I didn\'t break anything, did I?' +
+        'Hold on a sec, I can probably fix this...I think...\n' +
+        'Actually, you know what? This would probably be a lot easier if I just deleted her.'+
+        'She\'s the one who\'s making this so difficult. Ahaha! Well, here goes nothing.');" hidden>
+
+- |-
+    <span class="block trunc">
+        Get out of my head. Get out of my head. Get out of my head.
+        Get out of my head. Get out of my head. Get out of my head.
+        Get out of my head. Get out of my head. Get out of my head.
+    </span>
+#! XXX: Love Live!
 - i love you <del>watanabe</del>
 - <em>Love Live!</em> is the most anime-like anime I’ve ever heard of.
 - Jojo’s and Love Live are the same thing.
-    #! XXX: Poputepipikku
+#! XXX: Poputepipikku
 - Spinning Popuko
 - Sorry, I was thinking about Hellshake Yano.
-    #! XXX: Blend S
+#! XXX: Blend S
 - Smile! Sweet! Sister! Sadistic! Surprise! Service!
-    #! XXX: Duet game
+#! XXX: Duet game
 - It’s so good to see you.<br>Stay close to me and don’t touch anything.
 - <span lang="es" class="tooltip" data-tp="above" data-tooltip="Attempt itself invites failure.">El mero intento invita al fracaso.</span>
-    #! XXX: Vsauce
+#! XXX: Vsauce
 - Hey, <span aria-hidden="true">🅱️🆘</span><span class="sr-only">Vsauce</span>, Michael here.
-    #! XXX: Death note
+#! XXX: Death note
 - “I’ll take a potato chip, and eat it!”
-    #! XXX: Nichijou
+#! XXX: Nichijou
 - <span lang="ms">“Selamat pagi!”</span>
 # - Hyadaruko no Kakakata Kataomoi-F
+- “Did you know that the truth isn’t always correct?”
 - <em>“See? Fortune favors the upbeat. It’s positive magic!”</em>
 - “To live tomorrow with a smile, even though I cried yesterday.”
 - "Short Thoughts: “If you search for it, you’ll find everything.”"
 - "Short Thoughts: “I respond to praise, but I never receive any.”"
-    #! XXX: Rhythm Heaven
+#! XXX: Rhythm Heaven
 # - "♫ <em>Let’s go read a buncha books!</em> ♫"
 - "♬ <em>One, two, three! One, two, three! Okay, it’s on! It’s up to you!</em> ♬"
 - "♬ <em>Whoa! You go big guy!</em> ♬"
 - "♬ <em>Wubba-dubba-dub, is that true?</em> ♬"
-    #! XXX: Pokémon
+#! XXX: Pokémon
 - Unova.
 - "Aspertia City: The city of nostalgia!"
 - Aspertia.

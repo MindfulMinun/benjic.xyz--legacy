@@ -18,6 +18,7 @@ permalink: /:year-:month-:day/:categories/:title/
 #! My vars
 tracking-id: "UA-113187497-1"
 
+#! See Gemfile
 plugins:
     - jekyll-autoprefixer
     - jekyll-redirect-from
@@ -35,9 +36,10 @@ strict_front_matter: true
 
 jekyll-minifier:
     exclude:
-        - 'robots.txt'
-        - 'sitemap.xml'
-        - '.htaccess'
+        - "robots.txt"
+        - "sitemap.xml"
+        - ".htaccess"
+        - "mocha/*"
 
 #! ========================================
 # Sass settings
@@ -72,3 +74,8 @@ defaults:
         values:
             layout: "default"
             theme-color: "#673ab7"
+    -
+        scope:
+            path: "mocha/*"
+        values:
+            sitemap: false

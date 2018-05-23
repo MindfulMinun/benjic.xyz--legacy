@@ -7,22 +7,27 @@ description: >
 
 scripts:
     - #! External scripts
-        src: "app.js"
+        src: "./app.js"
         async: true
 ---
 
+<style>
+    .blob-list {
+        margin: .5rem 0;
+    }
+</style>
+
 <h1>{{ page.title }}</h1>
 
+{% assign blobs = site.data.blobs %}
 
-<p>
-    Blob count: {{ site.data.blobs | size | minus: 1 }} elements (zero-based)
-</p>
+<p>Blob count: {{ blobs | size | minus: 1 }} elements (zero-based)</p>
 <div class="no-js-hide">
 
     <div class="grid">
         <div class="s6 m3">
             <input type="number" title="Index of blob" id="index" min="0" placeholder="Index of blob"
-            max="{{ site.data.blobs | size | minus: 1}}">
+            max="{{ blobs | size | minus: 1}}">
         </div>
         <div class="s6">
             <button class="flat-btn" id="new-blob" aria-label="Pull and render a blob.">Pull + render a blob</button>
@@ -30,19 +35,17 @@ scripts:
     </div>
 
     <div aria-atomic="true" aria-live="assertive" class="margin-tb">
-        <span aria-hidden="true">Blob #</span><span class="sr-only">Blob number</span><span id="number">???</span><span aria-hidden=true>:</span>
+        <span aria-hidden="true">Blob #</span><span class="sr-only">Blob number</span><span id="number">???</span><span aria-hidden="true">:</span>
         <div id="blob-result" style="margin-left: 2rem;">
             <em class="txt-aside">There’s no blob rendered here&hellip;yet.</em>
         </div>
     </div>
 </div>
-<hr>
 
 <figure class="no-cap flush-p">
-<pre>
-{% assign blobs = site.data.blobs %}
+<pre><ol start="0" class="blob-list">
 {%- for blob in blobs -%}
-    {% increment c %} - {{ blob | escape }}<br>
+    <li>{{ blob | escape }}</li>
 {%- endfor -%}
-</pre>
+</ol></pre>
 </figure>

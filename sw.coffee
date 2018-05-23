@@ -12,7 +12,7 @@ assets = [
 ]
 # Cache name: v?.?.?-environment::yyyy-mm-dd--hh-mm-ss
 # Current_Cache = 'v0.0.0-production::2018-03-17--23:49:26'
-Current_Cache = 'v0.0.0-development::2018-03-18--16:29:19'
+Current_Cache = 'v1.0.0-production::2018-05-23--13:31:01'
 expectedCaches = [
     Current_Cache
 ]
