@@ -29,4 +29,4 @@ _Protip: Press_ <kbd><kbd>&#8984; Command</kbd> + <kbd>R</kbd></kbd> _to refresh
 
 <!-- > _“If you search for it, you’ll find everything.” &mdash;&nbsp;Short&nbsp;Thoughts, Nichijou_ -->
 
-[twitter]: https://twitter.com/MindfulMinun "Benji (@MindfulMinun) | Twitter"
+[twitter]: https://twitter.com/MindfulMinun "MindfulMinun on Twitter"

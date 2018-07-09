@@ -35,6 +35,8 @@ include:
 # show_drafts: true
 # incremental: true
 strict_front_matter: true
+exclude:
+    - "_archives/"
 
 jekyll-minifier:
     exclude:

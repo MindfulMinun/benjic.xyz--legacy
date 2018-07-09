@@ -7,9 +7,21 @@
 CACHE = '{{ jekyll.environment }}::{{ site.time | slice: 0, 19 }}'
 OFFLINE = "/oops/offline.html"
 ASSETS = [
+    #! Criticals
     "/styles/master.css"
+    "/scripts/master.js"
+    "/scripts/post.js"
     "/scripts/mini-video.js"
+    #! SVGs
+    "/assets/svg/cloud_circle--white.svg"
+    "/assets/svg/hash.svg"
+    "/assets/svg/pause_circle_filled--white.svg"
+    "/assets/svg/pause--black.svg"
+    "/assets/svg/play_arrow--black.svg"
+    "/assets/svg/play_circle_filled--white.svg"
+    #! Offline
     OFFLINE
+    #! External
     "https://twemoji.maxcdn.com/2/twemoji.min.js?2.5"
 ]
 
@@ -39,15 +51,15 @@ fromNetwork = (request, timeout) ->
         .catch reject
 
 #! ========================================
-#! FromCache: Fetches asset from the cache. Always resolves.
+#! FromCache: Fetches asset from the cache.
 fromCache = (request) ->
     caches.open(CACHE)
     .then (cache) ->
         cache.match request
             #! Resolves with `undefined` if no match
-            # .then (matching) -> matching or Promise.reject('no-match')
+            .then (matching) -> matching or Promise.reject('no-match')
             #! Resolves with the offline url if no match
-            .then (matching) -> matching or cache.match OFFLINE
+            # .then (matching) -> matching or cache.match OFFLINE
 
 #! ========================================
 #! Install: precaches assets
@@ -64,8 +76,15 @@ self.addEventListener "fetch", (e) ->
     l "Fetch:", url
 
     e.respondWith(
+        #! Here's what this does:
+        #! - Try to fetch from network quickly...
+        #! - If it takes too long, go to cache
+        #! - If not in cache, go to network again.
+        #! - If all of that failed, assume no network; offline
         fromNetwork(e.request, 400)
         .catch -> fromCache(e.request)
+        .catch -> fetch(e.request)
+        .catch -> caches.match(OFFLINE) if e.request.method is 'GET'
     )
 
 #! ========================================
