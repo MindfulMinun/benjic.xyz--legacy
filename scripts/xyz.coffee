@@ -6,10 +6,12 @@
 ###
 this.xyz = {}
 
-{% include_relative xyz/addEventListeners.coffee %}
-{% include_relative xyz/escapeHTML.coffee %}
-{% include_relative xyz/hashUpdate.coffee %}
-{% include_relative xyz/parseHTML.coffee %}
-{% include_relative xyz/randomInt.coffee %}
-{% include_relative xyz/ready.coffee %}
-{% include_relative xyz/wait.coffee %}
+# coffeelint: disable=space_operators
+{% include xyz/addEventListeners.coffee %}
+{% include xyz/download.coffee %}
+{% include xyz/escapeHTML.coffee %}
+{% include xyz/hashUpdate.coffee %}
+{% include xyz/parseHTML.coffee %}
+{% include xyz/randomInt.coffee %}
+{% include xyz/ready.coffee %}
+{% include xyz/wait.coffee %}

@@ -1,6 +1,11 @@
 ---
 ---
 'use strict'
+
+#! coffeelint: disable=space_operators
+{% include xyz/copy.coffee %}
+#! coffeelint: enable=space_operators
+
 ## ==================================== ##
 ## ========== Time Formatter ========== ##
 ## ==================================== ##
@@ -49,8 +54,20 @@
                 alert 'Error, couldn’t share'
                 console.error err
         else
-            prompt 'Permalink:', url
-            ga('send', 'event', 'Share', 'Shared Permalink')
+            xyz.copy(url)
+            .then ->
+                xyz.toast {
+                    content: "URL copied to clipboard"
+                }
+                ga('send', 'event', 'Share', 'Shared Permalink')
+            .catch ->
+                xyz.toast {
+                    content: "Couldn’t copy URL to clipboard."
+                    actionText: "URL"
+                    actionHandler: ->
+                        prompt "Copy this URL: ", url
+                        ga('send', 'event', 'Share', 'Shared Permalink')
+                }
 
 
 )('share')

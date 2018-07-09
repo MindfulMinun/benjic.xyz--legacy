@@ -1,5 +1,8 @@
 //! Banners
 .banner {
+    &:first-of-type {
+        border-top: 0;
+    }
     background-color: $accent;
     background-color: var(--accent, $accent);
     color: #fafafa;

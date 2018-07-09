@@ -7,13 +7,13 @@
 ### ======================================== ###
 ### ====== Random stuff (Last resort) ====== ###
 ### ======================================== ###
+- hello world
 - smh my head
 - Kek
 - Bobby-kun!
 - “Don’t quote me on this.” &mdash;&nbsp;Benji
 - Benji, the skinny legend.
 - Minerva.
-- <code>window["xyz"];</code>
 - w00t
 - It’s a running joke.
 - Superb owl
@@ -30,6 +30,7 @@
 - Red cup. #! I'm still shook
 - “Taylor ISD Trustees agree to split THS, Legacy”
 - <blockquote>There will be bad things that will happen in life. We cannot always avoid those. But what we can do is we can stand up.</blockquote>
+- hugs &gt; drugs
 - |-
     ｜￣￣￣￣￣￣￣￣￣￣｜<br>
     ｜　　あんたは嫌い　　｜<br>
@@ -37,6 +38,25 @@
     (\__/) ||<br>
     (•ㅅ•) ||<br>
     / 　 づ
+- |-
+    ｜￣￣￣￣￣￣￣￣￣￣￣｜<br>
+    ｜　Ｉｓａｂｅｌｌｅ　　｜<br>
+    ｜　ｆｏｒ　Ｓｍａｓｈ　｜<br>
+    ｜＿＿＿＿＿＿＿＿＿＿＿｜<br>
+    (\__/) ||<br>
+    (•ㅅ•) ||<br>
+    / 　 づ
+- Poor Waluigi.
+- Does anyone actually read these blobs?
+- "bts stands for: <strong>b</strong>ig <strong>t</strong>ime ru<strong>s</strong>h"
+#! NOTE: Meta
+- Made with love by MindfulMinun
+- Copied to clipboard successfully.
+- Projects, Tools, &amp; Gadgets
+- I like coding things for the Internet & playing the piano. I’m also on Twitter and CodePen. Feel free to say hi.
+- Make your boring geometrical text more ａｅｓｔｈｅｔｉｃ™.
+- Convert an ASCII string to Base64 and vice versa.
+- An assorted list of small and useless projects, tools, and gadgets I’ve worked on.
 
 ### ======================================== ###
 ### ============== Misc. jokes ============= ###
@@ -45,8 +65,9 @@
 - “Comedy is best left to comedians.”
 - Be there or be square ‘cause you’re never a-round.
 - It’s transient humor.
+- ¿La viola? Ese instrumento me “viola” los oídos.
 - |-
-    <em style=\"font-family:'Comic Sans MS', serif; font-weight: 100;\" aria-hidden=\"true\">Helvetica</em><span class=\"sr-only\">Helvetica written in Comic Sans.</span>
+    <em style="font-family:'Comic Sans MS', serif; font-weight: 100;" aria-hidden="true">Helvetica</em><span class="sr-only">Helvetica written in Comic Sans.</span>
 
 
 ### ======================================== ###
@@ -64,23 +85,23 @@
 - "Uncaught TypeError: Assignment to constant variable."
 - |-
     <pre style="background: 0; color: inherit; padding: 0;">
-    f = -> f arguments...<br>
+    f = -> f arguments...
     f 'I love recursion'
     </pre>
 - “You are currently on a text element, inside of web content.”
 - I become very self-conscious when people look at my code.
 - <strong>Note:</strong> XSS vectors most frequently appear where code from one language is interpolated incorrectly or carelessly into another language.
-
+- I can’t drown my pm2 daemons, they know how to swim.
+- <code>document.body.style.setProperty('--accent', '#FF5252');</code>
+- <code>window["xyz"];</code>
+- The contents of <code>xyz.blobs.allBlobs</code> is appoximately 8kb compressed.
 
 ### ======================================== ###
 ### ================ Spanish =============== ###
 ### ======================================== ###
-- |-
-    <span lang="es-MX" class="tooltip" data-tp="above" data-tooltip="Your principal is your pal. Not principle.">
-        La principala.
-    </span>
-- <em class="tooltip" data-tp="above" data-tooltip="Beyond!">¡Más allá!</em>
-- <span lang="es-MX" class="tooltip" data-tp="above" data-tooltip="Nooo, my sandwich!">¡Nooo, mi torta!</span>
+# - <em class="tooltip" data-tp="above" data-tooltip="Beyond!">¡Más allá!</em>
+- <em>La luna carmesí vuelve a brillar esta noche. Ten mucho cuidado, Link.</em>
+- ¡Nooo, mi torta!
 - <span lang="es-MX" class="tooltip" data-tp="above" data-tooltip="Reeding is important.">“Hay que ler.”</span>
 - |-
     <em lang="es-MX">
@@ -93,23 +114,32 @@
 ### ======================================== ###
 - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Pop Team Epic!">ポプテピピック！</span><span class="sr-only">Pop Team Epic!</span>
 - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Twitter!">ツイッター！</span><span class="sr-only">Twitter!</span>
-- <em lang="ja" class="tooltip" data-tp="above" data-tooltip="I love you soooooooooooo much!" aria-hidden="true">Daaaaaaaaaaaaaaaaaaaski!</em> <span class="sr-only">I love you <strong><em>so</em></strong> much!</span>
-- |-
-    <span class="tooltip" data-tp="above" data-tooltip="First comes rock! Then comes paper! You can’t throw all of them. Rock, paper, scissors!">
-    Saisho wa guu<br>
-    Sono tsugi paa<br>
-    Guchopa wo nashi yo<br>
-    Jan ken pon!
-    </span>
+# - |-
+#     <em lang="ja" class="tooltip" data-tp="above" data-tooltip="I love you soooooooooooo much!" aria-hidden="true">
+#         Daaaaaaaaaaaaaaaaaaaski!
+#     </em>
+#     <span class="sr-only">I love you <strong><em>so</em></strong> much!</span>
+# - |-
+#     <span class="tooltip" data-tp="above" data-tooltip="First comes rock! Then comes paper! You can’t throw all of them. Rock, paper, scissors!">
+#     Saisho wa guu<br>
+#     Sono tsugi paa<br>
+#     Guchopa wo nashi yo<br>
+#     Jan ken pon!
+#     </span>
 - |-
     <span lang="ja" class="tooltip" data-tp="above" data-tooltip="It’s a pun on the word “Hawaii”">
         なんかハワイには、歯医者さんひとりもいない。それはね、歯はいい。</span>
     <span class="sr-only">It’s a Japanese pun on the word “Hawaii”</span>
 - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="I party for 24 hours.">二十四時間パーティーをします。</span><span class="sr-only">I party for 24 hours.</span>
-- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="People are dumb." aria-hidden="true">人はバカ。</span><span class="sr-only">People are stupid.</span>
-- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="You’re gay.">お前はゲイだよ。</span><span class="sr-only">You’re gay.</span>
-- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Nice to meet you, call me Benji.">はじめまして、ベンジーと申します。</span><span class="sr-only">Nice to meet you, call me Benji.</span>
-- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Akane-chan will go along with whatever you say.">何でも言うことを聞いてくれるアカネチャン</span><span class="sr-only">Akane-chan will go along with whatever you say.</span>
+# - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="People are dumb." aria-hidden="true">人はバカ。</span><span class="sr-only">People are stupid.</span>
+- |-
+    <span lang="ja" class="tooltip" data-tp="above" data-tooltip="You’re gay.">お前はゲイだよ。</span>
+    <span class="sr-only">You’re gay.</span>
+- |-
+    <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Nice to meet you, call me Benji.">
+        はじめまして、ベンジーと申します。
+    </span><span class="sr-only">Nice to meet you, call me Benji.</span>
+- 何でも言うことを聞いてくれるアカネチャン #! Akane-chan will go along with whatever you say.
 
 
 
@@ -118,9 +148,9 @@
 ### ======================================== ###
 #! XXX: Misc. references
 - KissAnime
+- "Error Code: 20110"
 - Each time I hear this song
 - “So long, gay Bowser!”
-- Nathaniel Bandy every time. #! Simpleflips
 - “How nice to see you again!”
 - <em class="tooltip" data-tp="above" data-tooltip="Beyond!">Plus ultra!</em>
 - one two <br> two loss
@@ -142,12 +172,13 @@
 - Amy Likes Spiders
 - “You kind of left her hanging this morning, you know?”
 - I gently open the door.
+- Este juego no es apto para niños ni para quienes son fácilmente perturbados.
 - |-
     An exception has occurred.
     <img src="/game/script-ch5.rpy" onerror="throw Error(
-        'Oh jeez...I didn\'t break anything, did I?' +
-        'Hold on a sec, I can probably fix this...I think...\n' +
-        'Actually, you know what? This would probably be a lot easier if I just deleted her.'+
+        'Oh jeez...I didn\'t break anything, did I? ' +
+        'Hold on a sec, I can probably fix this...I think... ' +
+        'Actually, you know what? This would probably be a lot easier if I just deleted her. ' +
         'She\'s the one who\'s making this so difficult. Ahaha! Well, here goes nothing.');" hidden>
 
 - |-
@@ -156,6 +187,9 @@
         Get out of my head. Get out of my head. Get out of my head.
         Get out of my head. Get out of my head. Get out of my head.
     </span>
+#! XXX: Haruka
+- Haruka
+- The world is not black and white.
 #! XXX: Love Live!
 - i love you <del>watanabe</del>
 - <em>Love Live!</em> is the most anime-like anime I’ve ever heard of.
@@ -200,8 +234,8 @@
 - HeartGold &amp; SoulSilver did Kanto’s theme better than it’s own theme.
 - "[in Lumiose @ night] <br>man: you can't pass there's a blackout <br>[lights on, npc passes by] <br> man: you can't pass."
 - <em class="txt-u">Don’t Ever Forget</em> and <em class="txt-u">I Don’t Want To Say Goodbye</em> are both names for the same song.
-- Don’t Ever Forget
-- I Don’t Want To Say Goodbye
+- <em>Don’t Ever Forget</em>
+- <em>I Don’t Want To Say Goodbye</em>
 - Arata Iiyoshi
 
 
@@ -214,6 +248,7 @@
 - “Be unique” is such a normie thing to say.
 - Happiness isn’t the absence of problems, but the ability to overcome them.
 - “Stop holding hands! No PDFs!”
+- No one's around to help.
 # - >
 #     <span class="ruby tooltip" data-tp="above" data-tooltip="What"><!--
 #      --><ruby lang="ja"><!--

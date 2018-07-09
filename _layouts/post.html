@@ -14,20 +14,21 @@
 
         <link rel="stylesheet" href="/styles/master.css">
         <link rel="stylesheet" href="/styles/post.css">
+        {%- if page.afterHead -%}{{ page.afterHead }}{%- endif -%}
     </head>
     <body class="fluid-body post">
         {%- include layout/header.html %}
         {%- include layout/banners.html %}
         <main>
             {%- if page.image -%}
-            <aside class="post-metadata cf ribbon-image"
+            <header class="post-metadata cf ribbon-image"
                 style="background-image: url({{ page.image.src | absolute_url }}); background-color: {{ page.image.color }}">
             {%- else -%}
-            <aside class="post-metadata cf">
+            <header class="post-metadata cf">
             {%- endif -%}
                 <div class="ribbon-gradient-container">
                     <div class="container flex end">
-                        <h1 class="flex-fill-row">{{ page.title }}</h1>
+                        <h1 class="flex-fill-row" style="margin-bottom: 0;">{{ page.title }}</h1>
                         <p class="txt-aside flex-fill-space">
                             Written on <time datetime="{{ page.date | date_to_xmlschema }}" class="i18n">
                                 {{ page.date | date: "%a, %b %d, %l:%M %P %Z" }}
@@ -46,7 +47,7 @@
                         </button>
                     </div>
                 </div>
-            </aside>
+            </header>
             <hr class="print-only">
             <div class="container">
                 <article class="post-content">
@@ -60,6 +61,8 @@
         <button class="sr-only">Bottom of page.</button>
         {%- include layout/drawer.html %}
         {% endcomment -%}
+        <div id="toast-container" aria-live="polite"></div>
+        {%- if page.afterHTML -%}{{ page.afterHTML }}{%- endif -%}
     </body>
     <script src="/scripts/post.js"></script>
     {%- include layout/scripts.html %}

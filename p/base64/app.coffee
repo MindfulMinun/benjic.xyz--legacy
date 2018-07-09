@@ -1,15 +1,7 @@
 ---
 ---
 
-xyz.textarea = {
-    upgrade: (el) ->
-        el.addEventListener 'input', ->
-            this.style.height = "auto"
-            this.style.height = "#{this.scrollHeight + 1}px"
-    update: (el) ->
-        el.style.height = "auto"
-        el.style.height = "#{el.scrollHeight + 1}px"
-}
+{% include xyz/textarea.coffee %}
 
 a = document.getElementById 'txt-a'
 b = document.getElementById 'txt-b'
@@ -33,6 +25,3 @@ btnBtoA.addEventListener 'click', ->
     catch error
         console.log error.message
         a.value = "[An error occurred while encoding text, likely because text contains non-ASCII characters.]"
-
-for txt in document.querySelectorAll 'textarea.textarea'
-    xyz.textarea.upgrade txt

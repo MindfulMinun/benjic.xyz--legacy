@@ -9,10 +9,12 @@ twitter: "@MindfulMinun"
 synopsis: >
     I like coding things for the Internet & playing the piano.
     I’m also on [Twitter](https://twitter.com/MindfulMinun)
-    and [CodePen](https://codepen.io/MindfulMinun). Come say hi!
+    and [CodePen](https://codepen.io/MindfulMinun).
+    Feel free to say hi.
 
 timezone: America/Chicago
 permalink: /:year-:month-:day/:categories/:title/
+markdown: kramdown
 
 #! ========================================
 #! My vars
@@ -30,7 +32,7 @@ plugins:
 #! Plugin vars
 include:
     - ".htaccess"
-show_drafts: true
+# show_drafts: true
 # incremental: true
 strict_front_matter: true
 

@@ -2,9 +2,10 @@
 ---
 'use strict'
 
+#! coffeelint: disable=space_operators
 {% capture scss %}
 @import "_vars";
-//! Audio player styles ###
+// Audio player styles ###
 .audio-player {
     overflow: hidden;
     background-color: #fff;
@@ -61,11 +62,9 @@
 }
 // ###
 {% endcapture %}
+#! coffeelint: enable=space_operators
 
-
-styles = """
-    {{ scss | scssify }}
-"""
+styles = "{{ scss | scssify }}"
 
 
 #! Append styles
@@ -115,12 +114,15 @@ formatTime = (timeInSec) ->
 
 
 createPlayer = (box) ->
-    box.appendChild xyz.parseHTML """
-        <div class="audio-player__controls">
-            <button aria-label="Play"><i class="material-icons">play_arrow</i></button>
-            <button class="audio-player__time-display" aria-label="Timestamp not loaded.">0:00 / ?:??</button>
+    box.appendChild xyz.parseHTML "
+        <div class=\"audio-player__controls\">
+            <button aria-label=\"Play\">
+                <i class=\"material-icons\">play_arrow</i>
+            </button>
+            <button class=\"audio-player__time-display\"
+                aria-label=\"Timestamp not loaded.\">0:00 / ?:??</button>
         </div>
-    """
+    "
 
     player = box.querySelector 'audio'
     pp = box.querySelector 'button'
@@ -129,8 +131,14 @@ createPlayer = (box) ->
     box.removeAttribute "hidden"
 
     updateTime = ->
-        timeDisplay.setAttribute "aria-label", "#{formatTime player.currentTime} out of #{formatTime player.duration}"
-        timeDisplay.textContent = "#{formatTime player.currentTime} / #{formatTime player.duration}"
+        timeDisplay.setAttribute(
+            "aria-label",
+            "#{formatTime player.currentTime} out of
+            #{formatTime player.duration}"
+        )
+        timeDisplay.textContent = "
+            #{formatTime player.currentTime} / #{formatTime player.duration}
+        "
 
     #! Set initial states
     box.dataset.playbackState = 'unstarted'
@@ -146,26 +154,34 @@ createPlayer = (box) ->
 
     #! Audio listeners
     player.addEventListener 'playing', ->
+        #! Analytics
+        if box.dataset.playbackState is "unstarted" and ga?
+            ga 'send', 'event', 'Media', "Audio played"
         box.dataset.playbackState = 'playing'
         pp.setAttribute "aria-label", "Playing. Click to Pause."
-        pp.innerHTML = """
-            <i class="material-icons">pause</i>
-        """
+        pp.innerHTML = "<i class=\"material-icons\">pause</i>"
     player.addEventListener 'pause', ->
         box.dataset.playbackState = 'pause'
         pp.setAttribute "aria-label", "Paused. Click to Play."
-        pp.innerHTML = """
-            <i class="material-icons">play_arrow</i>
-        """
+        pp.innerHTML = "<i class=\"material-icons\">play_arrow</i>"
     player.addEventListener 'ended', ->
         box.dataset.playbackState = 'end'
         pp.setAttribute "aria-label", "Playback ended. Click to restart."
+        #! Analytics
+        if ga?
+            ga 'send', 'event', 'Media', "Audio played to end"
     player.addEventListener 'waiting', ->
         box.dataset.playbackState = "buffering"
         pp.setAttribute "aria-label", "Loading..."
 
-    player.addEventListener "timeupdate", updateTime
-    player.addEventListener "durationchange", updateTime
+    # player.addEventListener "timeupdate", updateTime
+    # player.addEventListener "loadedmetadata", updateTime
+    # player.addEventListener "durationchange", updateTime
+    xyz.addEventListeners(
+        [player],
+        ["timeupdate", "loadedmetadata", "durationchange"],
+        updateTime
+    )
 
 players = document.querySelectorAll '.audio-player'
 createPlayer player for player in players

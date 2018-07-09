@@ -10,6 +10,11 @@
 //! ====================================== !//
 @import "_helpers-mixins";
 
+//! ============================ !//
+//! ========== Resets ========== !//
+//! ============================ !//
+@import "_resets";
+
 //! ================================= !//
 //! ========== Scaffolding ========== !//
 //! ================================= !//
@@ -22,6 +27,7 @@ html, body {
     line-height: 1.5;
     background-color: $background-color;
     color: $text-color;
+    overflow-x: hidden;
 }
 :root {
     //! CSS vars
@@ -36,12 +42,25 @@ html, body {
 }
 
 //! Focus styles
+//! See post.scss, look up "Focus styles"
 .focus-visible:focus, :focus-within .focus-visible {
     outline-style: dashed;
     outline-color: white;
     outline-width: 1px;
     outline-offset: 0.125rem;
+    &.header-link {
+        h1, h2, h3, h4, h5, h6 {
+            outline-style: dashed;
+            outline-color: white;
+            outline-width: 1px;
+            outline-offset: 0.125rem;
+        }
+    }
 }
+input.focus-visible:focus {
+    outline: none;
+}
+
 //! Hides focus ring if focused with mouse, but shows it if focused via keyboard
 .js-focus-visible :focus:not(.focus-visible) {
     outline: none;
@@ -54,7 +73,6 @@ html, body {
 
     margin-left: auto;
     margin-right: auto;
-    overflow-x: visible;
 }
 @media #{$s2-up} {
     .container {max-width: $s2;}
@@ -62,11 +80,6 @@ html, body {
 @media #{$m2-up} {
     .container {max-width: $m2;}
 }
-
-//! ============================ !//
-//! ========== Resets ========== !//
-//! ============================ !//
-@import "_resets";
 
 //! Maybe add ;typography here?
 
@@ -161,6 +174,7 @@ figure {
 @import "_nav-bar";
 @import "_dialogs";
 @import "_toasts";
+// @import "syntax";
 
 //! ============================ !//
 //! ========== Extras ========== !//
@@ -194,6 +208,7 @@ a.post-card {
         position: absolute;
         bottom: 0; left: 0; right: 0;
         background: $text-against-image;
+        font-weight: $light;
     }
 }
 .horizontal-scroller {

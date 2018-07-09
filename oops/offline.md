@@ -22,9 +22,11 @@ main .container {
 One of three things happened.
 
 1. You’re offline.
-2. I forgot to start `jekyll serve`.
-3. My web server diedededed.
+2. I forgot to start `bundle exec jekyll serve --livereload`.
+3. My web server diedededed. (If so, [please let me know immediately][twitter].)
 
 _Protip: Press_ <kbd><kbd>&#8984; Command</kbd> + <kbd>R</kbd></kbd> _to refresh._
 
 <!-- > _“If you search for it, you’ll find everything.” &mdash;&nbsp;Short&nbsp;Thoughts, Nichijou_ -->
+
+[twitter]: https://twitter.com/MindfulMinun "Benji (@MindfulMinun) | Twitter"

@@ -44,7 +44,7 @@ The following is a paragraph demonstrating basic text: **Donut wafer cupcake** i
     <cite>&mdash;&nbsp;El Aleph, Jorge Luis Borges</cite>
 </blockquote>
 
-### Images and Media
+### Media
 
 {% include image.html
     caption="Cherry blossom"
@@ -54,38 +54,42 @@ The following is a paragraph demonstrating basic text: **Donut wafer cupcake** i
 
 <figure>
     <div class="media-box">
-        <iframe src="https://www.youtube.com/embed/1-BSTM2is7I?modestbranding=1&rel=0&color=white" frameborder="0" allow="encrypted-media" title="I Don’t Want to Say Goodbye – YouTube" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/yD2FSwTy2lw?modestbranding=1&rel=0&color=white&showinfo=0" frameborder="0" allow="encrypted-media" title="No one's around to help. – YouTube" allowfullscreen></iframe>
     </div>
-    <figcaption>I Don’t Want to Say Goodbye – YouTube</figcaption>
+    <figcaption>No one's around to help. – YouTube</figcaption>
 </figure>
 
-
+<figure>
+    <div class="media-box" style="padding-top: 100%;">
+        <iframe src="/media/bongo/" title="Bongo"></iframe>
+    </div>
+    <figcaption>Bongo.mp4</figcaption>
+</figure>
 
 ### Lists
 
-* One, two, three, four
-* Who's that knocking at my door?
-    * Five, six, seven, eight,
-    * Hurry up and don't be late
-* Nine, ten, ‘leven, twelve,
-* Got a secret I can’t tell.
-    * Flap your fins,
-        * Flip your tails
-* School’s out,
-    * Ring the bell!
-
-
-1. One, two, three, four
-2. Who's that knocking at my door?
-    1. Five, six, seven, eight,
-    2. Hurry up and don't be late
-3. Nine, ten, ‘leven, twelve,
-4. Got a secret I can’t tell.
-    1. Flap your fins,
-        1. Flip your tails
-5. School’s out,
-    1. Ring the bell!
-
+1. European Theater
+    * Operation Torch
+        * Invasion of North Africa
+    *  Operation Overlord
+        * Landings at Normandy (NW France)
+        * D-Day
+2. Pacific Theater
+    * Midway
+    * Pearl Harbor
+    * Island Hopping
+    * Little Boy & Fat Man (Manhattan Project)
+        * Bombing of Hiroshima & Nagasaki
+3. Home Front
+    * Women
+        * They were actually in the war, fighting
+        * Rosie the Riveter
+    * Rationing
+        * Can't buy things w/o coupon
+        * Victory Bonds / Victory Gardens
+            * War Bonds (where you just give money to government)
+            * Gov. would promise money given plus interest after war ends
+    * Japanese Internment Camps
 
 <dl>
     <dt>Coffee</dt>
@@ -110,5 +114,5 @@ describe "xyz", ->
                 start = performance.now()
                 xyz.ready ->
                     end = performance.now()
-                    chai.assert.isAtMost(end - start, 1)
+                    chai.assert.isAtMost(end - start, 5)
 {%- endhighlight -%}

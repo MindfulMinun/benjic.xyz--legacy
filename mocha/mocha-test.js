@@ -48,8 +48,6 @@ describe("xyz", function() {
                 two = xyz.parseHTML("<span>A span</span> <a href='#'>and a link</a>");
             assert.isTrue(one instanceof HTMLElement);
             assert.isTrue(two instanceof NodeList);
-            this.DOMElement.appendChild(one);
-            console.log(this);
         });
         it("creates the tree as expected", function () {
             var parsedTree = xyz.parseHTML("<div><span>h</span></div>"),
@@ -83,7 +81,7 @@ describe("xyz", function() {
                 var start = performance.now(), end;
                 xyz.ready(function () {
                     end = performance.now();
-                    assert.isAtMost(end - start, 1);
+                    assert.isAtMost(end - start, 3);
                 });
             });
         });
@@ -102,4 +100,48 @@ describe("xyz", function() {
             done();
         });
     });
-});
+    describe(".download()", function () {
+        it("should download plaintext as plaintext", function () {
+            var d = this.DOMElement;
+            d.innerHTML = [
+                "<textarea placeholder=\"Content to be saved\" style=\"display:block;width:100%\"></textarea>",
+                "<button>Save file</button>"
+            ].join('');
+            var btn = d.querySelector("button"),
+                txt = d.querySelector("textarea");
+            btn.addEventListener('click', function () {
+                xyz.download("My plaintext file", txt.value, "text/plain", "utf-8");
+            });
+        });
+    }); //! end describe .download()
+    describe(".downloadBlob()", function () {
+        it("should download blobs", function () {
+            var btn = document.createElement("button");
+            btn.innerHTML = "Download a JSON file created via Blob Constructor";
+            btn.addEventListener('click', function () {
+                xyz.downloadBlob("My JSON File", new Blob(
+                    [JSON.stringify({
+                        foo: "bar",
+                        date: new Date(),
+                        "random number between zero and one": Math.random()
+                    }, null, 4)],
+                    {type: "application/json"}
+                ), "blob");
+            });
+            this.DOMElement.appendChild(btn);
+        });
+        it("should download blobs abstracted via an Object URL", function () {
+            var btn = document.createElement("button"),
+                blob = new Blob(
+                    [JSON.stringify({hello: "world"}, null, 2)],
+                    {type: "application/json"}
+                ),
+                blobURL = URL.createObjectURL(blob);
+            btn.innerHTML = "Download a JSON file via blob URL";
+            btn.addEventListener('click', function () {
+                xyz.downloadBlob("My Blob via Object URL", blobURL, "application/json");
+            });
+            this.DOMElement.appendChild(btn);
+        });
+    });
+}); //! end describe xyz

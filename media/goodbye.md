@@ -1,0 +1,13 @@
+---
+sitemap: false
+title: Don’t Ever Forget
+layout: media/mini-video
+styles: 'max-width: 480px; max-height: 480px;'
+sources:
+    -
+        src: '/assets/goodbye/goodbye.webm'
+        type: 'video/webm'
+    -
+        src: '/assets/goodbye/goodbye.mp4'
+        type: 'video/mp4'
+---

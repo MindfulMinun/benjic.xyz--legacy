@@ -51,7 +51,7 @@ $red: #FF5252;
     padding: 0;
     max-width: none;
     overflow: hidden;
-    font-size: 14px;
+    // font-size: 16px; //! In practice, this ends up being 14px because of 87.5% thing
     background-color: #000;
     color: $white;
 
@@ -60,6 +60,7 @@ $red: #FF5252;
         background: inherit;
         margin: 0;
         padding: 1rem;
+        font-size: 14px;
     }
     code {
         color: inherit;
@@ -72,10 +73,10 @@ $red: #FF5252;
     code::after {
         position: absolute;
         top: 0; right: 0;
-        background-color: rgba(#727272, 0.52);
+        background-color: rgba(#424242, 0.52);
         color: white;
         padding: 0.25rem 1rem;
-        content: attr(data-lang);
+        content: "." attr(data-lang);
     }
     ::selection {
         color: currentColor !important;
@@ -163,7 +164,7 @@ $red: #FF5252;
     .s1, .s2 {color: $green;}
 
     //! .no: SCSS Color keywords, "black" "red" "whitesmoke"
-    .no {font-style: italic;}
+    .no {font-style: italic; color: $red;}
 }
 
 

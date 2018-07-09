@@ -1,11 +1,16 @@
 ---
 ---
 User-agent: *
+
 #! 404s
 Disallow: {{ site.url }}/404
 Disallow: {{ site.url }}/404/
 Disallow: {{ site.url }}/404.html
+
 #! Anything in /oops/
-Disallow: {{ site.url }}/oops
 Disallow: {{ site.url }}/oops/
+
+#! Media lol
+Disallow: {{ site.url }}/media/
+
 Sitemap:  {{ site.url }}/sitemap.xml

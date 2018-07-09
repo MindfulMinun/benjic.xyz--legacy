@@ -3,6 +3,7 @@
     <head>
         {%- include layout/default-head.html %}
         <link rel="stylesheet" href="/styles/master.css">
+        {%- if page.afterHead -%}{{ page.afterHead }}{%- endif -%}
     </head>
     <body class="fluid-body">
         {%- include layout/banners.html %}
@@ -15,6 +16,8 @@
                 {{ content }}
             </div>
         </main>
+        <div id="toast-container" aria-live="polite"></div>
+        {%- if page.afterHTML -%}{{ page.afterHTML }}{%- endif -%}
     </body>
     {%- include layout/scripts.html -%}
 </html>

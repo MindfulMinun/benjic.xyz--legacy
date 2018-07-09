@@ -2,7 +2,7 @@
 layout: default
 title: Projects, Tools, & Gadgets
 description: >
-    A collection of all my projects.
+    An assorted list of small and useless projects, tools, and gadgets I've worked on.
 ---
 
 # {{ page.title }}
@@ -10,7 +10,9 @@ description: >
 {{ page.description }}
 
 
-{%- comment %}Set project_pages to be all pages where page[i].categories contains 'p'{% endcomment -%}
+{%- comment %}
+    Set project_pages to be all pages where page[i].categories contains 'p'
+{% endcomment -%}
 {% assign project_pages = site.pages | where: 'categories', 'p' %}
 <ul>
 {% for project in project_pages %}

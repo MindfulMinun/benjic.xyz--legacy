@@ -8,11 +8,14 @@
         <style media="screen">
             .dom-results {
                 float: left;
-                border: 1px solid rgba(0,0,0,0.13);
+                border: 1px solid rgba(0,0,0,.13);
                 border-radius: 2px;
                 margin: .5rem 1rem;
                 padding: .5rem;
                 font-size: 1rem;
+            }
+            .dom-results, .dom-results * {
+                box-sizing: border-box;
             }
             .dom-results:after {
                 content: "";
@@ -28,7 +31,6 @@
         <script>mocha.setup('bdd');</script>
 
         <!-- load the scripts you want to test here -->
-        <!-- <script src="./xyz.js"></script> -->
         <script src="/scripts/xyz.js"></script>
 
         <!-- load your test files here -->

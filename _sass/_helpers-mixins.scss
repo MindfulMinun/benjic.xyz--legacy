@@ -37,10 +37,11 @@
     background: $text-against-image;
 }
 
-//! No-script hide
+//! Noscript hide
 html.no-js .no-js-hide {
     display: none !important;
 }
+
 
 //! Pretty helpful
 .help {
@@ -146,8 +147,8 @@ html.no-js .no-js-hide {
     text-decoration-skip-ink: auto;
 }
 
-.txt-aside {color: $color-aside;}
-.txt-fade {color: $color-fade;}
+.txt-aside {color: $color-aside !important;}
+.txt-fade {color: $color-fade !important;}
 
 .txt-alt {
     //! Use this class if the surrounding text is already styled
@@ -157,9 +158,9 @@ html.no-js .no-js-hide {
     text-decoration-skip-ink: auto;
 }
 
-.txt-read {
-    //! Use this class to increase the text size, particularly in text-heavy pages
-    font-size: 1.25em;
+.txt-lead {
+    //! Use this class to increase the text size in a leading paragrpaph.
+    font-size: 1.5em;
 }
 
 .txt-alike {

@@ -72,11 +72,11 @@
 
         <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
         <script type="text/javascript">
-            (function(d) {
+            (function(d, w) {
                 "use strict";
                 d.documentElement.classList.remove("no-js");
                 {%- include specials/analytics.html %}
-                window.xyz = window.xyz || {
+                w.xyz = w.xyz || {
                     ready: function (fn) {
                         if (
                             d.attachEvent ? d.readyState === "complete" : d.readyState !== "loading"
@@ -84,7 +84,21 @@
                         else {d.addEventListener("DOMContentLoaded", fn);}
                     }
                 };
-                window.twemoji = window.twemoji || {parse: function (s) {return s;}};
+                w.twemoji = w.twemoji || {parse: function (s) {return s;}};
                 twemoji.size = "svg"; twemoji.ext = ".svg";
-            }(document));
+
+                // Catch errors
+                w.onerror = function (err, uri, line, col) {
+                    var msg = (uri + " @ " + line + ":" + col + ":\n\t" + err);
+                    if ('ga' in w && !msg.includes("Ahaha!")) {
+                        ga('send', 'event', 'Client error', msg);
+                    }
+                    xyz.toast({
+                        content: "An uncaught exception has occurred, see the console for more details.",
+                        timeout: 5000
+                    });
+                    console.warn("%cException:", "font-weight:bold", msg);
+                    return false;
+                }
+            }(document, window));
         </script>

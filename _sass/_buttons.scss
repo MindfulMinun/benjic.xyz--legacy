@@ -1,7 +1,8 @@
 %button {
+    display: inline-block;
     box-sizing: border-box;
     background: 0; border: 0;
-    margin: 8px; padding: 8px 16px;
+    margin: 8px; padding: 9px 16px;
     min-width: 36px; min-height: 36px;
     background-color: transparent;
     border-radius: 2px;
@@ -14,7 +15,6 @@
     outline: 0;
     transition: background $standard-curve 0.2s,
                 box-shadow $standard-curve 0.2s;
-
 
     &.large {
         font-size: 22px;
