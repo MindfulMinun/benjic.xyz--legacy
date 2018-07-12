@@ -72,8 +72,10 @@ self.addEventListener "install", (e) ->
 #! Fetch: Goes to the network, but if it's taking too long,
 #!        it fetches from the cache
 self.addEventListener "fetch", (e) ->
+    #{% if site.environment == "development" %}
     url = new URL e.request.url
     l "Fetch:", url
+    #{% endif %}
 
     e.respondWith(
         #! Here's what this does:
