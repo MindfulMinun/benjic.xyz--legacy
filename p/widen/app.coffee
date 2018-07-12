@@ -5,8 +5,18 @@ txt = document.getElementById "txt"
 res = document.getElementById "results"
 copy = document.getElementById "copy"
 
+#! If there's a page hash, use that.
+xyz.ready ->
+    if location.hash
+        txt.value = decodeURIComponent location.hash.substr 1
+        txt.dispatchEvent(new Event('input'))
+
+#! Replace the page hash (don't add it to the browser history,
+#!                        causes Back button problems.)
 txt.addEventListener 'input', ->
     res.innerHTML = toFullwidth @value
+    location.replace '#' + encodeURIComponent @value
+
 copy.addEventListener 'click', ->
     xyz.copy toFullwidth txt.value
     .then ->
