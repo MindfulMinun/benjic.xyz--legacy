@@ -4,7 +4,7 @@
 #! ServiceWorker
 
 #! Constants
-CACHE = '{{ jekyll.environment }}::{{ site.time | slice: 0, 19 }}'
+CACHE = '{{ site.environment }}::{{ site.time | slice: 0, 19 }}'
 OFFLINE = "/oops/offline.html"
 ASSETS = [
     #! Criticals

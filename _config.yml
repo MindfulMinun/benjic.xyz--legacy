@@ -19,6 +19,7 @@ markdown: kramdown
 #! ========================================
 #! My vars
 tracking-id: "UA-113187497-1"
+environment: "production"
 
 #! See Gemfile
 plugins:
@@ -30,8 +31,8 @@ plugins:
 
 #! ========================================
 #! Plugin vars
-include:
-    - ".htaccess"
+# include:
+#     - ".htaccess"
 # show_drafts: true
 # incremental: true
 strict_front_matter: true
@@ -67,7 +68,7 @@ defaults:
             theme-color: "#448aff"
             # manifest: "/manifest.json"
     -
-        # This is here because Jekyll isn't smart enough to not set a layout for JS files, but doesn't for SCSS files????????
+        # This is here because Jekyll isn't smart enough to not set a layout for JS files, but doesn't for SCSS files?¿??¿¿¿??
         scope:
             path: "scripts"
         values:
