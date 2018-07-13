@@ -10,6 +10,8 @@ scripts:
         content: >
             alert('hi')
 {% endcomment -%}
+<script src="/scripts/focus-visible.js" async></script>
+<script src="/scripts/master.js"></script>
 {%- if page.scripts -%}
     {%- for s in page.scripts %}
     <script
@@ -21,8 +23,6 @@ scripts:
 {%- if s.async %} async{%- endif -%}>{{ s.content | rstrip }}</script>
     {%- endfor %}
 {%- endif %}
-    <script src="/scripts/focus-visible.js"></script>
-    <script src="/scripts/master.js"></script>
     <script>
         // Install SW
         if (navigator.serviceWorker) {
