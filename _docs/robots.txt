@@ -1,0 +1,14 @@
+User-agent: *
+
+#! 404s
+Disallow: https://benjic.xyz/404
+Disallow: https://benjic.xyz/404/
+Disallow: https://benjic.xyz/404.html
+
+#! Anything in /oops/
+Disallow: https://benjic.xyz/oops/
+
+#! Media lol
+Disallow: https://benjic.xyz/media/
+
+Sitemap:  https://benjic.xyz/sitemap.xml
