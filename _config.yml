@@ -15,6 +15,7 @@ synopsis: >
 timezone: America/Chicago
 permalink: /:year-:month-:day/:categories/:title/
 markdown: kramdown
+destination: "_docs"
 
 #! ========================================
 #! My vars

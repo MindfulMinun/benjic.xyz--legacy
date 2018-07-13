@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mocha Test Suite</title>
+        <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet">
+        <style media="screen">
+            .dom-results {
+                float: left;
+                border: 1px solid rgba(0,0,0,.13);
+                border-radius: 2px;
+                margin: .5rem 1rem;
+                padding: .5rem;
+                font-size: 1rem;
+            }
+            .dom-results, .dom-results * {
+                box-sizing: border-box;
+            }
+            .dom-results:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mocha"></div>
+        <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.1.2/chai.min.js"></script>
+        <script>mocha.setup('bdd');</script>
+
+        <!-- load the scripts you want to test here -->
+        <script src="/scripts/xyz.js"></script>
+
+        <!-- load your test files here -->
+        <script src="./mocha-test.js"></script>
+    </body>
+    <script>mocha.run();</script>
+</html>
