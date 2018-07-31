@@ -5,10 +5,13 @@
 .post-metadata {
     position: relative;
     background: $accent;
-    padding-top: 30vh;
     margin-top: -1rem;
     #share {
-        margin: 1rem 0;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .ribbon-gradient-container {
+        padding-top: 30vh;
     }
     &.ribbon-image {
         background-position: center;

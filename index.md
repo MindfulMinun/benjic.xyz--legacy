@@ -7,10 +7,10 @@ image:
     src: /assets/pfp-4-3.jpg
     alt: Benji
 scripts:
-    -   async: true
-        src: "https://platform.twitter.com/widgets.js"
-    -   async: true
-        src: "/scripts/audio-player.js"
+    - async: true
+      src: "https://platform.twitter.com/widgets.js"
+    - async: true
+      src: "/scripts/audio-player.js"
 afterHead: "<style>h2 {font-size: 1.75rem;}</style>"
 ---
 
@@ -19,7 +19,6 @@ Student by day, developer by night.
 <hr>
 
 
-{%- comment %}
 {% if site.posts.size >= 1 -%}
 <section>
     <h2 id="posts">Posts</h2>
@@ -45,7 +44,6 @@ Student by day, developer by night.
     </div>
 </section>
 {%- endif %}
-{% endcomment -%}
 
 <section markdown="1">
 ## About me

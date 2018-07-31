@@ -156,7 +156,7 @@ figure {
 @media #{$s2-down} {
     //! If the browser *does* supports media queries, use these styles for mobile
     .container, .container-fluid, .post-content {
-        figure:not(.no-stick) {
+        figure:not(.no-stick), .highlighter-rouge > .highlight {
             //! Negative margin to stick figure to the edges on mobile
             margin: 1rem -1rem;
             padding: 0;

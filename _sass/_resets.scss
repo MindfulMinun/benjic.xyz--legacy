@@ -74,7 +74,7 @@ acronym[title]  {
 //! Code and stuff
 pre, code, kbd, samp {
     font-family: $mono;
-    font-size: 87.5%;
+    font-size: 85%;
     line-height: 1.5;
 }
 pre {
@@ -84,10 +84,10 @@ pre {
     border-radius: 4px;
 }
 code {
-    padding: .25em .5em;
+    padding: .2em .4em;
     background-color: #353535;
     color: #F06292;
-    border-radius: 4px;
+    border-radius: 2px;
 }
 kbd {
     background-color: #fefefe;
@@ -271,7 +271,7 @@ $select-arrow-size: 0.35em;
         //! It's ok bc I think the border's enough
         outline: none !important;
         border-bottom-color: $accent;
-        border-bottom-color: var(--accent);
+        border-bottom-color: var(--accent, $accent);
     }
 }
 @media print {
@@ -303,13 +303,24 @@ select {
         border-bottom-color: invert($bg-4);
         &:focus {
             border-bottom-color: $accent;
-            border-bottom-color: var(--accent);
+            border-bottom-color: var(--accent, $accent);
         }
     }
 }
 
-//! input[type="text"]
-input {
+//! All input types *except*
+//! button, checkbox, color, file, hidden, image, radio, range, reset, and submit
+[type="date"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="week"] {
     @extend %component-resets;
     appearance: textfield;
     &.light {
@@ -318,7 +329,7 @@ input {
         border-bottom-color: invert($bg-4);
         &:focus {
             border-bottom-color: $accent;
-            border-bottom-color: var(--accent);
+            border-bottom-color: var(--accent, $accent);
         }
     }
 }

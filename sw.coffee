@@ -12,6 +12,7 @@ ASSETS = [
     "/scripts/master.js"
     "/scripts/post.js"
     "/scripts/mini-video.js"
+    "/scripts/focus-visible.js"
     #! SVGs
     "/assets/svg/cloud_circle--white.svg"
     "/assets/svg/hash.svg"
