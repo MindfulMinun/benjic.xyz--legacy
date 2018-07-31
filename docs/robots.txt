@@ -1,14 +1,14 @@
 User-agent: *
 
 #! 404s
-Disallow: http://localhost:1337/404
-Disallow: http://localhost:1337/404/
-Disallow: http://localhost:1337/404.html
+Disallow: https://benjic.xyz/404
+Disallow: https://benjic.xyz/404/
+Disallow: https://benjic.xyz/404.html
 
 #! Anything in /oops/
-Disallow: http://localhost:1337/oops/
+Disallow: https://benjic.xyz/oops/
 
 #! Media lol
-Disallow: http://localhost:1337/media/
+Disallow: https://benjic.xyz/media/
 
-Sitemap:  http://localhost:1337/sitemap.xml
+Sitemap:  https://benjic.xyz/sitemap.xml

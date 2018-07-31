@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:1337/2018-07-13/styling-input-elements/</loc>
-<lastmod>2018-07-13T15:49:33-05:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:1337/2018-07-30/haruka-teardown/</loc>
+<loc>https://benjic.xyz/2018-07-30/haruka-teardown/</loc>
 <lastmod>2018-07-30T23:36:57-05:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:1337/p/blob-debugger/</loc>
+<loc>https://benjic.xyz/p/blob-debugger/</loc>
 </url>
 <url>
-<loc>http://localhost:1337/p/base64/</loc>
+<loc>https://benjic.xyz/p/base64/</loc>
 </url>
 <url>
-<loc>http://localhost:1337/p/widen/</loc>
+<loc>https://benjic.xyz/p/widen/</loc>
 </url>
 <url>
-<loc>http://localhost:1337/</loc>
+<loc>https://benjic.xyz/</loc>
 </url>
 <url>
-<loc>http://localhost:1337/p/default/</loc>
+<loc>https://benjic.xyz/p/default/</loc>
 </url>
 <url>
-<loc>http://localhost:1337/p/</loc>
+<loc>https://benjic.xyz/p/</loc>
 </url>
 </urlset>
