@@ -4,7 +4,7 @@
 #! ServiceWorker
 
 #! Constants
-CACHE = '{{ site.environment }}::{{ site.time | slice: 0, 19 }}'
+CACHE = '{{ jekyll.environment }}::{{ site.time | slice: 0, 19 }}'
 OFFLINE = "/oops/offline.html"
 ASSETS = [
     #! Criticals
@@ -73,7 +73,7 @@ self.addEventListener "install", (e) ->
 #! Fetch: Goes to the network, but if it's taking too long,
 #!        it fetches from the cache
 self.addEventListener "fetch", (e) ->
-    #{% if site.environment == "development" %}
+    #{% if jekyll.environment == "development" %}
     url = new URL e.request.url
     l "Fetch:", url
     #{% endif %}

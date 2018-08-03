@@ -15,7 +15,7 @@
         */
         (function() { // DON'T EDIT BELOW THIS LINE // lol i did you can't tell me what to do
         var d = document, s = d.createElement('script');
-        {% if site.environment == "production" %}
+        {% if jekyll.environment == "production" %}
         s.src = 'https://benji-xyz.disqus.com/embed.js';
         {%- else -%}
         s.src = 'https://testing-benji-xyz.disqus.com/embed.js';
