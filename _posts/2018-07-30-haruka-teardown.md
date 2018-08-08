@@ -1,7 +1,7 @@
 ---
 title: Haruka Teardown
 date:     2018-07-30 23:36:57 CDT
-# last_mod: 2018-07-30 23:36:57 CDT
+last_mod: 2018-08-07 16:06:59 CDT
 layout: post
 comments: true
 description: >
@@ -9,7 +9,7 @@ description: >
 excerpt: >
     How Haruka works.
 image:
-    src: "/assets/Haruka-minun.webp"
+    src: "/assets/Haruka-minun.png"
     alt: "A screenshot of a Discord chat."
     color: "#36393f"
 ---
@@ -18,16 +18,17 @@ This is a somewhat~ comprehensive guide on how Haruka works.
 - [GitHub Repository][github-discord-haruka]
 - [Add Haruka][add-haruka] to your Discord server.
 
-There’s three main parts to Haruka:
+There’s four main parts to Haruka:
 1. Setup: `main.coffee`
     - Connects to Discord and listens for messages.
-2. Haruka: `Haruka.coffee`
+2. Haruka Core: `Haruka.coffee`
     - Collects all Functions and determines which
       one should be run.
 3. Functions
     - Haruka’s high-level methods.
 4. The Haruka object
-    - The whole environment revolves around the Haruka object.
+    - Settings, configuration, and functions are attached here,
+      and can be accessed at any time.
 
 ---
 
@@ -79,7 +80,7 @@ fs.readdirSync "#{__dirname}/specials"
     .filter (filename) ->
         /^(?:[^_]).+(?:\.(?:coffee|js))/.test filename
     .forEach (filename) ->
-        Haruka.functions.push(
+        Haruka.specials.push(
             require "#{__dirname}/specials/#{filename}"
         )
 ```
