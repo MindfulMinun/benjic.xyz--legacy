@@ -94,7 +94,7 @@
 - I can’t drown my pm2 daemons, they know how to swim.
 - <code>document.body.style.setProperty('--accent', '#FF5252');</code>
 - <code>window["xyz"];</code>
-- The contents of <code>xyz.blobs.allBlobs</code> is appoximately 8kb compressed.
+- The contents of <code>xyz.blobs.allBlobs</code> is appoximately 9kb compressed.
 
 ### ======================================== ###
 ### ================ Spanish =============== ###
@@ -105,7 +105,7 @@
 - <span lang="es-MX" class="tooltip" data-tp="above" data-tooltip="Reeding is important.">“Hay que ler.”</span>
 - |-
     <em lang="es-MX">
-        <strong>Advertencia:</strong> Se ha ejecutado un virus y ha tomado control del sistema operativo. Para la seguridad de usted y de los demás, su dispositivo será formateado en breve.
+        <strong>Advertencia:</strong> Se ha ejecutado un virus y ha tomado control del SO. Para la seguridad de usted y de los demás, su dispositivo será formateado en breve.
     </em>
 
 
@@ -192,6 +192,7 @@
     </span>
 #! XXX: Haruka
 - Haruka
+- <code>-h help</code>
 - Haruka Ikeda from WataShu looks a lot like Sosogu Hoshifuri from Hoshiiro Girldrop.
 - The world is not black and white.
 #! XXX: Love Live!
