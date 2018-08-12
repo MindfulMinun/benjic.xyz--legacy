@@ -2,7 +2,10 @@
 title: Default Layout
 layout: default
 description: Default styles and components used throughout this site, all of which are mobile-first and work without JavaScript.
-categories: ["p"]
+excerpt: Mobile-first CSS layout.
+categories: ['p']
+last_mod: 2018-07-01 00:00:00 CDT
+
 banners:
     -
         id: "default-layout--sample-banner"

@@ -18,32 +18,35 @@ afterHead: "<style>h2 {font-size: 1.75rem;}</style>"
 Student by day, developer by night.
 <hr>
 
-
-{% if site.posts.size >= 1 -%}
 <section>
-    <h2 id="posts">Posts</h2>
+    <h2>Projects &amp; Posts</h2>
+    <p>Some <a href="/p/">projects</a> and posts I’ve written.</p>
 
     <div class="horizontal-scroller">
-        {%- for post in site.posts -%}
-        <div class="horizontal-scroller__element">
-            <a class="post-card block" href="{{ post.url | absolute_url }}"
-                style="background-color:{{ post.image.color }};background-image:url('{{ post.image.src | absolute_url }}')">
-                <div class="post-card-content">
-                    {%- if post.draft -%}
-                    <strong>{{ post.title }}&nbsp;[draft]</strong><br>
-                    {%- else -%}
-                    <strong>{{ post.title }}</strong><br>
-                    {%- endif -%}
-                    <p class="no-margin">{{-
-                        post.excerpt | markdownify | remove: '<p>' | remove: '</p>' | truncatewords: 11
-                    -}}</p>
-                </div>
-            </a>
-        </div>
+        {% assign projects = site.pages | where: 'categories', 'p' %}
+        {% assign posts = site.posts %}
+        <!-- Concatenate arrays and sort from newest to oldest -->
+        {% assign PandP = projects | concat: posts | sort: 'last_mod' | reverse %}
+
+        {%- for p in PandP -%}
+            <!-- Include pages that (are a post) or (are a project) -->
+            <div class="horizontal-scroller__element">
+                <a class="post-card block"
+                    href="{{ p.url | absolute_url }}"
+                    {% if p.image -%}
+                        style="background-color:{{ p.image.color }};background-image:url('{{ p.image.src | absolute_url }}')"
+                    {%- endif %}>
+                    <div class="post-card-content">
+                        <strong>{{ p.title | escape }}</strong>
+                        <p class="no-margin">{{
+                            p.excerpt | markdownify | remove: '<p>' | remove: '</p>' | truncatewords: 8
+                        }}</p>
+                    </div>
+                </a>
+            </div>
         {%- endfor -%}
     </div>
 </section>
-{%- endif %}
 
 <section markdown="1">
 ## About me
