@@ -3,6 +3,7 @@ title: Offline
 layout: content-only
 permalink: /oops/offline.html
 sitemap: false
+afterHead: <link rel="stylesheet" href="/styles/master.css">
 ---
 {% capture scss %}
 //<!-- Make this as tiny as possible (added html comment bc syntax is annoying)

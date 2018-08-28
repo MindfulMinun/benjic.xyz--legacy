@@ -19,7 +19,6 @@ markdown: kramdown
 #! ========================================
 #! My vars
 tracking-id: "UA-113187497-1"
-environment: "production"
 
 #! See Gemfile
 plugins:

@@ -1,8 +1,7 @@
 <!doctype html>
-<html class="no-js" lang="en-US">
+<html class="no-js" lang="{%- if page.lang -%}{{ page.lang }}{%- else -%}en-US{%- endif -%}">
     <head>
         {%- include layout/default-head.html %}
-        <link rel="stylesheet" href="/styles/master.css">
         {%- if page.afterHead -%}{{ page.afterHead }}{%- endif -%}
     </head>
     <body class="fluid-body">

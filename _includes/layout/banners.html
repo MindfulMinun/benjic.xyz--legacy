@@ -55,29 +55,30 @@
         </div>
     </div>
     {%- endfor -%}
-
-{%- endif -%}
-<script>
-    xyz.banner = {
-        close: function (bannerId, isConsistent) {
-            var b = document.querySelector('.banner[data-banner-id="' + bannerId + '"]');
-            if (!isConsistent) {
+    
+    <script>
+        xyz.banner = {
+            close: function (bannerId, isConsistent) {
+                var b = document.querySelector('.banner[data-banner-id="' + bannerId + '"]');
+                if (!isConsistent) {
+                    var d = JSON.parse(localStorage.getItem('xyz::banner')) || {};
+                    d[bannerId] = true;
+                    localStorage.setItem('xyz::banner', JSON.stringify(d));
+                }
+                b.classList.add('banner-hidden');
+            },
+            init: function () {
+                var n = document.querySelectorAll('.banner[data-banner-id]');
                 var d = JSON.parse(localStorage.getItem('xyz::banner')) || {};
-                d[bannerId] = true;
-                localStorage.setItem('xyz::banner', JSON.stringify(d));
-            }
-            b.classList.add('banner-hidden');
-        },
-        init: function () {
-            var n = document.querySelectorAll('.banner[data-banner-id]');
-            var d = JSON.parse(localStorage.getItem('xyz::banner')) || {};
-            for (var i = 0; i < n.length; i++) {
-                var bannerId = n[i].dataset.bannerId;
-                if (d[bannerId]) {
-                    n[i].style.display = "none";
+                for (var i = 0; i < n.length; i++) {
+                    var bannerId = n[i].dataset.bannerId;
+                    if (d[bannerId]) {
+                        n[i].style.display = "none";
+                    }
                 }
             }
         }
-    }
-    xyz.banner.init();
-</script>
+        xyz.banner.init();
+    </script>
+
+{%- endif -%}
