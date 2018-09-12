@@ -13,7 +13,7 @@ description: >
 {%- comment %}
     Set project_pages to be all pages where page[i].categories contains 'p'
 {% endcomment -%}
-{% assign project_pages = site.pages | where: 'categories', 'p' %}
+{% assign project_pages = site.pages | where: 'categories', 'p' | sort: 'last_mod' | reverse %}
 <ul>
 {% for project in project_pages %}
     <li>
