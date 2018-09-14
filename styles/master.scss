@@ -195,7 +195,7 @@ img.emoji {
 ruby > rt {font-size: 60%;}
 
 //! Post card listings
-a.post-card {
+.post-card {
     @include ratio(16, 9);
     width: 100%;
     overflow: hidden;
@@ -217,13 +217,17 @@ a.post-card {
     white-space: nowrap;
     line-height: 0;
     margin: .5rem -1rem;
-    -webkit-overflow-scrolling: touch;
     padding: .5rem 1rem;
+    // Scroll props
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scroll-padding: 1rem;
     > .horizontal-scroller__element {
         display: inline-block;
         white-space: normal;
         margin-right: 1rem;
         line-height: 1.5;
+        scroll-snap-align: start; // Snap scrolling to start
         &:last-of-type {
             margin-right: 0;
         }
