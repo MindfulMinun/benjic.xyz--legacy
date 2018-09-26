@@ -9,39 +9,57 @@
 dataState = 'data-playback-state'
 dataStarted = 'data-started'
 
+# UI = {
+#     prep: "Preparing video."
+#     notRes: "Video not resumed. Click to play."
+#     ready: "Video ready. Click to play."
+#     playing: "Playing. Click to pause."
+#     paused: "Paused. Click to play."
+#     ended: "Playback ended. Click to replay."
+#     buffer: "Buffering video. Please wait."
+#     notLoading: "Video not loading. Click to retry."
+# }
+UI = {
+    prep: "Preparando el video."
+    notRes: "Error al reanudar video. Clic para reproducir."
+    ready: "Video listo. Reproducir."
+    playing: "Reproduciendo. Clic para pausar."
+    paused: "Pausado. Clic para reproducir."
+    ended: "Fin del video. Clic para repetir."
+    buffer: "Cargando video."
+    notLoading: "Fallo al cargar el video. Clic para reintentar."
+}
+
+
 createPlayer = (p) ->
     v = p.getElementsByTagName('video')[0]
-    # b = document.createElement 'button'
     b = p.getElementsByTagName('button')[0]
     v.setAttribute 'aria-hidden', yes
-    # b.classList.add 'mini-video-player__a11y-btn'
-    # b.setAttribute 'aria-live', 'polite'
-    # p.appendChild b
 
     #! Event listeners
     #! Click listener
     p.addEventListener 'click', ->
         if p.getAttribute 'data-click-action' is 'load'
             v.load()
-            b.innerText = 'Preparing video.';
-            return;
+            b.innerHTML = UI.prep
+            return
         if v.paused and p.getAttribute dataState
             v.play().catch ->
-                b.innerText = 'Video not resumed. Click to play.'
+                b.innerHTML = UI.notRes
         else
             v.pause()
 
     #! Video listeners
     v.addEventListener 'canplay', ->
         p.setAttribute dataState, 'ready'
-        b.innerText = 'Video ready. Click to play.'
+        b.innerHTML = UI.ready
 
     # v.addEventListener 'timeupdate', ->
     #     #! I’d update the UI here, but there is none
 
     v.addEventListener 'playing', ->
         p.setAttribute dataState, 'playing'
-        b.innerText = 'Playing. Click to pause.'
+        b.innerHTML = UI.playing
         if not p.getAttribute dataStarted
             window.parent.postMessage {
                 "function": {
@@ -53,11 +71,11 @@ createPlayer = (p) ->
 
     v.addEventListener 'pause', ->
         p.setAttribute dataState, 'paused'
-        b.innerText = 'Paused. Click to play.'
+        b.innerHTML = UI.paused
 
     v.addEventListener 'ended', ->
         p.setAttribute dataState, 'stopped'
-        b.innerText = 'Playback ended. Click to play.'
+        b.innerHTML = UI.ended
         window.parent.postMessage {
             "function": {
                 "name": "ga"
@@ -67,11 +85,11 @@ createPlayer = (p) ->
 
     v.addEventListener 'waiting', ->
         p.setAttribute dataState, 'loading'
-        b.innerText = 'loading'
+        b.innerHTML = UI.buffer
 
     v.addEventListener 'stalled', ->
         console.log 'Video stalled.'
-        b.innerText = 'Video not loading. Click to force reload.'
+        b.innerHTML = UI.notLoading
         p.setAttribute dataState, 'loading'
         p.setAttribute 'data-click-action', 'load'
 

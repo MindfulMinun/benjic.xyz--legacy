@@ -19,6 +19,8 @@ main {
     box-sizing: border-box;
 }
 
+:focus { outline: 0; }
+
 .container {
     display: flex;
     position: absolute;

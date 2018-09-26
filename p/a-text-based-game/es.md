@@ -37,7 +37,7 @@ scripts:
 </header>
 
 
-<div id="terminal" class="terminal" aria-live="assertive">
+<div id="terminal" class="terminal" aria-live="polite">
     <noscript class="terminal--line" style="text-indent: 0; padding-left: 0;">
         Basta ya de chistes e habilita JavaScript.
     </noscript>

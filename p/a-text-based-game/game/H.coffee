@@ -11,11 +11,16 @@ H.parseHTML = (html) ->
     Array.from tmp.body.children
 H.out = (text, timeout) ->
     new Promise (resolve, reject) ->
-        line = H.parseHTML("<span class='terminal--line'>#{text}</span>")[0]
+        line = H.parseHTML("
+        <span class='terminal--line'>
+            #{text}
+        </span>
+        ")[0]
         H.wait(timeout).then ->
             Terminal.appendChild(line)
             H.scroll(line)
             resolve(line)
+
 H.outRaw = -> H.out(arguments...) # Allow for raw HTML
 H.newLine = (timeout) -> H.out('', timeout) # Newline helper
 H.thenChain = (fn) ->

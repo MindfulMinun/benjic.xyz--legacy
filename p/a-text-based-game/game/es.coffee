@@ -217,7 +217,7 @@ G.wa_room = ->
     .then -> H.out 'Al entrar por el pasillo, la oscuridad se
         va acercando poco a poco.'
     .then -> H.out 'Solo puedes ver 2 metros a tu alrededor.', 3
-    .then -> H.out 'Al entrar la habitación, la puerta
+    .then -> H.out 'Al entrar por la habitación, la puerta
         se cierra por detrás de tí.', 3
     .then -> H.newLine(3)
     .then -> H.choice({
