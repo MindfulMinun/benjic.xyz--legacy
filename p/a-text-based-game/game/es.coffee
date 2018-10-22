@@ -15,7 +15,7 @@ G.$1 = ->
     H.thenChain()
     .then -> H.out 'Encuentras un videojuego de texto.'
     .then -> H.out 'Es obvio que menos de 24 horas se han
-        dedicado a hacerlo.', 3
+        dedicado en hacerlo.', 3
     .then -> H.newLine 3
     .then -> H.choice({
         content: '¿Deseas jugar el juego?'
@@ -26,8 +26,8 @@ G.$1 = ->
         }, {
             content: 'No'
             callback: ->
-                H.out "La tentación es demasiada, y terminas
-                    iniciando el juego."
+                H.out "No te parece interesante, pero la curiosidad
+                    te obliga a jugarlo."
         }]
     })
     .then -> H.out "El juego comienza con una pantalla que dice:", 3
@@ -68,7 +68,7 @@ G.$2 = ->
     }
 G.$2_investigate = ->
     H.thenChain()
-    .then -> H.out 'Al ver por la habitación, te das cuenta que
+    .then -> H.out 'Al mirar por la habitación, te das cuenta de que
         es bastante amplia.'
     .then -> H.out 'Una de las paredes está hecha de vitral.', 3
     .then -> H.out 'Más allá del vitral, no hay más que un vacío.', 3
@@ -160,7 +160,7 @@ G.$3_classroom = ->
                 }]
             })
             .then -> H.newLine()
-            .then -> H.out 'Te pones de pié e intentas irte del salón.'
+            .then -> H.out 'Te pones de pié e intentas huir del salón.'
             .then -> H.out 'La puerta no abre.', 3
             .then -> H.out 'Es obvio que estás atrapado aquí.', 5
             .then -> H.out 'Volteas a ver donde te despertaste.', 3
@@ -168,7 +168,7 @@ G.$3_classroom = ->
             .then -> H.out 'Tu vista se hace más y más oscura.', 3
             .then -> H.out 'Intentas buscar algo por dónde escapar.', 3
             .then -> H.newLine(10)
-            .then -> H.out 'Cuando de repente,'
+            .then -> H.out 'De repente,'
             .then -> H.wait 3
             .then -> G.badend()
     else
@@ -215,7 +215,7 @@ G.wa_room = ->
     H.thenChain()
     .then -> H.newLine()
     .then -> H.out 'Al entrar por el pasillo, la oscuridad se
-        va acercando poco a poco.'
+        acerca poco a poco.'
     .then -> H.out 'Solo puedes ver 2 metros a tu alrededor.', 3
     .then -> H.out 'Al entrar por la habitación, la puerta
         se cierra por detrás de tí.', 3
@@ -239,9 +239,9 @@ G.wa_room = ->
 G.wa_room_investigate = ->
     H.thenChain()
     .then -> H.newLine()
-    .then -> H.out 'La habitación en la que te encuentras tiene varios
+    .then -> H.out 'Esta habitación tiene varios
         pupitres bien ordenados.'
-    .then -> H.out 'Te fijas en un papel que está en cima de
+    .then -> H.out 'Te fijas en un papel que está encima de
         uno de los pupitres.', 3
     .then -> H.newLine(3)
     .then -> H.choice({
@@ -315,7 +315,7 @@ G.ke_room_lucky = ->
     .then -> H.out 'Por desgracia, apenas puedes ver un
         metro alrededor de ti.', 3
     .then -> H.out 'La habitación está llena de mesas plegables muy bien
-        ordenadas, de cuales son acompañados por sillas y recipientes.', 3
+        ordenadas, de cuales son acompañados por sillas y botes de reciclaje.', 3
     .then -> H.out 'Nada ha sido tocado.', 3
     .then -> H.newLine(5)
     .then -> H.out 'Encuentras un papel mientras examinabas la habitación.'
@@ -373,7 +373,7 @@ G.end = ->
     .then -> H.out 'Estás acostado en tu cama, ojos fijados al techo.', 3
     .then -> H.out 'Miras a tu celular.', 3
     .then -> H.newLine 3
-    .then -> H.out '«07:30, viernes, 30 de marzo», dice.'
+    .then -> H.out 'Muestra la hora: «07:30, viernes, 30 de marzo».'
     .then -> H.newLine 3
     .then -> H.out 'De mala gana, te arreglas y vas a la escuela.'
     .then -> H.newLine 10
@@ -383,7 +383,7 @@ G.end = ->
         podrías echarle un vistazo a lo que hicieron los demás.', 3
     .then -> H.newLine 3
     .then -> H.out 'Paseas por el salón, mirando a los proyectos que
-        hizo todo mundo, y uno de ellos te llama la atención.'
+        hicieron todos, y uno de ellos te llama la atención.'
     .then -> G.state.wa = no; H.newLine(5)
     .then -> G.$1()
 G.no = ->
