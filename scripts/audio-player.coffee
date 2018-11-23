@@ -155,8 +155,8 @@ createPlayer = (box) ->
     #! Audio listeners
     player.addEventListener 'playing', ->
         #! Analytics
-        if box.dataset.playbackState is "unstarted" and ga?
-            ga 'send', 'event', 'Media', "Audio played"
+        if box.dataset.playbackState is "unstarted"
+            ga?('send', 'event', 'Media', "Audio played")
         box.dataset.playbackState = 'playing'
         pp.setAttribute "aria-label", "Playing. Click to Pause."
         pp.innerHTML = "<i class=\"material-icons\">pause</i>"
@@ -168,8 +168,7 @@ createPlayer = (box) ->
         box.dataset.playbackState = 'end'
         pp.setAttribute "aria-label", "Playback ended. Click to restart."
         #! Analytics
-        if ga?
-            ga 'send', 'event', 'Media', "Audio played to end"
+        ga?('send', 'event', 'Media', "Audio played to end")
     player.addEventListener 'waiting', ->
         box.dataset.playbackState = "buffering"
         pp.setAttribute "aria-label", "Loading..."

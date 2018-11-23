@@ -9,31 +9,31 @@
 dataState = 'data-playback-state'
 dataStarted = 'data-started'
 
-# UI = {
-#     prep: "Preparing video."
-#     notRes: "Video not resumed. Click to play."
-#     ready: "Video ready. Click to play."
-#     playing: "Playing. Click to pause."
-#     paused: "Paused. Click to play."
-#     ended: "Playback ended. Click to replay."
-#     buffer: "Buffering video. Please wait."
-#     notLoading: "Video not loading. Click to retry."
-# }
 UI = {
-    prep: "Preparando el video."
-    notRes: "Error al reanudar video. Clic para reproducir."
-    ready: "Video listo. Reproducir."
-    playing: "Reproduciendo. Clic para pausar."
-    paused: "Pausado. Clic para reproducir."
-    ended: "Fin del video. Clic para repetir."
-    buffer: "Cargando video."
-    notLoading: "Fallo al cargar el video. Clic para reintentar."
+    prep: "Preparing video."
+    notRes: "Video not resumed. Click to play."
+    ready: "Video ready. Click to play."
+    playing: "Playing. Click to pause."
+    paused: "Paused. Click to play."
+    ended: "Playback ended. Click to replay."
+    buffer: "Buffering video. Please wait."
+    notLoading: "Video not loading. Click to retry."
 }
+# UI = {
+#     prep: "Preparando el video."
+#     notRes: "Error al reanudar video. Clic para reproducir."
+#     ready: "Video listo. Clic para reproducir."
+#     playing: "Reproduciendo. Clic para pausar."
+#     paused: "Pausado. Clic para reproducir."
+#     ended: "Fin del video. Clic para repetir."
+#     buffer: "Cargando video."
+#     notLoading: "Fallo al cargar video. Clic para reintentar."
+# }
 
 
 createPlayer = (p) ->
-    v = p.getElementsByTagName('video')[0]
-    b = p.getElementsByTagName('button')[0]
+    v = p.querySelector 'video'
+    b = p.querySelector 'button'
     v.setAttribute 'aria-hidden', yes
 
     #! Event listeners
@@ -93,5 +93,4 @@ createPlayer = (p) ->
         p.setAttribute dataState, 'loading'
         p.setAttribute 'data-click-action', 'load'
 
-players = document.getElementsByClassName 'tiny-video-player'
-createPlayer player for player in players
+createPlayer player for player in document.getElementsByClassName 'tiny-video-player'
