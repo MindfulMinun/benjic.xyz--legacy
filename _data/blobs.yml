@@ -29,16 +29,9 @@
 - “Hola hola crayola”
 - Red cup.
 - “Taylor ISD Trustees agree to split THS, Legacy”
-- <blockquote>There will be bad things that will happen in life. We cannot always avoid those. But what we can do is we can stand up.</blockquote>
+- <em>“There will be bad things that will happen in life. We cannot always avoid those. But what we can do is we can stand up.”</em>
 - hugs &gt; drugs
 - ggrks
-- |-
-    ｜￣￣￣￣￣￣￣￣￣￣｜<br>
-    ｜　　あんたは嫌い　　｜<br>
-    ｜＿＿＿＿＿＿＿＿＿＿｜<br>
-    (\__/) ||<br>
-    (•ㅅ•) ||<br>
-    / 　 づ
 - |-
     ｜￣￣￣￣￣￣￣￣￣￣￣｜<br>
     ｜　Ｉｓａｂｅｌｌｅ　　｜<br>
@@ -57,7 +50,10 @@
 - Made with love by MindfulMinun
 - Copied to clipboard successfully.
 - Projects, Tools, &amp; Gadgets
-- I like coding things for the Internet & playing the piano. I’m also on Twitter and CodePen. Feel free to say hi.
+- |-
+    I like coding things for the Internet & playing the piano.
+    I’m also on Twitter, GitHub, and Glitch.
+    Feel free to say hi.
 - Make your boring geometrical text more ａｅｓｔｈｅｔｉｃ™.
 - Convert an ASCII string to Base64 and vice versa.
 - An assorted list of small and useless projects, tools, and gadgets I’ve worked on.
@@ -90,7 +86,7 @@
 - "Uncaught TypeError: Assignment to constant variable."
 - |-
     <pre style="background: 0; color: inherit; padding: 0;">
-    f = -> f arguments...
+    f = (a) -> alert(a); f(a)
     f 'I love recursion'
     </pre>
 - “You are currently on a text element, inside of web content.”
@@ -101,7 +97,7 @@
 - <code>window["xyz"];</code>
 - The contents of <code>xyz.blobs.allBlobs</code> is appoximately 9kb compressed.
 - JavaScript arrow functions? Pfft, in CoffeeScript, <em>all</em> functions are arrow functions.
-- <code>KeyboardInterrupt</code>
+# - <code>KeyboardInterrupt</code>
 - Learning to code? Start from Scratch.
 
 ### ======================================== ###
@@ -110,7 +106,7 @@
 # - <em class="tooltip" data-tp="above" data-tooltip="Beyond!">¡Más allá!</em>
 - <em>La luna carmesí vuelve a brillar esta noche. Ten mucho cuidado, Link.</em>
 - ¡Nooo, mi torta!
-- <span lang="es-MX" class="tooltip" data-tp="above" data-tooltip="Reeding is important.">“Hay que ler.”</span>
+# - <span lang="es-MX" class="tooltip" data-tp="above" data-tooltip="Reeding is important.">“Hay que ler.”</span>
 - |-
     <em lang="es-MX">
         <strong>Advertencia:</strong> Se ha ejecutado un virus y ha tomado control del SO. Para la seguridad de usted y de los demás, su dispositivo será formateado en breve.
@@ -120,8 +116,9 @@
 ### ======================================== ###
 ### =============== Japanese =============== ###
 ### ======================================== ###
-- <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Pop Team Epic!">ポプテピピック！</span><span class="sr-only">Pop Team Epic!</span>
+# - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Pop Team Epic!">ポプテピピック！</span><span class="sr-only">Pop Team Epic!</span>
 - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Twitter!">ツイッター！</span><span class="sr-only">Twitter!</span>
+- これはベンジー
 # - |-
 #     <em lang="ja" class="tooltip" data-tp="above" data-tooltip="I love you soooooooooooo much!" aria-hidden="true">
 #         Daaaaaaaaaaaaaaaaaaaski!
@@ -209,7 +206,6 @@
 - Haruka Ikeda from WataShu looks a lot like Sosogu Hoshifuri from Hoshiiro Girldrop.
 - The world is not black and white.
 - How much loss can one take, before they finally break?
-# Vocaloid & stuff
 # Anime & stuff
 - tsundere blush™
 - SAO 16.5
@@ -235,13 +231,13 @@
 # Nichijou
 - <span lang="ms">“Selamat pagi!”</span>
 - ちよたにけらはとほらすてのはてきらとなりはしてと
-- “Did you know that the truth isn’t always correct?”
+- <em>“Did you know that the truth isn’t always correct?”</em>
 - <em>“See? Fortune favors the upbeat. It’s positive magic!”</em>
 - “To live tomorrow with a smile, even though I cried yesterday.”
 - "Short Thoughts: “If you search for it, you’ll find everything.”"
 - "Short Thoughts: “I respond to praise, but I never receive any.”"
 #! XXX: Rhythm Heaven
-# - "♫ <em>Let’s go read a buncha books!</em> ♫"
+- "♬ <em>Let’s go read a buncha books!</em> ♬"
 - "♬ <em>One, two, three! One, two, three! Okay, it’s on! It’s up to you!</em> ♬"
 - "♬ <em>Whoa! You go big guy!</em> ♬"
 - "♬ <em>Wubba-dubba-dub, is that true?</em> ♬"

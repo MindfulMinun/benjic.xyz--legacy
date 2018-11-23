@@ -83,6 +83,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  eventmachine (~> 1.2)
   jekyll (~> 3.8)
   jekyll-autoprefixer (~> 1.0)
   jekyll-coffeescript (~> 1.1)

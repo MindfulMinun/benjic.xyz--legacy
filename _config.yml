@@ -8,8 +8,9 @@ theme-color: "#448aff"
 twitter: "@MindfulMinun"
 synopsis: >
     I like coding things for the Internet & playing the piano.
-    I’m also on [Twitter](https://twitter.com/MindfulMinun)
-    and [CodePen](https://codepen.io/MindfulMinun).
+    I’m also on [Twitter](https://twitter.com/MindfulMinun),
+    [GitHub](https://github.com/MindfulMinun),
+    and [Glitch](https://glitch.com/@MindfulMinun).
     Feel free to say hi.
 
 timezone: America/Chicago
@@ -25,7 +26,7 @@ plugins:
     - jekyll-autoprefixer
     - jekyll-redirect-from
     - jekyll-sitemap
-    - jekyll-minifier
+    # - jekyll-minifier
     - jekyll-coffeescript
 
 #! ========================================

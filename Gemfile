@@ -10,3 +10,5 @@ gem "jekyll-minifier", "~> 0.1.6"
 gem "jekyll-coffeescript", "~> 1.1"
 
 gem "redcarpet", "~> 3.4"
+
+gem "eventmachine", "~> 1.2"
