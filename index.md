@@ -2,7 +2,7 @@
 title: About me
 layout: default
 description: >
-    Hi, I’m Benji. I like coding things for the Internet and playing the piano.
+    Hi, I’m Benji. I'm into programming and playing piano.
 image:
     src: /assets/pfp-4-3.jpg
     alt: Benji
@@ -15,7 +15,6 @@ afterHead: "<style>h2 {font-size: 1.75rem;}</style>"
 ---
 
 # Benji
-Student by day, developer by night.
 <hr>
 
 <section>
@@ -51,7 +50,10 @@ Student by day, developer by night.
 <section markdown="1">
 ## About me
 
-Hi, I’m Benji, also known as [@MindfulMinun][twitter] on the Internet. I’m a high school student attending [Legacy ECHS][lechs] in Taylor and I’ll be graduating with my Associate’s degree in 2019.
+Hi, I'm Benji. You may know me as [@MindfulMinun][twitter]
+on the Internet. I'm a senior at [Legacy ECHS][lechs],
+planning to graduate with my Associate’s in 2019.
+I'm into programming and playing piano.
 
 {% include image.html
     caption="This is what I look like."
@@ -60,7 +62,15 @@ Hi, I’m Benji, also known as [@MindfulMinun][twitter] on the Internet. I’m a
     src="/assets/pfp-4-3.jpg"
     style="padding-top:75%;background:#1d0c47;background: radial-gradient(#c84d65, #1d0c47);" %}
 
-In my leisure time, I love to [write CoffeeScript][github]. It’s my dream to write code for a living. I play the piano often, and I speak both English and Spanish fluently.
+During my time in high school so far, I've taken
+classes such as AP Computer Science,
+AP Spanish Language, AP Spanish Literature,
+Engineering I and II, and I'm currently taking
+Calculus.
+
+In my leisure time, I [code][github], [tweet][twitter],
+and play some piano. I can solve a Rubik's cube under
+2 minutes, and I speak both English and Spanish fluently.
 
 </section>
 
@@ -76,23 +86,38 @@ In my leisure time, I love to [write CoffeeScript][github]. It’s my dream to w
 <figure>
     <div class="audio-player" hidden>
         <audio>
-            <source src="/assets/goodbye/Goodbye--2018-07-07.mp3" type="audio/mpeg">
+            <source src="/assets/goodbye/Don't_Ever_Forget--Musescore-2018-11-23.ogg" type="audio/ogg">
+            <source src="/assets/goodbye/Don't_Ever_Forget--Musescore-2018-11-23.mp3" type="audio/mpeg">
         </audio>
         <div class="audio-player__content">
             <span class="title">Don’t Ever Forget &mdash; Arata Iiyoshi</span>
             <span class="song-data">
-                <a href="/assets/goodbye/Copia de Goodbye.zip" class="txt-alike"
+                <!-- <a href="/assets/goodbye/Copia de Goodbye.zip" class="txt-alike"
                     download="Don't Ever Forget.zip"
                     title="Download Garageband Project file (zipped)"
                     aria-label="Download Garageband Project file (zipped)">
                     <span class="txt-u">Garageband</span>
                     <i class="material-icons" style="font-size: 1.3em; vertical-align: middle;">get_app</i>
+                </a> -->
+                <a href="https://musescore.com/user/16771186/scores/5222447"
+                    class="txt-alike" target="_blank"
+                    aria-label="View in Musescore (opens a new window)"
+                    >
+                    View in Musescore
+                    <i class="material-icons" style="font-size: 1.3em; vertical-align: middle;">open_in_new</i>
                 </a>
-                <a href="/assets/goodbye/Goodbye--2018-07-07.mp3" class="txt-alike"
+                <a href="/assets/goodbye/Don't_Ever_Forget--Musescore-2018-11-23.mp3" class="txt-alike"
                     download="Don't Ever Forget.mp3"
                     title="Download mp3"
                     aria-label="Download mp3">
-                    <span class="txt-u">.mp3</span>
+                    .mp3
+                    <i class="material-icons" style="font-size: 1.3em; vertical-align: middle;">get_app</i>
+                </a>
+                <a href="/assets/goodbye/Don't_Ever_Forget--Musescore-2018-11-23.ogg" class="txt-alike"
+                    download="Don't Ever Forget.ogg"
+                    title="Download ogg"
+                    aria-label="Download ogg">
+                    .ogg
                     <i class="material-icons" style="font-size: 1.3em; vertical-align: middle;">get_app</i>
                 </a>
             </span>
@@ -104,12 +129,24 @@ In my leisure time, I love to [write CoffeeScript][github]. It’s my dream to w
 </figure>
 
 <section markdown="1">
-## Projects
+## Code &amp; stuff
 
-As mentioned before, I absolutely love to code. The [video](https://codepen.io/MindfulMinun/pen/OzbZzB)
-and [audio](https://codepen.io/MindfulMinun/pen/vRjPwP) players above were both created
-by yours truly. I've also made [layouts][layout] and other [HTML things][projects].
-I’ve also worked on some [Node projects][github] as well.
+I love to code. It’s my dream to write code for a living.
+I picked up HTML, (S)CSS, and JavaScript during
+my freshman year of high school, while messing around with
+Firefox Scratchpad. I'm now fluent in front-end workflow,
+combining technologies ranging from ServiceWorker, Jekyll,
+GitHub, and Netlify.
+
+The [video](https://codepen.io/MindfulMinun/pen/OzbZzB)
+and [audio](https://codepen.io/MindfulMinun/pen/vRjPwP)
+players above were both created by yours truly.
+I've also made [layouts][layout] and other [HTML things][projects].
+
+Near the end of my Sopohmore year, I went on to focus on Node.js,
+a back-end JavaScript runtime. Here, I picked up CoffeeScript,
+a Python-esque language that transpiles to JavaScript.
+With these, I created [Haruka][haruka], a Discord bot.
 </section>
 
 <section markdown="1">
@@ -117,28 +154,34 @@ I’ve also worked on some [Node projects][github] as well.
 
 You can find me all over the Internet.
 For business inquiries, [send me an email.](mailto:importantmails4bc@gmail.com)
-For pretty much anything else, feel free to contact me via [Twitter][twitter].
-I'm also on [GitHub][github] and [CodePen][codepen].
+For pretty much anything else, feel free to contact me via [Twitter][twitter] or
+Discord (MindfulMinun#3386).
+I'm also on [GitHub][github], [CodePen][codepen], and [Glitch][glitch].
 
 [Tweet to @MindfulMinun][twitter-intent]
 </section>
 
 <!-- References -->
-[lechs]:   https://lechs.taylorisd.org
+[lechs]: https://lechs.taylorisd.org
+{: target="_blank" }
+
 [twitter]: https://twitter.com/MindfulMinun
 {: target="_blank" }
-<!-- __ -->
 
 [twitter-intent]: https://twitter.com/intent/tweet?screen_name=MindfulMinun&ref_src=twsrc%5Etfw "Tweet to @MindfulMinun"
 {: class="twitter-mention-button" data-size="large" data-show-count="true" }
 
+[haruka]: https://github.com/MindfulMinun/discord-haruka
+{: target="_blank" }
+
 [github]: https://github.com/MindfulMinun
 {: target="_blank" }
-<!-- __ -->
 
 [codepen]: https://codepen.io/MindfulMinun
 {: target="_blank" }
-<!-- __ -->
+
+[glitch]: https://glitch.com/@MindfulMinun
+{: target="_blank" }
 
 [projects]: /p/
 [layout]: /p/default/
