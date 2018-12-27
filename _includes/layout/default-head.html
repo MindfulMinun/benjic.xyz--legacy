@@ -78,14 +78,13 @@
                 "use strict";
                 d.documentElement.classList.remove("no-js");
                 {%- include specials/analytics.html %}
-                w.xyz = w.xyz || {
-                    ready: function (fn) {
-                        if (
-                            d.attachEvent ? d.readyState === "complete" : d.readyState !== "loading"
-                        ) {fn();}
-                        else {d.addEventListener("DOMContentLoaded", fn);}
-                    }
-                };
+                w.xyz = w.xyz || {};
+                w.xyz.ready = function (fn) {
+                    if (
+                        d.attachEvent ? d.readyState === "complete" : d.readyState !== "loading"
+                    ) {fn();}
+                    else {d.addEventListener("DOMContentLoaded", fn);}
+                }
                 w.twemoji = w.twemoji || {parse: function (s) {return s;}};
                 twemoji.size = "svg"; twemoji.ext = ".svg";
 

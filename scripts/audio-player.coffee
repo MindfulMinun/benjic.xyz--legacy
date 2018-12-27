@@ -27,6 +27,11 @@
         .song-data {display: block; font-size: 0.75em;}
         * {margin: 0;}
     }
+
+    .audio-player__icon {
+        font-size: 1.3em; vertical-align: middle;
+    }
+
     .audio-player__controls {
         order: -1;
         padding-right: 8px;
