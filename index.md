@@ -2,7 +2,7 @@
 title: About me
 layout: default
 description: >
-    Hi, I’m Benji. I'm into programming and playing piano, but never both at once.
+    Hi, I’m Benji. I'm into programming and playing piano.
 image:
     src: /assets/pfp-4-3.jpg
     alt: Benji
@@ -14,8 +14,7 @@ scripts:
 afterHead: "<style>h2 {font-size: 1.75rem;}</style>"
 ---
 
-# Hi, I’m Benji.
-I’m into programming and piano, but never both at once.
+# Benji
 <hr>
 
 <section>
@@ -53,7 +52,7 @@ I’m into programming and piano, but never both at once.
 
 Hi, I'm Benji. You may know me as [@MindfulMinun][twitter]
 on the Internet. I'm a senior at [Legacy ECHS][lechs],
-planning to graduate with my Associate’s this spring.
+planning to graduate with my Associate’s in 2019.
 I'm into programming and playing piano.
 
 {% include image.html
@@ -67,8 +66,7 @@ During my time in high school so far, I've taken
 classes such as AP Computer Science,
 AP Spanish Language, AP Spanish Literature,
 Engineering I and II, and I'm currently taking
-Calculus. I'm planning on majoring in Computer Science
-and possibly minoring in Spanish.
+Calculus.
 
 In my leisure time, I [code][github], [tweet][twitter],
 and play some piano. I can solve a Rubik's cube under
@@ -99,28 +97,28 @@ and play some piano. I can solve a Rubik's cube under
                     title="Download Garageband Project file (zipped)"
                     aria-label="Download Garageband Project file (zipped)">
                     <span class="txt-u">Garageband</span>
-                    <i class="material-icons audio-player__icon">get_app</i>
+                    <i class="material-icons" style="font-size: 1.3em; vertical-align: middle;">get_app</i>
                 </a> -->
                 <a href="https://musescore.com/user/16771186/scores/5222447"
                     class="txt-alike" target="_blank"
                     aria-label="View in Musescore (opens a new window)"
                     >
                     View in Musescore
-                    <i class="material-icons audio-player__icon">open_in_new</i>
+                    <i class="material-icons" style="font-size: 1.3em; vertical-align: middle;">open_in_new</i>
                 </a>
                 <a href="/assets/goodbye/Don't_Ever_Forget--Musescore-2018-11-23.mp3" class="txt-alike"
                     download="Don't Ever Forget.mp3"
                     title="Download mp3"
                     aria-label="Download mp3">
                     .mp3
-                    <i class="material-icons audio-player__icon">get_app</i>
+                    <i class="material-icons" style="font-size: 1.3em; vertical-align: middle;">get_app</i>
                 </a>
                 <a href="/assets/goodbye/Don't_Ever_Forget--Musescore-2018-11-23.ogg" class="txt-alike"
                     download="Don't Ever Forget.ogg"
                     title="Download ogg"
                     aria-label="Download ogg">
                     .ogg
-                    <i class="material-icons audio-player__icon">get_app</i>
+                    <i class="material-icons" style="font-size: 1.3em; vertical-align: middle;">get_app</i>
                 </a>
             </span>
         </div>
@@ -135,10 +133,10 @@ and play some piano. I can solve a Rubik's cube under
 
 I love to code. It’s my dream to write code for a living.
 I picked up HTML, (S)CSS, and JavaScript during
-my freshman year of high school while messing around with
+my freshman year of high school, while messing around with
 Firefox Scratchpad. I'm now fluent in front-end workflow,
 combining technologies ranging from ServiceWorker, Jekyll,
-Vue, GitHub, and Netlify.
+GitHub, and Netlify.
 
 The [video](https://codepen.io/MindfulMinun/pen/OzbZzB)
 and [audio](https://codepen.io/MindfulMinun/pen/vRjPwP)
@@ -154,12 +152,11 @@ With these, I created [Haruka][haruka], a Discord bot.
 <section markdown="1">
 ## Contact
 
-You can find me all over the Internet as MindfulMinun, I can [prove it][keybase].
-For business inquiries, [send me an email](mailto:importantmails4bc@gmail.com).
-For pretty much anything else, get it touch with me via [Twitter][twitter] or
+You can find me all over the Internet.
+For business inquiries, [send me an email.](mailto:importantmails4bc@gmail.com)
+For pretty much anything else, feel free to contact me via [Twitter][twitter] or
 Discord (MindfulMinun#3386).
-I'm also on [GitHub][github], [CodePen][codepen], [Glitch][glitch],
-[Keybase][keybase], and many other places. Feel free to say hi!
+I'm also on [GitHub][github], [CodePen][codepen], and [Glitch][glitch].
 
 [Tweet to @MindfulMinun][twitter-intent]
 </section>
@@ -184,9 +181,6 @@ I'm also on [GitHub][github], [CodePen][codepen], [Glitch][glitch],
 {: target="_blank" }
 
 [glitch]: https://glitch.com/@MindfulMinun
-{: target="_blank" }
-
-[keybase]: https://keybase.io/mindfulminun
 {: target="_blank" }
 
 [projects]: /p/
