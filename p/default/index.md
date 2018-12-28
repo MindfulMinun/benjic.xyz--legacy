@@ -16,11 +16,18 @@ scripts:
     -
         async: true
         src: "https://platform.twitter.com/widgets.js"
+styles:
+    -
+        href: "/styles/syntax.css"
 ---
 
 # Default Layout and Styles
 
-The following is a paragraph demonstrating basic text: **Donut wafer cupcake** icing bonbon cheesecake dessert muffin chocolate cake. Dessert tart dragée marshmallow carrot cake. [Donut sweet roll](#) chocolate bar brownie sesame snaps. Oat cake bonbon jelly beans gingerbread lemon drops. _Bear claw chocolate bar_ jelly-o sesame snaps biscuit pastry dragée.
+The following is a paragraph demonstrating basic text: **Donut wafer cupcake** icing bonbon <mark>cheesecake dessert muffin</mark> chocolate cake. Dessert <ins>tart dragée marshmallow</ins> carrot cake. [Donut sweet roll](#) chocolate bar brownie sesame snaps. Oat cake ~~bonbon jelly beans~~ gingerbread lemon drops. _Bear claw chocolate bar_ jelly-o sesame snaps biscuit pastry dragée.
+
+- I love you ~~watanabe~~.
+- I'm [Link][link].
+- Usar negritas es **audaz.** Usar cursivas es _elegante._ Usar ambas es _**como si estuvieras gritándome.**_
 
 ### Ruby Text
 
@@ -39,13 +46,44 @@ The following is a paragraph demonstrating basic text: **Donut wafer cupcake** i
 </p>
 
 
-### Blockquotes
+### Blockquotes & Warnings
+
 <blockquote>
     <p>
         —Está en el sótano del comedor— explicó, aligerada su dicción por la angustia—. Es mío, es mío; yo lo descubrí en la niñez, antes de la edad escolar. La escalera del sótano es empinada, mis tíos me tenían prohibido el descenso, pero alguien dijo que había un mundo en el sótano. Se refería, lo supe después, a un baúl, pero yo entendí que había un mundo. Bajé secretamente, rodé por la escalera vedada, caí. Al abrir los ojos, vi el Aleph.
     </p>
     <cite>&mdash;&nbsp;El Aleph, Jorge Luis Borges</cite>
 </blockquote>
+
+<div class="block-warn">
+    <p>
+        <strong>I'm a warning.</strong><br>
+        I help keep dumb users like you out of trouble.
+    </p>
+</div>
+
+### Code and stuff
+
+{%- highlight coffee -%}
+class Pokemon
+    constructor: (@name) ->
+        alert "Go! #{@name}!"
+
+    attack: (atk) ->
+        alert "#{@name} used #{atk}!"
+
+class Minun extends Pokemon
+    attack: ->
+        super "Cheer"
+
+MyMinun = new Minun 'Mindful'
+MyMinun.attack()
+# -> "Go! Mindful!"
+# -> "Mindful used Cheer!"
+{%- endhighlight -%}
+
+Press <kbd><kbd>&#8984; Command</kbd> + <kbd>Q</kbd></kbd> to remove lag.
+Don't run `sudo rm -rf /`.
 
 ### Media
 
@@ -69,53 +107,6 @@ The following is a paragraph demonstrating basic text: **Donut wafer cupcake** i
     <figcaption>Bongo.mp4</figcaption>
 </figure>
 
-### Lists
 
-1. European Theater
-    * Operation Torch
-        * Invasion of North Africa
-    *  Operation Overlord
-        * Landings at Normandy (NW France)
-        * D-Day
-2. Pacific Theater
-    * Midway
-    * Pearl Harbor
-    * Island Hopping
-    * Little Boy & Fat Man (Manhattan Project)
-        * Bombing of Hiroshima & Nagasaki
-3. Home Front
-    * Women
-        * They were actually in the war, fighting
-        * Rosie the Riveter
-    * Rationing
-        * Can't buy things w/o coupon
-        * Victory Bonds / Victory Gardens
-            * War Bonds (where you just give money to government)
-            * Gov. would promise money given plus interest after war ends
-    * Japanese Internment Camps
-
-<dl>
-    <dt>Coffee</dt>
-    <dd>A warm caffeinated drink</dd>
-    <dt>Soda</dt>
-    <dd>A cold caffeinated drink</dd>
-    <dt>Tea</dt>
-    <dd>Water with leaves</dd>
-</dl>
-
-
-<link rel="stylesheet" href="/styles/syntax.css">
-
-{%- highlight coffeescript -%}
-describe "xyz", ->
-    # ...
-    describe ".ready", ->
-        it "should execute function once DOM has been loaded", (done) ->
-            xyz.ready done
-        it "should execute immediately if DOM is already loaded", ->
-            xyz.ready ->
-                start = performance.now()
-                xyz.ready ->
-                    end = performance.now()
-                    chai.assert.isAtMost(end - start, 5)
-{%- endhighlight -%}
+[link]: https://en.wikipedia.org/wiki/Link_(The_Legend_of_Zelda) "Link (The Legend of Zelda) • Wikipedia"
+{: target="_blank" }

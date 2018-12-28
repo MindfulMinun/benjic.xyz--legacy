@@ -14,6 +14,16 @@ image:
     color: "#36393f"
 ---
 
+<div class="block-warn">
+    <p>
+        <strong>This post is out of date. :/</strong><br>
+        The contents of this post do not reflect changes
+        made after version 2.0.0 of Haruka. Nevertheless,
+        this guide is accurate up to Haruka v1.4.0 and
+        previous versions.
+    </p>
+</div>
+
 This is a somewhat~ comprehensive guide on how Haruka works.
 - [GitHub Repository][github-discord-haruka]
 - [Add Haruka][add-haruka] to your Discord server.
