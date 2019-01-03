@@ -6,7 +6,7 @@ description: >
     Encuentras un videojuego de texto. Después de jugar un rato,
     miras a tu alrededor, y te encuentras entre la obscuridad.
     ¿Podrás escapar?
-lang: "es-MX"
+lang: "es-US"
 theme-color: "#0F0"
 afterHead: <link rel="stylesheet" href="/p/a-text-based-game/game/game.css">
 scripts:

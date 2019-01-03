@@ -271,7 +271,9 @@ $select-arrow-size: 0.35em;
     background: 0;
     border: 0; border-radius: 0px;
     border-bottom: 1px solid $bg-4;
-    transition: border 0.2s $standard-curve;
+    transition: border 0.2s $standard-curve
+                opacity 0.2s $standard-curve
+                background 0.2s $standard-curve;
     outline: none;
 
     &:focus {
@@ -279,6 +281,11 @@ $select-arrow-size: 0.35em;
         outline: none !important;
         border-bottom-color: $accent;
         border-bottom-color: var(--accent, $accent);
+    }
+
+    &:disabled {
+        opacity: .52;
+        font-style: italic;
     }
 }
 @media print {
@@ -312,6 +319,11 @@ select {
             border-bottom-color: $accent;
             border-bottom-color: var(--accent, $accent);
         }
+    }
+    &:disabled {
+        opacity: .52;
+        font-style: italic;
+        background: 0;
     }
 }
 

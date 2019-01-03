@@ -24,7 +24,7 @@ afterHead:
                 A Text-Based Python Game</a>.
         </p>
     </div>
-    <div class="s12 m6 flush-p" lang="es">
+    <div class="s12 m6 flush-p" lang="es-US">
         <h3 class="h2">Un videojuego de texto</h3>
         <p>Encuentras un videojuego de texto. Después de jugar un rato,
         miras a tu alrededor, y te encuentras entre la obscuridad.
