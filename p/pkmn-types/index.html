@@ -1,0 +1,169 @@
+---
+layout: default
+title: Pokémon Type Calculator
+categories: ['p']
+description: Calculates how effective some Pokémon type is against another.
+excerpt: It's super effective!
+last_mod: 2018-12-31 18:11:00 CST
+scripts:
+    - # External scripts
+        src: "app.js"
+        async: true
+---
+
+{% capture scss %}
+//! Make this as tiny as possible //<style>
+@import "_vars";
+.out {
+    padding: 1rem 0;
+    font-size: 24px;
+    font-family: $mono;
+}
+//</style>
+{% endcapture %}<style>{{ scss | scssify }}</style>
+
+<h1>{{ page.title }}</h1>
+<p>{{ page.description }}</p>
+<hr>
+
+<noscript>
+    <div class="block-warn">
+        <p>This app literally won’t start if you don't have JS enabled. Enable it.</p>
+    </div>
+</noscript>
+
+<!--
+    What order do we put the types in?
+    The most logical order seems to be as follows:
+
+        Normal,
+        Fire, Water, Electric,
+        Grass, Ice, Fighting,
+        Poison, Ground, Flying,
+        Psychic, Bug, Rock,
+        Ghost, Dragon,
+        Dark, Steel,
+        Fairy
+
+    See https://pokemondb.net/pokebase/279714/
+-->
+
+<div class="grid no-js-hide">
+    <div class="s12">
+        <!-- Legit just placeholder text. -->
+        <div id="out" class="out">It’s super effective! (×2)</div>
+    </div>
+    <div class="s12 m12 l4">
+        <label>
+            Attack type:
+
+            <select id="atk" disabled>
+                <option value="Normal">Normal</option>
+                <option value="Fire">Fire</option>
+                <option value="Water">Water</option>
+                <option value="Electric">Electric</option>
+                <option value="Grass">Grass</option>
+                <option value="Ice">Ice</option>
+                <option value="Fighting">Fighting</option>
+                <option value="Poison">Poison</option>
+                <option value="Ground">Ground</option>
+                <option value="Flying">Flying</option>
+                <option value="Psychic">Psychic</option>
+                <option value="Bug">Bug</option>
+                <option value="Rock">Rock</option>
+                <option value="Ghost">Ghost</option>
+                <option value="Dragon">Dragon</option>
+                <option value="Dark">Dark</option>
+                <option value="Steel">Steel</option>
+                <option value="Fairy">Fairy</option>
+            </select>
+        </label>
+    </div>
+    <div class="s12 m6 l4">
+        <label>
+            Defense’s Primary type:
+
+            <select id="def-1" disabled>
+                <option value="Normal">Normal</option>
+                <option value="Fire">Fire</option>
+                <option value="Water">Water</option>
+                <option value="Electric">Electric</option>
+                <option value="Grass">Grass</option>
+                <option value="Ice">Ice</option>
+                <option value="Fighting">Fighting</option>
+                <option value="Poison">Poison</option>
+                <option value="Ground">Ground</option>
+                <option value="Flying">Flying</option>
+                <option value="Psychic">Psychic</option>
+                <option value="Bug">Bug</option>
+                <option value="Rock">Rock</option>
+                <option value="Ghost">Ghost</option>
+                <option value="Dragon">Dragon</option>
+                <option value="Dark">Dark</option>
+                <option value="Steel">Steel</option>
+                <option value="Fairy">Fairy</option>
+            </select>
+        </label>
+    </div>
+    <div class="s12 m6 l4">
+        <label>
+            Defense’s Secondary type:
+
+            <select id="def-2" disabled>
+                <option value="null">--- None ---</option>
+                <option value="Normal">Normal</option>
+                <option value="Fire">Fire</option>
+                <option value="Water">Water</option>
+                <option value="Electric">Electric</option>
+                <option value="Grass">Grass</option>
+                <option value="Ice">Ice</option>
+                <option value="Fighting">Fighting</option>
+                <option value="Poison">Poison</option>
+                <option value="Ground">Ground</option>
+                <option value="Flying">Flying</option>
+                <option value="Psychic">Psychic</option>
+                <option value="Bug">Bug</option>
+                <option value="Rock">Rock</option>
+                <option value="Ghost">Ghost</option>
+                <option value="Dragon">Dragon</option>
+                <option value="Dark">Dark</option>
+                <option value="Steel">Steel</option>
+                <option value="Fairy">Fairy</option>
+            </select>
+        </label>
+    </div>
+    <div class="s12">
+    </div>
+</div>
+
+<p>
+    <a href="./types.json" class="txt-aside txt-u" title="types.json">For the machines among us.</a>
+</p>
+
+
+<script type="text/javascript">
+    var i18n = {},
+        out = document.getElementById('out');
+
+    i18n.format = function (mult) {
+        out.innerHTML = (function() {
+            switch (mult) {
+                case 0:
+                    return "It doesn’t affect the Pokémon. (×0)";
+                case .25:
+                    return "It’s not very effective at all... (×¼)";
+                case .5:
+                    return "It’s not very effective... (×½)";
+                case 1:
+                    return "Normal damage (×1)";
+                case 2:
+                    return "It’s super effective! (×2)";
+                case 4:
+                    return "It’s ultra effective! (×4)";
+                default:
+                    return "Multiplier: ×" + mult;
+            }
+        }());
+    };
+
+</script>
