@@ -153,7 +153,7 @@ createPlayer = (box) ->
         if player.paused
             player.play()
             .catch ->
-            pp.setAttribute "aria-label", "Playback not resumed. Click to play."
+                pp.setAttribute "aria-label", "Playback not resumed. Click to play."
         else
             player.pause()
 

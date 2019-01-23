@@ -12,7 +12,7 @@ xyz.ready ->
 
     f = ->
         index = if (
-            indexInput.value isnt "" &&
+            indexInput.value isnt "" and
             0 <= +indexInput.value <= {{ site.data.blobs | size | minus: 1 }}
         ) then +indexInput.value else null
 

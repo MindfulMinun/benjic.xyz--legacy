@@ -1,0 +1,6 @@
+---
+# Had to do this the manual way because the jsonify filter doesn't cut it.
+---
+[{% for blob in site.data.blobs %}
+    {{ blob | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}
+]
