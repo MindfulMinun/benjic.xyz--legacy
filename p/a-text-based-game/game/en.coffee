@@ -440,7 +440,7 @@ G.no = ->
     .then -> H.out 'The only escape is the one you make yourself.', 3
     .then -> H.out 'Only you can end this.', 3
     .then -> H.out 'End it.', 3
-    .then -> H.out 'Close the page.', 3
+    .then -> H.out 'Close the tab.', 3
     .then -> H.out 'Ending it will terminate all of this.', 3
     .then -> H.out 'Neither of us would have to worry about
         this anymore.', 3
@@ -453,7 +453,7 @@ G.no = ->
             content: 'Comfort'
             callback: -> # Resolve
         }, {
-            content: 'Nothing'
+            content: 'Do nothing'
             callback: -> G.stop()
         }]
     })
@@ -529,5 +529,3 @@ G.badend = ->
     .then -> H.out "e͞͡s̨̕͢͟c̨̨a̛̕͘p̶͏̨e҉̛͡", 1
     .then -> H.newLine(5)
     .then -> G.badend()
-    # console.log "G.badend"
-    # H.out "G.badend"

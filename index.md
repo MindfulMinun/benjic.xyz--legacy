@@ -11,11 +11,14 @@ scripts:
       src: "https://platform.twitter.com/widgets.js"
     - async: true
       src: "/scripts/audio-player.js"
-afterHead: "<style>h2 {font-size: 1.75rem;}</style>"
+afterHead: >
+    <style>h2 {font-size: 1.75rem;}</style>
+    <script src="/scripts/xyz-player.js"></script>
+    <script>XyzPlayer.register();</script>
 ---
 
 # Hi, I’m Benji.
-I’m into programming and piano, but never both at once.
+I’m into programming and piano, but never both at once. I should probably be studying.
 <hr>
 
 <section>
@@ -31,7 +34,7 @@ I’m into programming and piano, but never both at once.
         {%- for p in PandP -%}
             <!-- Include pages that (are a post) or (are a project) -->
             <div class="horizontal-scroller__element">
-                <a class="post-card block"
+                <a class="post-card"
                     href="{{ p.url | absolute_url }}"
                     {% if p.image -%}
                         style="background-color:{{ p.image.color }};background-image:url('{{ p.image.src | absolute_url }}')"
@@ -56,12 +59,21 @@ on the Internet. I'm a senior at [Legacy ECHS][lechs],
 planning to graduate with my Associate’s this spring.
 I'm into programming and playing piano.
 
+{% comment %}
+    {% include image.html
+        caption="This is what I look like."
+        id="pfp" class="small"
+        suppressLink="true"
+        src="/assets/pfp-4-3.jpg"
+        style="padding-top:75%;background:#1d0c47;background:radial-gradient(#c84d65, #1d0c47);" %}
+{% endcomment %}
+
 {% include image.html
-    caption="This is what I look like."
+    caption="My mom and I."
     id="pfp" class="small"
     suppressLink="true"
-    src="/assets/pfp-4-3.jpg"
-    style="padding-top:75%;background:#1d0c47;background: radial-gradient(#c84d65, #1d0c47);" %}
+    src="/assets/mom-and-i.jpg"
+    style="padding-top:100%;background:#759b86;background:radial-gradient(#759b86, #716060);" %}
 
 During my time in high school so far, I've taken
 classes such as AP Computer Science,
@@ -76,6 +88,7 @@ and play some piano. I can solve a Rubik's cube under
 
 </section>
 
+{% comment %}
 <figure id="piano">
     <div class="media-box">
         <iframe src="/media/goodbye/" aria-labelledby="piano-caption" frameborder="0" allow="encrypted-media" title="Don’t Ever Forget – Video" allowfullscreen></iframe>
@@ -83,6 +96,20 @@ and play some piano. I can solve a Rubik's cube under
     <figcaption id="piano-caption">
         An excerpt of <em>Don’t Ever Forget</em>.
     </figcaption>
+</figure>
+{% endcomment %}
+
+
+<figure>
+    <div class="media-box">
+        <xyz-player src="https://benjic.xyz/assets/goodbye/goodbye.mp4"></xyz-player>
+    </div>
+    <noscript>
+        <div class="block-warn">
+            <p>JavaScript must be enabled to play this video</p>
+        </div>
+    </noscript>
+    <figcaption>An excerpt of <em>Don't Ever Forget</em>.</figcaption>
 </figure>
 
 <figure>
@@ -126,7 +153,9 @@ and play some piano. I can solve a Rubik's cube under
         </div>
     </div>
     <noscript>
-        <figcaption>Sorry, but JavaScript must be enabled to play audio.</figcaption>
+        <div class="block-warn">
+            <p>JavaScript must be enabled to play audio.</p>
+        </div>
     </noscript>
 </figure>
 
@@ -140,7 +169,7 @@ Firefox Scratchpad. I'm now fluent in front-end workflow,
 combining technologies ranging from ServiceWorker, Jekyll,
 Vue, GitHub, and Netlify.
 
-The [video](https://codepen.io/MindfulMinun/pen/OzbZzB)
+The [video](https://github.com/MindfulMinun/xyz-custom-elements)
 and [audio](https://codepen.io/MindfulMinun/pen/vRjPwP)
 players above were both created by yours truly.
 I've also made [layouts][layout] and other [HTML things][projects].

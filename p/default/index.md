@@ -13,9 +13,10 @@ banners:
             Sample banner. This banner is consistent, meaning it will reappear on refresh
         consistent: true
 scripts:
-    -
-        async: true
-        src: "https://platform.twitter.com/widgets.js"
+    - async: true
+      src: "https://platform.twitter.com/widgets.js"
+    - src: "/scripts/xyz-player.js"
+    - content: "XyzPlayer.register();"
 styles:
     -
         href: "/styles/syntax.css"
@@ -105,6 +106,13 @@ Don't run `sudo rm -rf /`.
         <iframe src="/media/bongo/" title="Bongo"></iframe>
     </div>
     <figcaption>Bongo.mp4</figcaption>
+</figure>
+
+<figure>
+    <div class="media-box">
+        <xyz-player src="https://benjic.xyz/assets/goodbye/goodbye.mp4"></xyz-player>
+    </div>
+    <figcaption>An excerpt of <em>Don't Ever Forget</em>.</figcaption>
 </figure>
 
 

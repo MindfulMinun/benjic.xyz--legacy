@@ -327,6 +327,25 @@ select {
     }
 }
 
+//! Details and Summary
+details {
+    border: 1px solid $bg-4;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+    summary {
+        font-weight: bold;
+        margin: -.5em -.5em 0;
+        padding: .5em;
+    }
+    // &[open] {
+    //     padding: .5em;
+    // }
+    &[open] summary {
+        border-bottom: 1px solid $bg-4;
+        margin-bottom: .5em;
+    }
+}
+
 //! All input types *except*
 //! button, checkbox, color, file, hidden, image, radio, range, reset, and submit
 [type="date"],

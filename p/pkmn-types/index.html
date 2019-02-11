@@ -3,7 +3,7 @@ layout: default
 title: Pokémon Type Calculator
 categories: ['p']
 description: Calculates how effective some Pokémon type is against another.
-excerpt: It's super effective!
+excerpt: It’s super effective!
 last_mod: 2018-12-31 18:11:00 CST
 scripts:
     - # External scripts
@@ -133,6 +133,32 @@ scripts:
         </label>
     </div>
 </div>
+
+<details>
+    <summary>¿How do I use this?</summary>
+    <p>
+        Say, for example, if I wanted to see the effectiveness
+        of a Psychic-type move against a
+        <a href="https://bulbapedia.bulbagarden.net/wiki/Riolu_(Pok%C3%A9mon)">
+            Riolu</a>. I’d click <em>Attack type</em> and select <em>Psychic</em>.
+        I’d choose <em>Fighting</em> as its primary type and set its secondary type
+        to <em>--- None ---</em>, since Riolu is a single-type Pokémon. The large text
+        above should automatically update, in this case it would display
+        <em>It’s super effective! (×2).</em>
+    </p>
+    <p>
+        If I instead wanted to figure out the effectiveness against a
+        <a href="https://bulbapedia.bulbagarden.net/wiki/Lucario_(Pok%C3%A9mon)">
+            Lucario,</a> I’d select <em>Psychic</em> as the attack type,
+            <em>Fighting</em> as the primary type, and <em>Steel</em> as the
+            secondary type. Once again, the text should update automatically,
+            displaying <em>Normal damage (x1)</em>
+    </p>
+    <p>
+        Another thing to note, if a Pokémon has a dual
+        typing, the order of the typings doesn’t matter.
+    </p>
+</details>
 
 <p>
     <a href="./types.json" class="txt-aside txt-u" title="types.json">For the machines among us.</a>

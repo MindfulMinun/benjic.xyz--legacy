@@ -15,27 +15,29 @@ afterHead:
 <div class="grid" style="margin-top: 0;">
     <div class="s12 m6 flush-p">
         <h1 class="h2">{{ page.title }}</h1>
-        <p>{{ page.description }}</p>
-        <a class="raised-btn flush" href="./en/">Go to game (English)</a>
+        <p>You stumble upon a text-based game. After playing it a bit,
+        you look around, finding yourself amidst the darkness.
+        Can you escape?</p>
+        <a class="raised-btn flush" href="./en/">Play (English)</a>
         <hr>
         <p class="txt-aside txt-i">
             Based on Kaden Krei’s
             <a href="https://drive.google.com/drive/folders/1KDukl_GJXxdxpJArDXa21TZjeaSSitDo?usp=sharing">
-                A Text-Based Python Game</a>.
+                A Text-Based Python Game</a>, rewritten in CoffeeScript.
         </p>
     </div>
     <div class="s12 m6 flush-p" lang="es-US">
         <h3 class="h2">Un videojuego de texto</h3>
         <p>Encuentras un videojuego de texto. Después de jugar un rato,
         miras a tu alrededor, y te encuentras entre la obscuridad.
-        ¿Podrás escapar?</p>
-        <a class="raised-btn flush" href="./es/">Ir al juego (Español)</a>
+        ¿Puedes escapar?</p>
+        <a class="raised-btn flush" href="./es/">Jugar (Español)</a>
         <hr>
         <p class="txt-aside txt-i">
             Basado en
             <a href="https://drive.google.com/drive/folders/1KDukl_GJXxdxpJArDXa21TZjeaSSitDo?usp=sharing">
                 A Text-Based Python Game
-            </a> hecho por Kaden Krei.
+            </a> hecho por Kaden Krei, reescrito en CoffeeScript.
         </p>
     </div>
 </div>
