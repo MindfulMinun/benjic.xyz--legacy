@@ -4,7 +4,7 @@ layout: default
 description: >
     Hi, I’m Benji. I'm into programming and playing piano, but never both at once.
 image:
-    src: /assets/pfp-4-3.jpg
+    src: /assets/mom-and-i.jpg
     alt: Benji
 scripts:
     - async: true
