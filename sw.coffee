@@ -13,6 +13,8 @@ ASSETS = [
     "/scripts/post.js"
     "/scripts/mini-video.js"
     "/scripts/focus-visible.js"
+    #! JSON
+    "/p/blob-debugger/blobs.json"
     #! SVGs
     "/assets/svg/cloud_circle--white.svg"
     "/assets/svg/hash.svg"

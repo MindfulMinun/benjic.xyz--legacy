@@ -10,21 +10,6 @@
 {% include xyz/addEventListeners.coffee %}
 #! coffeelint: enable=space_operators
 
-#! Random blobs
-xyz.blobs = {
-    allBlobs: {{ site.data.blobs | jsonify }}
-    pull: (index) ->
-        if typeof index is "number"
-            x = index
-        else
-            x = xyz.randomInt(0, @allBlobs.length - 1)
-
-        return {
-            blob: twemoji.parse @allBlobs[x]
-            index: x
-        }
-}
-
 ##! ============================ !##
 ##! ========== Dialog ========== !##
 ##! ============================ !##
@@ -110,7 +95,14 @@ xyz.ready(->
 
     #! Add the footer blob if the footer's there
     footerBlob = document.getElementById "footer--blob"
-    if footerBlob then footerBlob.innerHTML = xyz.blobs.pull().blob
+    # if footerBlob then footerBlob.innerHTML = xyz.blobs.pull().blob
+    if footerBlob
+        fetch('/p/blob-debugger/blobs.json')
+            .then((j) -> j.json())
+            .then (blobs) ->
+                xyz.blobs = blobs
+                i = xyz.randomInt(0, blobs.length - 1)
+                footerBlob.innerHTML = twemoji.parse blobs[i]
 )
 
 xyz.addEventListeners([window], 'message', (event) ->

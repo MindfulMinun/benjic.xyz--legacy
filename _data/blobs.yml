@@ -99,7 +99,7 @@
 - |-
     Ah, yes,
     <a href="https://github.com/MindfulMinun/benjic.xyz/blob/master/_data/blobs.yml" target="_blank">
-        <code>xyz.blobs.allBlobs</code>
+        <code>xyz.blobs</code>
     </a>, a waste of 11kb.
 - JavaScript arrow functions? Pfft, in CoffeeScript, <em>all</em> functions are arrow functions.
 - coffeescript &gt; javascript <br> (I’m 100% serious when I say that.)
