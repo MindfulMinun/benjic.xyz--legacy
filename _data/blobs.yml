@@ -100,8 +100,13 @@
     Ah, yes,
     <a href="https://github.com/MindfulMinun/benjic.xyz/blob/master/_data/blobs.yml" target="_blank">
         <code>xyz.blobs.allBlobs</code>
-    </a>, a waste of 9kb.
+    </a>, a waste of 11kb.
 - JavaScript arrow functions? Pfft, in CoffeeScript, <em>all</em> functions are arrow functions.
+- coffeescript &gt; javascript <br> (I’m 100% serious when I say that.)
+# when _new thing_ comes out, devs love it. when _old thing_ becomes better than _new thing_
+# everyone ditches _new thing_ leaving it in ruins. (Notable examples: CoffeeScript, yarn)
+# "Why use <new> when <old> was always here and better?" No, you dingus, they can coexist.
+#
 # - <code>KeyboardInterrupt</code>
 - Learning to code? Start from Scratch.
 
@@ -124,6 +129,7 @@
 # - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Pop Team Epic!">ポプテピピック！</span><span class="sr-only">Pop Team Epic!</span>
 - <span lang="ja" class="tooltip" data-tp="above" data-tooltip="Twitter!">ツイッター！</span><span class="sr-only">Twitter!</span>
 - これはベンジー
+- <code>'kawaii desu'.replace(/\bde ?su ?(?:ne)?\b/g, 'innit')</code>
 # - |-
 #     <em lang="ja" class="tooltip" data-tp="above" data-tooltip="I love you soooooooooooo much!" aria-hidden="true">
 #         Daaaaaaaaaaaaaaaaaaaski!
@@ -232,6 +238,8 @@
 - “Kyon-kun, denwa.”
 - "15,498 times."
 - “Time never comes back once it’s gone!”
+- Gymnopédie no. 1
+- Haruhi, Yuki, Mikuru, Tsuruya
 # Love Live!
 - i love you <del>watanabe</del>
 - <em>Love Live!</em> is the most anime-like anime I’ve ever heard of.

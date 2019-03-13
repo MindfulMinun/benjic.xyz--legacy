@@ -71,12 +71,12 @@ G.$2_investigate = ->
     .then -> H.out 'Al mirar por la habitación, te das cuenta de que
         es bastante amplia.'
     .then -> H.out 'Una de las paredes está hecha de vitral.', 3
-    .then -> H.out 'Más allá del vitral, no hay más que un vacío.', 3
+    .then -> H.out 'Más allá del vitral, no hay más que un abismo.', 3
     .then -> H.out 'Hay varias mesas y sillas que llenan el
         centro de la habitación.', 3
     .then -> H.out 'Están alineadas con esmero, y no han sido tocadas.', 3
     .then -> H.newLine 6
-    .then -> H.out 'Notas que hay un papel en el suelo cercas de tí.'
+    .then -> H.out 'Notas que hay un papel en el suelo cercas de ti.'
     .then -> H.newLine 3
     .then -> H.choice {
         content: "¿Qué decides hacer con el papel?"

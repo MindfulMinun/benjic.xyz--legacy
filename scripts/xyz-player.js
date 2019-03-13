@@ -2,6 +2,8 @@
  * XyzPlayer
  */
 (function () {
+    // Comment the following line for Spanish labels
+    /*
     const dict = {
         scrubberA11yLabel: "Búsqueda en video",
         scrubberA11yDefault: "Cargando...",
@@ -16,7 +18,22 @@
         forward: "Avanzar",
         rewind: "Retroceder"
     }
-    const $ymbol = Symbol('xyz-player')
+    /*/
+    const dict = {
+        scrubberA11yLabel: "Scrubber",
+        scrubberA11yDefault: "Loading...",
+        scrubberA11yVal: (v) => `${formatTime(v.currentTime)} out of ${formatTime(v.duration)}`,
+        formatNumericProgress: (v) => `${formatTime(v.currentTime)} / ${formatTime(v.duration)}`,
+        numericProgressDefault: '0:00 / 0:00',
+        pip: 'Picture\u2011in\u2011picture',
+        enterFs: 'Fullscreen',
+        exitFs: 'Exit\u00a0Fullscreen',
+        pause: 'Pause',
+        play: 'Play',
+        forward: "Fast\u2011forward",
+        rewind: "Rewind"
+    }
+    // */
     const temp = document.createElement('template')
     temp.innerHTML = `
         <style>
