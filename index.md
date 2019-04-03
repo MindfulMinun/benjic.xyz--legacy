@@ -54,10 +54,10 @@ I’m into programming and piano, but never both at once. I should probably be s
 <section markdown="1">
 ## About me
 
-Hi, I'm Benji. You may know me as [@MindfulMinun][twitter]
-on the Internet. I'm a senior at [Legacy ECHS][lechs],
-planning to graduate with my Associate’s this spring.
-I'm into programming and playing piano.
+Hi, I'm Benji. You may know me as [@MindfulMinun][twitter] on the Internet. I'm
+a senior at [Legacy ECHS][lechs], planning to graduate with my Associate’s this
+spring and attend UT Dallas this same fall. I'm into programming and playing
+piano.
 
 {% comment %}
     {% include image.html
@@ -74,18 +74,19 @@ I'm into programming and playing piano.
     suppressLink="true"
     src="/assets/mom-and-i.jpg"
     style="padding-top:100%;background:#759b86;background:radial-gradient(#759b86, #716060);" %}
+<!--
+I was born in Houston but spent most of my childhood in a town named Wylie, to
+the northeast of Dallas and Garland. At around the age of 12, I moved south to
+a city east of Austin.
+-->
 
-During my time in high school so far, I've taken
-classes such as AP Computer Science,
-AP Spanish Language, AP Spanish Literature,
-Engineering I and II, and I'm currently taking
-Calculus. I'm planning on majoring in Computer Science
-and possibly minoring in Spanish.
+During my time in high school so far, I've taken classes such as AP Computer
+Science, AP Spanish Language, AP Spanish Literature, Engineering I and II, and
+I'm currently taking Calculus II. I'm planning on majoring in Computer Science.
 
-In my leisure time, I [code][github], [tweet][twitter],
-and play some piano. I can solve a Rubik's cube under
-2 minutes, and I speak both English and Spanish fluently.
-
+In my leisure time, I [write code][github], [tweet tweets][twitter], and play
+piano. I can solve a Rubik's cube under 2 minutes, and I speak both English and
+Spanish fluently.
 </section>
 
 {% comment %}
@@ -178,17 +179,23 @@ Near the end of my Sopohmore year, I went on to focus on Node.js,
 a back-end JavaScript runtime. Here, I picked up CoffeeScript,
 a Python-esque language that transpiles to JavaScript.
 With these, I created [Haruka][haruka], a Discord bot.
+
+This year, I've worked some more with Node.js and created
+[@NichijouEbooks][NichijouEbooks], a Twitter bot that posts randomly-formulated
+strings from quotes taken from the Nichijou anime.
+[Her reposititory is also on GitHub.](https://github.com/MindfulMinun/nichijouebooks)
 </section>
 
 <section markdown="1">
 ## Contact
 
-You can find me all over the Internet as MindfulMinun, I can [prove it][keybase].
-For business inquiries, [send me an email](mailto:importantmails4bc@gmail.com).
+You can find me all over the Internet as MindfulMinun, I can
+[prove it][keybase]. For business inquiries,
+[send me an email](mailto:importantmails4bc@gmail.com).
 For pretty much anything else, get it touch with me via [Twitter][twitter] or
-Discord (MindfulMinun#3386).
-I'm also on [GitHub][github], [CodePen][codepen], [Glitch][glitch],
-[Keybase][keybase], and many other places. Feel free to say hi!
+Discord (MindfulMinun#3386). I'm also on [GitHub][github],
+[CodePen][codepen], [Glitch][glitch], [Keybase][keybase],
+and many other places. Feel free to say hi!
 
 [Tweet to @MindfulMinun][twitter-intent]
 </section>
@@ -204,6 +211,9 @@ I'm also on [GitHub][github], [CodePen][codepen], [Glitch][glitch],
 {: class="twitter-mention-button" data-size="large" data-show-count="true" }
 
 [haruka]: https://github.com/MindfulMinun/discord-haruka
+{: target="_blank" }
+
+[NichijouEbooks]: https://twitter.com/NichijouEbooks
 {: target="_blank" }
 
 [github]: https://github.com/MindfulMinun

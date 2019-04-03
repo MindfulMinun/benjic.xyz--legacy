@@ -62,10 +62,17 @@
                 --standard-curve: cubic-bezier(0.4, 0, 0.2, 1);
             }
             i.material-icons { display: block; }
-            video {
+            .xyz-vid-container {
                 display: block;
                 margin: auto;
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
                 height: 100%; width: 100%;
+                z-index: 0;
+            }
+            .xyz-vid-container video {
+                width: 100%; height: 100%;
+                z-index: -1;
             }
 
             .xyz-player {
@@ -81,12 +88,12 @@
                 padding-bottom: 0;
                 position: absolute;
                 left: 0; right: 0; bottom: 0;
-                opacity: 1;
+                opacity: 0.9999999999999;
                 transition: opacity var(--standard-curve) .2s;
             }
             .xyz-controls:hover .xyz-controls__scrubber__head { opacity: 1; }
             .xyz-player--hide-controls { cursor: none; }
-            .xyz-player--hide-controls .xyz-controls { opacity: 0; }
+            .xyz-player--hide-controls .xyz-controls { opacity: 0.0000000001; }
 
             .xyz-controls__btn {
                 position: relative;
@@ -178,7 +185,9 @@
             .xyz-spacer { flex: 1 }
         </style>
         <div class="xyz-player">
-            <video></video>
+            <div class="xyz-vid-container">
+                <video></video>
+            </div>
             <div class="xyz-controls">
                 <div class="xyz-controls__scrubber" tabindex="0" role="slider"
                     aria-label="${dict.scrubberA11yLabel}"
@@ -356,6 +365,12 @@
             pp.setAttribute('title', dict.play)
             pp.setAttribute('aria-label', dict.play)
         })
+        v.addEventListener('playing', () => {
+            ga('send', 'event', 'Media', 'Video played')
+        }, {once: true});
+        v.addEventListener('ended', _ => {
+            ga('send', 'event', 'Media', 'Video played to end')
+        });
 
         // Controller event listeners
         ff.addEventListener('click', () => {
