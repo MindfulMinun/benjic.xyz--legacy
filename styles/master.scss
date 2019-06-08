@@ -25,9 +25,11 @@ html, body {
     font-size: 16px;
     font-weight: 300;
     line-height: 1.5;
-    background-color: $background-color;
     color: $text-color;
     overflow-x: hidden;
+}
+body {
+    background-color: $background-color;
 }
 :root {
     //! CSS vars

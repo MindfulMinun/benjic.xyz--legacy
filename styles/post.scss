@@ -42,6 +42,9 @@
 }
 
 .post .post-content {
+    // Make it a bit easier to read.
+    font-size: 18px;
+    line-height: 1.75;
     a.header-link {
         color: inherit;
         text-decoration: none;

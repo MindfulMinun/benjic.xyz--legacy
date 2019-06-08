@@ -30,13 +30,9 @@ plugins:
 
 #! ========================================
 #! Plugin vars
-# include:
-#     - ".htaccess"
-# show_drafts: true
 # incremental: true
 strict_front_matter: true
-exclude:
-    - "_archives/"
+# exclude:
 
 jekyll-minifier:
     exclude:

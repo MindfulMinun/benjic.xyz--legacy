@@ -2,23 +2,23 @@
 title: About me
 layout: default
 description: >
-    Hi, I’m Benji. I'm into programming and playing piano, but never both at once.
+    Hi, I’m Benji. I like programming and playing piano.
 image:
     src: /assets/mom-and-i.jpg
     alt: Benji
 scripts:
+    - src: "/scripts/xyz-player.js"
+      onload: "XyzPlayer.register()"
     - async: true
       src: "https://platform.twitter.com/widgets.js"
     - async: true
       src: "/scripts/audio-player.js"
 afterHead: >
     <style>h2 {font-size: 1.75rem;}</style>
-    <script src="/scripts/xyz-player.js"></script>
-    <script>XyzPlayer.register();</script>
 ---
 
 # Hi, I’m Benji.
-I’m into programming and piano, but never both at once. I should probably be studying.
+I like programming and playing piano. I should probably be studying.
 <hr>
 
 <section>
@@ -54,10 +54,7 @@ I’m into programming and piano, but never both at once. I should probably be s
 <section markdown="1">
 ## About me
 
-Hi, I'm Benji. You may know me as [@MindfulMinun][twitter] on the Internet. I'm
-a senior at [Legacy ECHS][lechs], planning to graduate with my Associate’s this
-spring and attend UT Dallas this same fall. I'm into programming and playing
-piano.
+Hi, I'm Benji. You might know my as [@MindfulMinun][twitter] online. I graduated from both [Legacy ECHS](https://lechs.taylorisd.org) and [Temple College](https://templejc.edu) late this spring with my HS diploma and an Associate of Arts respectively. I'll be attending [UT Dallas](https://utd.edu) this fall, majoring in Computer Science. I like to write code and play the piano.
 
 {% comment %}
     {% include image.html
@@ -74,19 +71,8 @@ piano.
     suppressLink="true"
     src="/assets/mom-and-i.jpg"
     style="padding-top:100%;background:#759b86;background:radial-gradient(#759b86, #716060);" %}
-<!--
-I was born in Houston but spent most of my childhood in a town named Wylie, to
-the northeast of Dallas and Garland. At around the age of 12, I moved south to
-a city east of Austin.
--->
 
-During my time in high school so far, I've taken classes such as AP Computer
-Science, AP Spanish Language, AP Spanish Literature, Engineering I and II, and
-I'm currently taking Calculus II. I'm planning on majoring in Computer Science.
-
-In my leisure time, I [write code][github], [tweet tweets][twitter], and play
-piano. I can solve a Rubik's cube under 2 minutes, and I speak both English and
-Spanish fluently.
+In my leisure time, I like to [write code][github], [tweet tweets][twitter], and play piano and vidya. I can solve a Rubik's cube under 2 minutes, and I speak both English and Spanish fluently.
 </section>
 
 {% comment %}
@@ -131,7 +117,7 @@ Spanish fluently.
                 </a> -->
                 <a href="https://musescore.com/user/16771186/scores/5222447"
                     class="txt-alike" target="_blank"
-                    aria-label="View in Musescore (opens a new window)"
+                    aria-label="View in Musescore (opens new tab)"
                     >
                     View in Musescore
                     <i class="material-icons audio-player__icon">open_in_new</i>
@@ -163,70 +149,34 @@ Spanish fluently.
 <section markdown="1">
 ## Code &amp; stuff
 
-I love to code. It’s my dream to write code for a living.
-I picked up HTML, (S)CSS, and JavaScript during
-my freshman year of high school while messing around with
-Firefox Scratchpad. I'm now fluent in front-end workflow,
-combining technologies ranging from ServiceWorker, Jekyll,
-Vue, GitHub, and Netlify.
+I love to code. It’s my dream to write code for a living. I picked up JavaScript during my freshman year of high school while messing around with Firefox Scratchpad. I naturally went on to learn the other two web languages: HTML and CSS. I'm now fluent in front-end workflow, combining technologies ranging from ServiceWorker, Jekyll, Vue, GitHub, and Netlify.
 
-The [video](https://github.com/MindfulMinun/xyz-custom-elements)
-and [audio](https://codepen.io/MindfulMinun/pen/vRjPwP)
-players above were both created by yours truly.
-I've also made [layouts][layout] and other [HTML things][projects].
+The [video](https://github.com/MindfulMinun/xyz-custom-elements) and [audio](https://codepen.io/MindfulMinun/pen/vRjPwP) players above were both created by yours truly. I've also made [layouts][layout] and other [HTML things][projects].
 
-Near the end of my Sopohmore year, I went on to focus on Node.js,
-a back-end JavaScript runtime. Here, I picked up CoffeeScript,
-a Python-esque language that transpiles to JavaScript.
-With these, I created [Haruka][haruka], a Discord bot.
+Near the end of my Sopohmore year, I went on to focus on Node.js, a back-end JavaScript runtime. Here, I picked up CoffeeScript, a Python-esque language that transpiles to JavaScript. With these, I created [Haruka][haruka], a Discord bot.
 
-This year, I've worked some more with Node.js and created
-[@NichijouEbooks][NichijouEbooks], a Twitter bot that posts randomly-formulated
-strings from quotes taken from the Nichijou anime.
-[Her reposititory is also on GitHub.](https://github.com/MindfulMinun/nichijouebooks)
+This year, I've worked some more with Node.js and created [@NichijouEbooks][NichijouEbooks], a Twitter bot that posts randomly-formulated strings from quotes taken from the Nichijou anime. [Her repository is also on GitHub.](https://github.com/MindfulMinun/nichijouebooks)
 </section>
 
 <section markdown="1">
 ## Contact
 
-You can find me all over the Internet as MindfulMinun, I can
-[prove it][keybase]. For business inquiries,
-[send me an email](mailto:importantmails4bc@gmail.com).
-For pretty much anything else, get it touch with me via [Twitter][twitter] or
-Discord (MindfulMinun#3386). I'm also on [GitHub][github],
-[CodePen][codepen], [Glitch][glitch], [Keybase][keybase],
-and many other places. Feel free to say hi!
+You can find me all over the Internet as MindfulMinun, I can [prove it][keybase]. For business inquiries, [send me an email](mailto:importantmails4bc@gmail.com). For pretty much anything else, get it touch with me via [Twitter][twitter] or Discord (MindfulMinun#3386). I'm also on [GitHub][github], [CodePen][codepen], [Glitch][glitch], [Keybase][keybase], and many other places. Feel free to say hi!
 
 [Tweet to @MindfulMinun][twitter-intent]
 </section>
 
 <!-- References -->
-[lechs]: https://lechs.taylorisd.org
-{: target="_blank" }
-
 [twitter]: https://twitter.com/MindfulMinun
-{: target="_blank" }
 
 [twitter-intent]: https://twitter.com/intent/tweet?screen_name=MindfulMinun&ref_src=twsrc%5Etfw "Tweet to @MindfulMinun"
 {: class="twitter-mention-button" data-size="large" data-show-count="true" }
 
 [haruka]: https://github.com/MindfulMinun/discord-haruka
-{: target="_blank" }
-
 [NichijouEbooks]: https://twitter.com/NichijouEbooks
-{: target="_blank" }
-
 [github]: https://github.com/MindfulMinun
-{: target="_blank" }
-
 [codepen]: https://codepen.io/MindfulMinun
-{: target="_blank" }
-
 [glitch]: https://glitch.com/@MindfulMinun
-{: target="_blank" }
-
 [keybase]: https://keybase.io/mindfulminun
-{: target="_blank" }
-
 [projects]: /p/
 [layout]: /p/default/

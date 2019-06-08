@@ -53,7 +53,7 @@ template, [hidden] {
     display: none;
 }
 p {
-    margin: 1rem 0;
+    margin: 1em 0;
     padding: 0;
 }
 strong, b {font-weight: $bold;}
@@ -112,8 +112,8 @@ pre {
 samp {
     background-color: #000;
     color: #fff;
-    padding: 1rem;
-    margin: 1rem 0;
+    padding: 1em;
+    margin: 1em 0;
     white-space: pre;
     display: block;
     overflow-y: auto;
@@ -143,10 +143,10 @@ small {font-size: 80%;}
 
 //! Lists
 dl, ul, ol {
-    margin: 1rem 0;
+    margin: 1em 0;
     p {
         margin-top: 0;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.5em;
     }
 
     dl, ul, ol {
@@ -166,7 +166,7 @@ ul {list-style-type: disc;}
 ol {list-style-type: decimal;}
 //! Level 2
 ul, ol {
-    padding-left: 2rem;
+    padding-left: 2em;
     ul {list-style-type: circle;}
     ol {list-style-type: lower-alpha;}
 }
@@ -179,7 +179,7 @@ ul, ol {ul, ol {
 //! Descriptions
 dt {font-weight: $bold;}
 dd {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
     margin-left: 0;
 }
 
@@ -402,12 +402,12 @@ textarea.textarea {
 //! ============================== !//
 //! ========== Headings ========== !//
 //! ============================== !//
-h1, .h1 {font-size: 2.5rem;}
-h2, .h2 {font-size: 2rem;}
-h3, .h3 {font-size: 1.75rem;}
-h4, .h4 {font-size: 1.5rem;}
-h5, .h5 {font-size: 1.25rem;}
-h6, .h6 {font-size: 1rem;}
+h1, .h1 {font-size: 2.5em;}
+h2, .h2 {font-size: 2em;}
+h3, .h3 {font-size: 1.75em;}
+h4, .h4 {font-size: 1.5em;}
+h5, .h5 {font-size: 1.25em;}
+h6, .h6 {font-size: 1em;}
 
 h1, .h1,
 h2, .h2,
