@@ -7,14 +7,13 @@ image:
     src: /assets/mom-and-i.jpg
     alt: Benji
 scripts:
-    - src: "/scripts/xyz-player.js"
-      onload: "XyzPlayer.register()"
     - async: true
       src: "https://platform.twitter.com/widgets.js"
     - async: true
       src: "/scripts/audio-player.js"
 afterHead: >
     <style>h2 {font-size: 1.75rem;}</style>
+    <script src="/scripts/xyz-player.js" onload="XyzPlayer.register()"></script>
 ---
 
 # Hi, I’m Benji.

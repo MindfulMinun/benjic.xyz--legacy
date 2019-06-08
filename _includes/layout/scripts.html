@@ -16,6 +16,7 @@ scripts:
     <script
 {%- if s.src %} src="{{ s.src }}"{%- endif -%}
 {%- if s.type %} type="{{ s.type }}"{%- endif -%}
+{%- if s.onload %} onload="{{ s.type }}"{%- endif -%}
 {%- if s.integrity %} integrity="{{ s.integrity }}"{%- endif -%}
 {%- if s.crossorigin %} crossorigin="{{ s.crossorigin }}"{%- endif -%}
 {%- if s.defer %} defer{%- endif -%}
