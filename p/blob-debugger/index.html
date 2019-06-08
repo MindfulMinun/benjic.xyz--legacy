@@ -25,10 +25,10 @@ scripts:
     <div class="grid">
         <div class="s6 m3">
             <input type="number" title="Index of blob" id="index" min="0" placeholder="Index of blob"
-            max="{{ blobs | size | minus: 1}}">
+            max="{{ blobs | size | minus: 1}}" disabled>
         </div>
         <div class="s6">
-            <button class="flat-btn" id="new-blob" aria-label="Pull and render a blob.">Pull + render a blob</button>
+            <button class="flat-btn" id="new-blob" aria-label="Pull and render a blob." disabled>Pull + render a blob</button>
         </div>
     </div>
 

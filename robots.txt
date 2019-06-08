@@ -3,14 +3,14 @@
 User-agent: *
 
 #! 404s
-Disallow: {{ site.url }}/404
-Disallow: {{ site.url }}/404/
-Disallow: {{ site.url }}/404.html
+Disallow: /404
+Disallow: /404/
+Disallow: /404.html
 
 #! Anything in /oops/
-Disallow: {{ site.url }}/oops/
+Disallow: /oops/
 
 #! Media lol
-Disallow: {{ site.url }}/media/
+Disallow: /media/
 
-Sitemap:  {{ site.url }}/sitemap.xml
+Sitemap:  /sitemap.xml

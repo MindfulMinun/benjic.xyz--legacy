@@ -72,7 +72,7 @@
         {% endif -%}
 
         <script src="/scripts/focus-visible.js" async></script>
-        <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.6"></script>
+        <script src="https://twemoji.maxcdn.com/2/twemoji.min.js?12.0.4" crossorigin="anonymous" onload="twemoji.parse(document.body, {folder: 'svg', ext: '.svg'})" async defer></script>
         <script type="text/javascript">
             (function(d, w) {
                 "use strict";
@@ -85,8 +85,6 @@
                     ) {fn();}
                     else {d.addEventListener("DOMContentLoaded", fn);}
                 }
-                w.twemoji = w.twemoji || {parse: function (s) {return s;}};
-                twemoji.size = "svg"; twemoji.ext = ".svg";
 
                 // Catch errors
                 w.onerror = function (err, uri, line, col) {

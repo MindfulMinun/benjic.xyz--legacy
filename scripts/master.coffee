@@ -85,10 +85,6 @@ xyz.toast = (data) ->
     return data
 
 xyz.ready(->
-    #! Parse twemoji
-    for el in document.getElementsByClassName 'e'
-        el.innerHTML = twemoji.parse el.innerHTML
-
     #! Send Acquisition, From share link when the URL is a share link
     if location.href.match(/\?[\s\S]*(s=(1|permalink))/gi)
         ga('send', 'event', 'Acquisition', "From share link")
@@ -102,7 +98,10 @@ xyz.ready(->
             .then (blobs) ->
                 xyz.blobs = blobs
                 i = xyz.randomInt(0, blobs.length - 1)
-                footerBlob.innerHTML = twemoji.parse blobs[i]
+                footerBlob.innerHTML = if twemoji?
+                    twemoji.parse blobs[i]
+                else
+                    blobs[i]
 )
 
 xyz.addEventListeners([window], 'message', (event) ->

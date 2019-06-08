@@ -20,7 +20,7 @@ xyz.ready ->
             0 <= +indexInput.value <= blobs.length
         ) then +indexInput.value else xyz.randomInt(0, blobs.length - 1)
 
-        blob = twemoji.parse blobs[i]
+        blob = twemoji.parse blobs[i], {folder: 'svg', ext: '.svg'}
         console.log blob
         renderBox.innerHTML = blob
         indexBox.innerHTML  = i
@@ -30,6 +30,8 @@ xyz.ready ->
             requestAnimationFrame check
         else
             blobs = xyz.blobs
+            indexInput.disabled = no
+            button.disabled = no
             f()
     check()
 
