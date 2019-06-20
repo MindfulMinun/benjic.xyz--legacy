@@ -7,14 +7,8 @@ afterHead: <link rel="stylesheet" href="/styles/master.css">
 ---
 {% capture scss %}
 //<!-- Make this as tiny as possible (added html comment bc syntax is annoying)
-@import "_vars";
-main .container {
-    position: relative;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-    h1 {margin-top: 0;}
-}
+main { display: flex; }
+main .container { margin: auto; }
 //-->
 {% endcapture %}<style>{{ scss | scssify }}</style>
 
