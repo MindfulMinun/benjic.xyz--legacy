@@ -13,4 +13,4 @@ Disallow: /oops/
 #! Media lol
 Disallow: /media/
 
-Sitemap:  /sitemap.xml
+Sitemap:  {{ site.url }}/sitemap.xml
