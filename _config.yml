@@ -27,6 +27,8 @@ plugins:
     - jekyll-sitemap
     - jekyll-minifier
     - jekyll-coffeescript
+kramdown:
+    math_engine: nil
 
 #! ========================================
 #! Plugin vars

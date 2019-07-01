@@ -183,6 +183,8 @@ dd {
     margin-left: 0;
 }
 
+ul.default, ol.default {list-style-type: none; padding: 0;}
+
 //! Tables
 table {
     border-collapse: collapse;

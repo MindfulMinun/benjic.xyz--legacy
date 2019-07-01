@@ -20,7 +20,6 @@
 //! ================================= !//
 html, body {
     margin: 0;
-    height: 100%;
     font-family: $font;
     font-size: 16px;
     font-weight: 300;
@@ -30,6 +29,7 @@ html, body {
 }
 body {
     background-color: $background-color;
+    height: 100%;
 }
 :root {
     //! CSS vars

@@ -25,24 +25,37 @@ I like programming and playing piano. I should probably be studying.
     <p>Some <a href="/p/">projects</a> and posts I’ve written.</p>
 
     <div class="horizontal-scroller">
-        {% assign projects = site.pages | where: 'categories', 'p' %}
+        <!-- {% assign projects = site.pages | where: 'categories', 'p' %} -->
         {% assign posts = site.posts %}
+        {% assign projects = site.data.projects %}
         <!-- Concatenate arrays and sort from newest to oldest -->
-        {% assign PandP = projects | concat: posts | sort: 'last_mod' | reverse %}
+        {% assign PandP = posts | concat: projects %}
 
         {%- for p in PandP -%}
             <!-- Include pages that (are a post) or (are a project) -->
             <div class="horizontal-scroller__element">
                 <a class="post-card"
+                    {% if p.source -%}
+                    href="{{ p.source }}"
+                    {%- else -%}
                     href="{{ p.url | absolute_url }}"
+                    {%- endif %}
                     {% if p.image -%}
                         style="background-color:{{ p.image.color }};background-image:url('{{ p.image.src | absolute_url }}')"
                     {%- endif %}>
                     <div class="post-card-content">
                         <strong>{{ p.title | escape }}</strong>
-                        <p class="no-margin">{{
-                            p.excerpt | markdownify | remove: '<p>' | remove: '</p>' | truncatewords: 8
-                        }}</p>
+                        <p class="no-margin">
+
+                        {%- if p.excerpt -%}
+                        {{ p.excerpt | markdownify | remove: '<p>' | remove: '</p>' | truncatewords: 8 }}
+                        {%- elsif p.hook -%}
+                        {{ p.hook | markdownify | remove: '<p>' | remove: '</p>' | truncatewords: 8 }}
+                        {%- else -%}
+                        {{ p.description | markdownify | remove: '<p>' | remove: '</p>' | truncatewords: 8 }}
+                        {%- endif -%}
+
+                        </p>
                     </div>
                 </a>
             </div>

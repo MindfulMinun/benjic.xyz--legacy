@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Projects, Tools, & Gadgets
+title: Projects
 description: >
     An assorted list of small and useless projects, tools, and gadgets I’ve worked on.
 ---
@@ -8,14 +8,43 @@ description: >
 <h1>{{ page.title }}</h1>
 
 <p>
-    P is for Projects. Below is an assorted list of small and useless projects,
-    tools, and gadgets I've worked on.
+    P is for Projects. Here's everything I've worked on in the past few years.
 </p>
+
+<style media="screen">
+    .default li {
+        margin-bottom: 1rem;
+    }
+</style>
+
+<ul class="default grid">
+    {%- for p in site.data.projects -%}
+        <li class="s12 l6 pad">
+            <strong class="h4">{{ p.title }}</strong>
+            <!-- <p>{{ p.hook }}</p> -->
+            {%- if p.description -%}
+            {{ p.description | markdownify }}
+            {%- endif -%}
+            <p class="txt-aside left">
+                {{ p.codeLangs | join: ', ' }}
+            </p>
+            <p class="right">
+                {%- if p.url and p.source -%}
+                    <a href="{{ p.source }}">Source</a> •
+                    <a href="{{ p.url }}">View</a>
+                {%- elsif p.source -%}
+                    <a href="{{ p.source }}">Source</a>
+                {%- elsif p.url -%}
+                    <a href="{{ p.url }}">View</a>
+                {%- endif -%}
+            </p>
+        </li>
+    {%- endfor -%}
+</ul>
 
 
 {%- comment %}
     Set project_pages to be all pages where page[i].categories contains 'p'
-{% endcomment -%}
 {% assign project_pages = site.pages | where: 'categories', 'p' | sort: 'last_mod' | reverse %}
 <ul>
 {% for project in project_pages %}
@@ -26,3 +55,4 @@ description: >
     </li>
 {% endfor %}
 </ul>
+{% endcomment -%}

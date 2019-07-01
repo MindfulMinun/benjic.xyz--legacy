@@ -1,0 +1,118 @@
+# Stuff I've worked on.
+
+# title: "title"
+# hook: "a rly short desc"
+# description: "a short desc"
+# url: "url of project"
+# source: "url of code source"
+# langs: ["en", "es"]
+# codeLangs: ["HTML", "CoffeeScript"]
+
+- title: Haruka
+  hook: Haruka, your useless Discord bot.
+  description: |-
+    Haruka is a multipurpose Discord bot as well as my largest project to date.
+  source: https://github.com/MindfulMinun/discord-haruka
+  langs:
+    - English
+  codeLangs:
+    - CoffeeScript
+
+- title: Tabú
+  hook: Cada quien tendrá una palabra o frase en la frente. El objetivo es hacer que la digan.
+  description: |-
+    El tabú es un juego de fiesta. El objetivo es mantener
+    y manejar una conversación y hacer que los demás digan
+    su palabra prohibida sin que tú digas la tuya.
+  url: https://tabu.glitch.me/
+  source: https://glitch.com/edit/#!/tabu
+  langs:
+    - Español
+  codeLangs:
+    - JavaScript
+
+- title: A text based game
+  hook: You stumble upon a text-based game. After playing it a bit, you look around, finding yourself amidst the darkness. Can you escape?
+  description: |-
+    A friend I met online, who goes by
+    [Lexiathan](https://twitter.com/Lexiathan08),
+    shared a game he wrote himself in Python called "A Text-Based Python Game".
+    I enjoyed it so much I decided to port it to CoffeeScript and translate it
+    to Spanish.
+  url: https://benjic.xyz/p/a-text-based-game/
+  langs:
+    - English
+    - Español
+  codeLangs:
+    - CoffeeScript
+
+- title: yt-for-me
+  hook: downloads videos from youtube using ytdl
+  description: |-
+    I complained to a friend how online YouTube downloaders
+    are riddled with ads when he responded with "why don't you
+    just make one yourself?" So I did.
+  url: https://yt-for-me.glitch.me
+  source: https://glitch.com/edit/#!/yt-for-me?path=public/client.js
+  langs:
+    - English
+  codeLangs:
+    - JavaScript
+
+- title: NichijouEbooks
+  hook: Tweeting quotes that may or may not be from Nichijou.
+  description: |-
+    A Twitter bot that tweets randomly-formulated quotes from the popular anime/manga series Nichijou.
+  url: https://twitter.com/NichijouEbooks
+  source: https://github.com/MindfulMinun/nichijouebooks
+  langs:
+    - English
+  codeLangs:
+    - JavaScript
+
+- title: Pokémon Type Calculator
+  hook: It’s super effective!
+  description: Calculates how effective some Pokémon type is against another.
+  url: https://benjic.xyz/p/pkmn-types/
+  langs:
+    - English
+  codeLangs:
+    - CoffeeScript
+
+- title: Widen
+  hook: Make your text ｗｉｄｅｒ.
+  description: Make your boring geometrical text more ａｅｓｔｈｅｔｉｃ™. Copy it, share it with friends.
+  url: https://benjic.xyz/p/widen/
+  langs:
+    - English
+  codeLangs:
+    - CoffeeScript
+
+- title: Base64 Encoder / Decoder
+  hook: Two-way Base64 / ASCII converter.
+  description: Convert an ASCII string to Base64 and vice versa.
+  url: https://benjic.xyz/p/base64/
+  langs:
+    - English
+  codeLangs:
+    - CoffeeScript
+
+- title: Default Layout
+  hook: Mobile-first CSS layout
+  description: Default styles and components used throughout this site, all of which are mobile-first and work without JavaScript.
+  url: https://benjic.xyz/p/default/
+  langs:
+    - English
+  codeLangs:
+    - HTML
+    - SCSS
+
+
+- title: Blob Debugger
+  hook: List of all footer blobs
+  description: Debug the random blobs and quotes in the footer, each blob with its index and content.
+  url: https://benjic.xyz/p/blob-debugger/
+  langs:
+    - English
+  codeLangs:
+    - YAML
