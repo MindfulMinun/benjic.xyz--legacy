@@ -26,10 +26,10 @@ html, body {
     line-height: 1.5;
     color: $text-color;
     overflow-x: hidden;
+    height: 100%;
 }
 body {
     background-color: $background-color;
-    height: 100%;
 }
 :root {
     //! CSS vars
