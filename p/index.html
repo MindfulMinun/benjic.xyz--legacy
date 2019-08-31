@@ -3,6 +3,12 @@ layout: default
 title: Projects
 description: >
     An assorted list of small and useless projects, tools, and gadgets I’ve worked on.
+afterHead: >
+    <style media="screen">
+        .default li {
+            margin-bottom: 1rem;
+        }
+    </style>
 ---
 
 <h1>{{ page.title }}</h1>
@@ -11,11 +17,13 @@ description: >
     P is for Projects. Here's everything I've worked on in the past few years.
 </p>
 
-<style media="screen">
-    .default li {
-        margin-bottom: 1rem;
-    }
-</style>
+<p>
+    Check out my developer profiles:
+    <a href="https://github.com/MindfulMinun">GitHub</a> •
+    <a href="https://glitch.com/@MindfulMinun">Glitch</a> •
+    <!-- <a href="https://keybase.io/mindfulminun">Keybase</a> • -->
+    <a href="https://codepen.io/MindfulMinun/">CodePen</a>
+</p>
 
 <ul class="default grid">
     {%- for p in site.data.projects -%}

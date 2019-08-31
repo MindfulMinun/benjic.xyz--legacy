@@ -21,11 +21,10 @@ I like programming and playing piano. I should probably be studying.
 <hr>
 
 <section>
-    <h2>Projects &amp; Posts</h2>
-    <p>Some <a href="/p/">projects</a> and posts I’ve written.</p>
+    <h2>Projects</h2>
+    <p>Some <a href="/p/">projects</a> I’ve worked on.</p>
 
     <div class="horizontal-scroller">
-        <!-- {% assign projects = site.pages | where: 'categories', 'p' %} -->
         {% assign posts = site.posts %}
         {% assign projects = site.data.projects %}
         <!-- Concatenate arrays and sort from newest to oldest -->
@@ -66,7 +65,7 @@ I like programming and playing piano. I should probably be studying.
 <section markdown="1">
 ## About me
 
-Hi, I'm Benji. You might know my as [@MindfulMinun][twitter] online. I graduated from both [Legacy ECHS](https://lechs.taylorisd.org) and [Temple College](https://templejc.edu) late this spring with my HS diploma and an Associate of Arts respectively. I'll be attending [UT Dallas](https://utd.edu) this fall, majoring in Computer Science. I like to write code and play the piano.
+Hi, I'm Benji. You might know my as [@MindfulMinun][twitter] online. I graduated from both [Legacy ECHS](https://lechs.taylorisd.org) and [Temple College](https://templejc.edu) late this spring with my HS diploma and an Associate of Arts respectively. I’m currently a sophomore at [UT Dallas](https://utdallas.edu), majoring in Computer Science. I like to write code and play the piano.
 
 {% comment %}
     {% include image.html
@@ -84,7 +83,7 @@ Hi, I'm Benji. You might know my as [@MindfulMinun][twitter] online. I graduated
     src="/assets/mom-and-i.jpg"
     style="padding-top:100%;background:#759b86;background:radial-gradient(#759b86, #716060);" %}
 
-In my leisure time, I like to [write code][github], [tweet tweets][twitter], and play piano and vidya. I can solve a Rubik's cube under 2 minutes, and I speak both English and Spanish fluently.
+In my leisure time, I like to [write code][github], [tweet tweets][twitter], and play piano and Smash. I can solve a Rubik's cube under 2 minutes, and I speak both English and Spanish fluently.
 </section>
 
 {% comment %}
@@ -161,7 +160,7 @@ In my leisure time, I like to [write code][github], [tweet tweets][twitter], and
 <section markdown="1">
 ## Code &amp; stuff
 
-I love to code. It’s my dream to write code for a living. I picked up JavaScript during my freshman year of high school while messing around with Firefox Scratchpad. I naturally went on to learn the other two web languages: HTML and CSS. I'm now fluent in front-end workflow, combining technologies ranging from ServiceWorker, Jekyll, Vue, GitHub, and Netlify.
+I love to code. It’s my dream to write code for a living. I picked up JavaScript during my freshman year of high school while messing around with Firefox Scratchpad. I naturally went on to learn the other two web languages: HTML and CSS. I'm now fluent in front-end workflow, combining technologies ranging from ServiceWorker, Jekyll, Vue, GitHub, Netlify, Heroku, you name it.
 
 The [video](https://github.com/MindfulMinun/xyz-custom-elements) and [audio](https://codepen.io/MindfulMinun/pen/vRjPwP) players above were both created by yours truly. I've also made [layouts][layout] and other [HTML things][projects].
 
