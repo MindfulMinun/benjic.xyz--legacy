@@ -65,16 +65,7 @@ I like programming and playing piano. I should probably be studying.
 <section markdown="1">
 ## About me
 
-Hi, I'm Benji. You might know my as [@MindfulMinun][twitter] online. I graduated from both [Legacy ECHS](https://lechs.taylorisd.org) and [Temple College](https://templejc.edu) late this spring with my HS diploma and an Associate of Arts respectively. I’m currently a sophomore at [UT Dallas](https://utdallas.edu), majoring in Computer Science. I like to write code and play the piano.
-
-{% comment %}
-    {% include image.html
-        caption="This is what I look like."
-        id="pfp" class="small"
-        suppressLink="true"
-        src="/assets/pfp-4-3.jpg"
-        style="padding-top:75%;background:#1d0c47;background:radial-gradient(#c84d65, #1d0c47);" %}
-{% endcomment %}
+Hi, I'm Benji. You might know my as [@MindfulMinun][twitter] online. I graduated from both [Legacy ECHS](https://lechs.taylorisd.org) and [Temple College](https://templejc.edu) late this spring with my HS diploma and an Associate of Arts respectively. I’m currently a first-year sophomore at [UT Dallas](https://utdallas.edu), majoring in Computer Science. I like to write code and play the piano.
 
 {% include image.html
     caption="My mom and I."
@@ -85,18 +76,6 @@ Hi, I'm Benji. You might know my as [@MindfulMinun][twitter] online. I graduated
 
 In my leisure time, I like to [write code][github], [tweet tweets][twitter], and play piano and Smash. I can solve a Rubik's cube under 2 minutes, and I speak both English and Spanish fluently.
 </section>
-
-{% comment %}
-<figure id="piano">
-    <div class="media-box">
-        <iframe src="/media/goodbye/" aria-labelledby="piano-caption" frameborder="0" allow="encrypted-media" title="Don’t Ever Forget – Video" allowfullscreen></iframe>
-    </div>
-    <figcaption id="piano-caption">
-        An excerpt of <em>Don’t Ever Forget</em>.
-    </figcaption>
-</figure>
-{% endcomment %}
-
 
 <figure>
     <div class="media-box">
@@ -172,7 +151,7 @@ This year, I've worked some more with Node.js and created [@NichijouEbooks][Nich
 <section markdown="1">
 ## Contact
 
-You can find me all over the Internet as MindfulMinun, I can [prove it][keybase]. For business inquiries, [send me an email](mailto:importantmails4bc@gmail.com). For pretty much anything else, get it touch with me via [Twitter][twitter] or Discord (MindfulMinun#3386). I'm also on [GitHub][github], [CodePen][codepen], [Glitch][glitch], [Keybase][keybase], and many other places. Feel free to say hi!
+You can find me all over the Internet as MindfulMinun, I can [prove it][keybase]. For business inquiries, [send me an email](mailto:importantmails4bc@gmail.com). For pretty much anything else, get it touch with me via [Twitter][twitter] or Discord (MindfulMinun#3386). I'm also on [GitHub][github], [CodePen][codepen], [Glitch][glitch], [Keybase][keybase], [Mastodon][mastodon], and many other places. Feel free to say hi!
 
 [Tweet to @MindfulMinun][twitter-intent]
 </section>
@@ -186,8 +165,13 @@ You can find me all over the Internet as MindfulMinun, I can [prove it][keybase]
 [haruka]: https://github.com/MindfulMinun/discord-haruka
 [NichijouEbooks]: https://twitter.com/NichijouEbooks
 [github]: https://github.com/MindfulMinun
+{: rel="me" }
 [codepen]: https://codepen.io/MindfulMinun
 [glitch]: https://glitch.com/@MindfulMinun
+{: rel="me" }
 [keybase]: https://keybase.io/mindfulminun
+{: rel="me" }
+[mastodon]: https://mastodon.social/@mindfulminun
+{: rel="me" }
 [projects]: /p/
 [layout]: /p/default/
