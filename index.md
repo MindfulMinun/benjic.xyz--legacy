@@ -65,7 +65,7 @@ I like programming and playing piano. I should probably be studying.
 <section markdown="1">
 ## About me
 
-Hi, I'm Benji. You might know my as [@MindfulMinun][twitter] online. I graduated from both [Legacy ECHS](https://lechs.taylorisd.org) and [Temple College](https://templejc.edu) late this spring with my HS diploma and an Associate of Arts respectively. I’m currently a first-year sophomore at [UT Dallas](https://utdallas.edu), majoring in Computer Science. I like to write code and play the piano.
+Hi, I'm Benji. You might know me as [@MindfulMinun][twitter] online. I graduated from both [Legacy ECHS](https://lechs.taylorisd.org) and [Temple College](https://templejc.edu) late this spring with my HS diploma and an Associate of Arts respectively. I’m currently a first-year sophomore at [UT Dallas](https://utdallas.edu), majoring in Computer Science. I like to write code and play the piano.
 
 
 {% comment %}
