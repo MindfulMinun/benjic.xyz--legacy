@@ -160,7 +160,7 @@ I love to code. It’s my dream to write code for a living. I picked up JavaScri
 
 The [video](https://github.com/MindfulMinun/xyz-custom-elements) and [audio](https://codepen.io/MindfulMinun/pen/vRjPwP) players above were both created by yours truly. I've also made [layouts][layout] and other [HTML things][projects].
 
-Near the end of my Sopohmore year, I went on to focus on Node.js, a back-end JavaScript runtime. Here, I picked up CoffeeScript, a Python-esque language that transpiles to JavaScript. With these, I created [Haruka][haruka], a Discord bot.
+Near the end of my Sophomore year, I went on to focus on Node.js, a back-end JavaScript runtime. Here, I picked up CoffeeScript, a Python-esque language that transpiles to JavaScript. With these, I created [Haruka][haruka], a Discord bot.
 
 This year, I've worked some more with Node.js and created [@NichijouEbooks][NichijouEbooks], a Twitter bot that posts randomly-formulated strings from quotes taken from the Nichijou anime. [Her repository is also on GitHub.](https://github.com/MindfulMinun/nichijouebooks)
 </section>
