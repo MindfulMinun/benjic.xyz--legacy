@@ -67,6 +67,8 @@ I like programming and playing piano. I should probably be studying.
 
 Hi, I'm Benji. You might know my as [@MindfulMinun][twitter] online. I graduated from both [Legacy ECHS](https://lechs.taylorisd.org) and [Temple College](https://templejc.edu) late this spring with my HS diploma and an Associate of Arts respectively. I’m currently a first-year sophomore at [UT Dallas](https://utdallas.edu), majoring in Computer Science. I like to write code and play the piano.
 
+
+{% comment %}
 {% include image.html
     caption="My mom and I."
     id="pfp" class="small"
@@ -74,12 +76,27 @@ Hi, I'm Benji. You might know my as [@MindfulMinun][twitter] online. I graduated
     src="/assets/mom-and-i.jpg"
     style="padding-top:100%;background:#759b86;background:radial-gradient(#759b86, #716060);" %}
 
+
+{% endcomment %}
+
+
+{% include image.html
+    caption="This is what I look like."
+    id="pfp" class="small"
+    suppressLink="true"
+    src="/assets/retrato-1-1.jpeg"
+    style="padding-top: 100%; background: #759b86; background: radial-gradient(#a06642, #306bad);" %}
+
 In my leisure time, I like to [write code][github], [tweet tweets][twitter], and play piano and Smash. I can solve a Rubik's cube under 2 minutes, and I speak both English and Spanish fluently.
 </section>
 
 <figure>
     <div class="media-box">
-        <xyz-player src="https://benjic.xyz/assets/goodbye/goodbye.mp4"></xyz-player>
+        <xyz-player
+            srcset="
+                https://benjic.xyz/assets/goodbye/goodbye.webm video/webm,
+                https://benjic.xyz/assets/goodbye/goodbye.mp4 video/mp4"
+        ></xyz-player>
     </div>
     <noscript>
         <div class="block-warn">

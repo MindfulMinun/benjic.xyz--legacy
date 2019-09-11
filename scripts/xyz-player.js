@@ -88,12 +88,13 @@
                 padding-bottom: 0;
                 position: absolute;
                 left: 0; right: 0; bottom: 0;
-                opacity: 0.9999999999999;
+                opacity: 1;
                 transition: opacity var(--standard-curve) .2s;
+                z-index: 5;
             }
             .xyz-controls:hover .xyz-controls__scrubber__head { opacity: 1; }
             .xyz-player--hide-controls { cursor: none; }
-            .xyz-player--hide-controls .xyz-controls { opacity: 0.0000000001; }
+            .xyz-player--hide-controls .xyz-controls { opacity: 0; }
 
             .xyz-controls__btn {
                 position: relative;
@@ -479,6 +480,13 @@
                 case "src":
                     v.src = newVal
                     break
+                case "srcset":
+                        // https://benjic.xyz/assets/goodbye/goodbye.webm video/webm,
+                        // https://benjic.xyz/assets/goodbye/goodbye.mp4 video/mp4"
+                    v.innerHTML = newVal.trim().split(/\s*,\s*/g).map(s => {
+                        return `<source src="${s.split(/\s+/g).join('" type="')}">`
+                    }).join('\n')
+                    break
                 case "data-accent":
                     this.style.setProperty('--accent', newVal)
                     break
@@ -486,7 +494,7 @@
                     v[name] = newVal
             }
         }
-        static get observedAttributes() { return ['src', 'data-accent'] }
+        static get observedAttributes() { return ['src', 'srcset', 'data-accent'] }
         get video() { return this.shadowRoot.querySelector('video') }
         // Exposed methods
         enterFullscreen() { enterFullscreen(this) }
