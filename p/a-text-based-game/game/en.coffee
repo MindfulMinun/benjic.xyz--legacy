@@ -129,7 +129,7 @@ G.$3 = ->
     .then -> H.newLine(10)
     .then -> H.out 'You can’t see anymore.'
     .then -> H.out 'You’re tired, but can’t sleep.', 3
-    .then -> H.out 'You’re can’t feel your legs.', 3
+    .then -> H.out 'You can’t feel your legs.', 3
     .then -> H.out 'But you keep walking.', 3
     .then -> H.newLine(10)
     .then -> H.out 'Suddenly,'
