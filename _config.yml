@@ -3,6 +3,7 @@
 
 port: 1337
 # host: 0.0.0.0
+encoding: utf-8
 url: "https://benjic.xyz"
 theme-color: "#448aff"
 twitter: "@MindfulMinun"

@@ -11,7 +11,7 @@
 - title: Haruka
   hook: Haruka, your useless Discord bot.
   description: |-
-    Haruka is a multipurpose Discord bot as well as my largest project to date.
+    Haruka is a multipurpose Discord bot as well as my largest project to date. She’s written in CoffeeScript, open sourced on GitHub, deployed to Heroku.
   source: https://github.com/MindfulMinun/discord-haruka
   langs:
     - English

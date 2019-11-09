@@ -9,6 +9,7 @@ afterHead: <link rel="stylesheet" href="/styles/master.css">
 //<!-- Make this as tiny as possible (added html comment bc syntax is annoying)
 main { display: flex; }
 main .container { margin: auto; }
+h1 { margin-top: 0; }
 //-->
 {% endcapture %}<style>{{ scss | scssify }}</style>
 

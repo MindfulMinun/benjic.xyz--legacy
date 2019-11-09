@@ -24,61 +24,13 @@ I like programming and playing piano. I should probably be studying.
     <h2>Projects</h2>
     <p>Some <a href="/p/">projects</a> I’ve worked on.</p>
 
-    <div class="horizontal-scroller">
-        {% assign posts = site.posts %}
-        {% assign projects = site.data.projects %}
-        <!-- Concatenate arrays and sort from newest to oldest -->
-        {% assign PandP = posts | concat: projects %}
-
-        {%- for p in PandP -%}
-            <!-- Include pages that (are a post) or (are a project) -->
-            <div class="horizontal-scroller__element">
-                <a class="post-card"
-                    {% if p.source -%}
-                    href="{{ p.source }}"
-                    {%- else -%}
-                    href="{{ p.url | absolute_url }}"
-                    {%- endif %}
-                    {% if p.image -%}
-                        style="background-color:{{ p.image.color }};background-image:url('{{ p.image.src | absolute_url }}')"
-                    {%- endif %}>
-                    <div class="post-card-content">
-                        <strong>{{ p.title | escape }}</strong>
-                        <p class="no-margin">
-
-                        {%- if p.excerpt -%}
-                        {{ p.excerpt | markdownify | remove: '<p>' | remove: '</p>' | truncatewords: 8 }}
-                        {%- elsif p.hook -%}
-                        {{ p.hook | markdownify | remove: '<p>' | remove: '</p>' | truncatewords: 8 }}
-                        {%- else -%}
-                        {{ p.description | markdownify | remove: '<p>' | remove: '</p>' | truncatewords: 8 }}
-                        {%- endif -%}
-
-                        </p>
-                    </div>
-                </a>
-            </div>
-        {%- endfor -%}
-    </div>
+    {% include scroller.html %}
 </section>
 
 <section markdown="1">
 ## About me
 
 Hi, I'm Benji. You might know me as [@MindfulMinun][twitter] online. I graduated from both [Legacy ECHS](https://lechs.taylorisd.org) and [Temple College](https://templejc.edu) late this spring with my HS diploma and an Associate of Arts respectively. I’m currently a first-year sophomore at [UT Dallas](https://utdallas.edu), majoring in Computer Science. I like to write code and play the piano.
-
-
-{% comment %}
-{% include image.html
-    caption="My mom and I."
-    id="pfp" class="small"
-    suppressLink="true"
-    src="/assets/mom-and-i.jpg"
-    style="padding-top:100%;background:#759b86;background:radial-gradient(#759b86, #716060);" %}
-
-
-{% endcomment %}
-
 
 {% include image.html
     caption="This is what I look like."
@@ -168,7 +120,7 @@ This year, I've worked some more with Node.js and created [@NichijouEbooks][Nich
 <section markdown="1">
 ## Contact
 
-You can find me all over the Internet as MindfulMinun, I can [prove it][keybase]. For business inquiries, [send me an email](mailto:importantmails4bc@gmail.com). For pretty much anything else, get it touch with me via [Twitter][twitter] or Discord (MindfulMinun#3386). I'm also on [GitHub][github], [CodePen][codepen], [Glitch][glitch], [Keybase][keybase], [Mastodon][mastodon], and many other places. Feel free to say hi!
+You can find me all over the Internet as MindfulMinun, I can [prove it][keybase]. For business inquiries, [send me an email](mailto:benji@utdallas.edu). For pretty much anything else, get it touch with me via [Twitter][twitter] or Discord (MindfulMinun#3386). I'm also on [GitHub][github], [CodePen][codepen], [Glitch][glitch], [Keybase][keybase], [Mastodon][mastodon], and many other places. Feel free to say hi.
 
 [Tweet to @MindfulMinun][twitter-intent]
 </section>
