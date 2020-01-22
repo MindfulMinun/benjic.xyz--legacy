@@ -47,13 +47,13 @@
     - CoffeeScript
 
 - title: yt-for-me
-  hook: downloads videos from youtube using ytdl
+  hook: Steals videos from YouTube, how fun!
   description: |-
     I complained to a friend how online YouTube downloaders
     are riddled with ads when he responded with "why don't you
     just make one yourself?" So I did.
-  url: https://yt-for-me.glitch.me
-  source: https://glitch.com/edit/#!/yt-for-me?path=public/client.js
+  url: https://yt.benjic.xyz
+  source: https://github.com/MindfulMinun/yt-for-me
   langs:
     - English
   codeLangs:

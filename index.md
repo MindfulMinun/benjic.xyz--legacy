@@ -4,7 +4,7 @@ layout: default
 description: >
     Hi, I’m Benji. I like programming and playing piano.
 image:
-    src: /assets/mom-and-i.jpg
+    src: /assets/retrato-1-1.jpeg
     alt: Benji
 scripts:
     - async: true
@@ -114,7 +114,7 @@ The [video](https://github.com/MindfulMinun/xyz-custom-elements) and [audio](htt
 
 Near the end of my Sophomore year, I went on to focus on Node.js, a back-end JavaScript runtime. Here, I picked up CoffeeScript, a Python-esque language that transpiles to JavaScript. With these, I created [Haruka][haruka], a Discord bot.
 
-This year, I've worked some more with Node.js and created [@NichijouEbooks][NichijouEbooks], a Twitter bot that posts randomly-formulated strings from quotes taken from the Nichijou anime. [Her repository is also on GitHub.](https://github.com/MindfulMinun/nichijouebooks)
+Last summer, I've worked some more with Node.js and created [@NichijouEbooks][NichijouEbooks], a Twitter bot that posts randomly-formulated strings from quotes taken from the Nichijou anime. [Her repository is also on GitHub.](https://github.com/MindfulMinun/nichijouebooks)
 </section>
 
 <section markdown="1">
