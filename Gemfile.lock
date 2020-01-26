@@ -85,6 +85,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (~> 2.1.4)
   eventmachine (~> 1.2)
   jekyll (~> 3.8.5)
   jekyll-autoprefixer (~> 1.0)
